@@ -303,26 +303,82 @@ function chartCommon() {
 }
 
 function loadCharts(d) {
-  const labels = d.activities.map(a => fmtDate(a.date));
-  const dist = d.activities.map(a => Math.round(a.distance_m));
+  // --- Distance: stack sessions on the same day ---
+  // Group activities by date in chronological order
+  const byDate = new Map();
+  for (const a of d.activities) {
+    if (!byDate.has(a.date)) byDate.set(a.date, []);
+    byDate.get(a.date).push(a);
+  }
+  const dateLabels = [...byDate.keys()];
+  const labels = dateLabels.map(fmtDate);
+
+  // Max sessions in any one day = number of stack layers we need
+  const maxSessions = Math.max(1, ...[...byDate.values()].map(arr => arr.length));
+  const SESSION_COLORS = ['#4cc9f0', '#a78bfa', '#34d399', '#fb923c'];
+
+  // Build N datasets: dataset[i] = i-th session of each day (or null if no such session)
+  const distDatasets = [];
+  for (let i = 0; i < maxSessions; i++) {
+    distDatasets.push({
+      label: maxSessions === 1 ? 'ระยะ' : `Session ${i + 1}`,
+      data: dateLabels.map(date => {
+        const sess = byDate.get(date)[i];
+        return sess ? Math.round(sess.distance_m) : null;
+      }),
+      // Per-bar metadata for tooltips
+      sessionNames: dateLabels.map(date => byDate.get(date)[i]?.name || null),
+      backgroundColor: SESSION_COLORS[i % SESSION_COLORS.length],
+      borderRadius: 6,
+      stack: 'distance',
+    });
+  }
+
   const hr = d.activities.map(a => Math.round(a.avg_hr || 0));
+  const hrLabels = d.activities.map(a => fmtDate(a.date));
 
   new Chart(document.getElementById('distChart'), {
     type: 'bar',
-    data: { labels, datasets: [{ data: dist, backgroundColor: '#4cc9f0', borderRadius: 6 }] },
+    data: { labels, datasets: distDatasets },
     options: {
       ...chartCommon(),
+      plugins: {
+        ...chartCommon().plugins,
+        legend: { display: maxSessions > 1, labels: { color: '#94a0bb' } },
+        tooltip: {
+          ...chartCommon().plugins.tooltip,
+          callbacks: {
+            title: items => items[0].label,
+            label: ctx => {
+              const ds = ctx.dataset;
+              const name = ds.sessionNames?.[ctx.dataIndex];
+              const val = ctx.parsed.y;
+              return name ? `${name}: ${val}m` : `${val}m`;
+            },
+            footer: items => {
+              if (items.length < 2) return '';
+              const total = items.reduce((s, it) => s + (it.parsed.y || 0), 0);
+              return `รวม: ${total}m`;
+            },
+          },
+        },
+      },
       scales: {
         ...chartCommon().scales,
-        y: { ...chartCommon().scales.y, title: { display: true, text: 'เมตร', color: '#94a0bb' } }
-      }
-    }
+        x: { ...chartCommon().scales.x, stacked: true },
+        y: {
+          ...chartCommon().scales.y,
+          stacked: true,
+          title: { display: true, text: 'เมตร', color: '#94a0bb' },
+        },
+      },
+    },
   });
 
   new Chart(document.getElementById('hrChart'), {
     type: 'line',
     data: {
-      labels,
+      labels: hrLabels,
       datasets: [{
         data: hr,
         borderColor: '#fcd34d',
