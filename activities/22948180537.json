@@ -30,30 +30,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 2,
-      "distance_m": 0,
-      "duration_s": 4.271,
-      "moving_duration_s": 0.0,
-      "avg_hr": 129.0,
-      "max_hr": 130.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 4.271,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 0
     },
     {
       "index": 3,
@@ -76,30 +54,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 4,
-      "distance_m": 0,
-      "duration_s": 4.75,
-      "moving_duration_s": 0.0,
-      "avg_hr": 121.0,
-      "max_hr": 122.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 4.75,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 4.3
     },
     {
       "index": 5,
@@ -122,7 +78,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 4.8
     },
     {
       "index": 6,
@@ -145,30 +102,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 7,
-      "distance_m": 0,
-      "duration_s": 4.835,
-      "moving_duration_s": 0.0,
-      "avg_hr": 134.0,
-      "max_hr": 134.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 4.835,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 0
     },
     {
       "index": 8,
@@ -191,7 +126,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 4.8
     },
     {
       "index": 9,
@@ -214,30 +150,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 10,
-      "distance_m": 0,
-      "duration_s": 3.52,
-      "moving_duration_s": 0.0,
-      "avg_hr": 144.0,
-      "max_hr": 144.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 3.52,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 0
     },
     {
       "index": 11,
@@ -260,7 +174,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 3.5
     },
     {
       "index": 12,
@@ -283,30 +198,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 13,
-      "distance_m": 0,
-      "duration_s": 3.219,
-      "moving_duration_s": 0.0,
-      "avg_hr": 145.0,
-      "max_hr": 146.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 3.219,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 0
     },
     {
       "index": 14,
@@ -329,7 +222,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 3.2
     },
     {
       "index": 15,
@@ -352,30 +246,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 16,
-      "distance_m": 0,
-      "duration_s": 2.746,
-      "moving_duration_s": 0.0,
-      "avg_hr": 134.0,
-      "max_hr": 134.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 2.746,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 0
     },
     {
       "index": 17,
@@ -398,7 +270,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 2.7
     },
     {
       "index": 18,
@@ -421,30 +294,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 19,
-      "distance_m": 0,
-      "duration_s": 3.367,
-      "moving_duration_s": 0.0,
-      "avg_hr": 129.0,
-      "max_hr": 129.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 3.367,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 0
     },
     {
       "index": 20,
@@ -467,7 +318,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 3.4
     },
     {
       "index": 21,
@@ -498,30 +350,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 22,
-      "distance_m": 0,
-      "duration_s": 2.635,
-      "moving_duration_s": 0.0,
-      "avg_hr": 141.0,
-      "max_hr": 141.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 2.635,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 0
     },
     {
       "index": 23,
@@ -544,7 +374,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 2.6
     },
     {
       "index": 24,
@@ -575,30 +406,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 25,
-      "distance_m": 0,
-      "duration_s": 3.481,
-      "moving_duration_s": 0.0,
-      "avg_hr": 156.0,
-      "max_hr": 157.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 3.481,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 0
     },
     {
       "index": 26,
@@ -621,7 +430,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 3.5
     },
     {
       "index": 27,
@@ -652,30 +462,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 28,
-      "distance_m": 0,
-      "duration_s": 2.787,
-      "moving_duration_s": 0.0,
-      "avg_hr": 150.0,
-      "max_hr": 150.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 2.787,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 0
     },
     {
       "index": 29,
@@ -698,7 +486,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 2.8
     },
     {
       "index": 30,
@@ -729,30 +518,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 31,
-      "distance_m": 0,
-      "duration_s": 3.289,
-      "moving_duration_s": 0.0,
-      "avg_hr": 154.0,
-      "max_hr": 155.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 3.289,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 0
     },
     {
       "index": 32,
@@ -775,7 +542,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 3.3
     },
     {
       "index": 33,
@@ -806,7 +574,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
+      "is_rest": false,
+      "turn_time_s": 0
     },
     {
       "index": 34,
@@ -829,30 +598,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
-    },
-    {
-      "index": 35,
-      "distance_m": 0,
-      "duration_s": 8.289,
-      "moving_duration_s": 0.0,
-      "avg_hr": 133.0,
-      "max_hr": 135.0,
-      "calories": 2.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 8.289,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 0
     },
     {
       "index": 36,
@@ -883,30 +630,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 37,
-      "distance_m": 0,
-      "duration_s": 4.111,
-      "moving_duration_s": 0.0,
-      "avg_hr": 147.0,
-      "max_hr": 147.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 4.111,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 8.3
     },
     {
       "index": 38,
@@ -929,7 +654,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 4.1
     },
     {
       "index": 39,
@@ -960,30 +686,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 40,
-      "distance_m": 0,
-      "duration_s": 3.564,
-      "moving_duration_s": 0.0,
-      "avg_hr": 153.0,
-      "max_hr": 154.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 3.564,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 0
     },
     {
       "index": 41,
@@ -1006,7 +710,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 3.6
     },
     {
       "index": 42,
@@ -1037,30 +742,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 43,
-      "distance_m": 0,
-      "duration_s": 4.245,
-      "moving_duration_s": 0.0,
-      "avg_hr": 148.0,
-      "max_hr": 149.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 4.245,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 0
     },
     {
       "index": 44,
@@ -1083,7 +766,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 4.2
     },
     {
       "index": 45,
@@ -1130,30 +814,8 @@
           "distance_m": 25.0
         }
       ],
-      "is_rest": false
-    },
-    {
-      "index": 46,
-      "distance_m": 0,
-      "duration_s": 4.873,
-      "moving_duration_s": 0.0,
-      "avg_hr": 129.0,
-      "max_hr": 130.0,
-      "calories": 0.0,
-      "stroke": null,
-      "avg_speed": 0.0,
-      "avg_swolf": null,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": null,
-          "duration_s": 4.873,
-          "strokes": null,
-          "swolf": null,
-          "distance_m": null
-        }
-      ],
-      "is_rest": true
+      "is_rest": false,
+      "turn_time_s": 0
     },
     {
       "index": 47,
@@ -1176,7 +838,8 @@
           "distance_m": null
         }
       ],
-      "is_rest": true
+      "is_rest": true,
+      "turn_time_s": 4.9
     }
   ],
   "hr_series": [

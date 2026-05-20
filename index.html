@@ -31,7 +31,7 @@
     min-height: 100vh;
     line-height: 1.5;
   }
-  .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px }
+  .wrap { padding: 32px 32px 80px }
   header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 32px; flex-wrap: wrap; gap: 12px }
   h1 { font-size: 28px; font-weight: 700; margin: 0; letter-spacing: -0.02em }
   h1 .accent { color: var(--accent) }
@@ -110,6 +110,25 @@
 
 <section class="stats" id="stats"></section>
 
+<h2>Weekly summary</h2>
+<div class="card" style="padding:8px 4px">
+  <div class="table-wrap">
+  <table id="weeklyTable">
+    <thead>
+      <tr>
+        <th>สัปดาห์</th>
+        <th class="num">Sessions</th>
+        <th class="num">ระยะรวม</th>
+        <th class="num">เวลาในน้ำ</th>
+        <th class="num">HR avg</th>
+        <th class="num">Pace avg</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  </div>
+</div>
+
 <h2>Progress</h2>
 <div class="grid-2">
   <div class="card">
@@ -117,9 +136,13 @@
     <div class="chart-wrap"><canvas id="distChart"></canvas></div>
   </div>
   <div class="card">
-    <h3>Average HR per session</h3>
-    <div class="chart-wrap"><canvas id="hrChart"></canvas></div>
+    <h3>Pace per session (s/100m)</h3>
+    <div class="chart-wrap"><canvas id="paceChart"></canvas></div>
   </div>
+</div>
+<div class="card" style="margin-top:20px">
+  <h3>Average HR per session</h3>
+  <div class="chart-wrap" style="height:300px"><canvas id="hrChart"></canvas></div>
 </div>
 
 <h2>Recent activities</h2>
@@ -195,6 +218,60 @@ const fmtDuration = s => {
   return `${m}:${String(sec).padStart(2,'0')}`;
 };
 const fmtNum = (v, suffix='') => v == null ? '—' : `${Math.round(v)}${suffix}`;
+
+function loadWeekly(d) {
+  const planStart = new Date(d.plan_start + 'T00:00:00');
+  // Bucket activities into 7-day windows from plan_start
+  const weeks = new Map();  // week_idx -> { sessions, distance, duration, hr_sum, hr_n, pace_sum, pace_n }
+  for (const a of d.activities) {
+    const dt = new Date(a.date + 'T00:00:00');
+    const wIdx = Math.floor((dt - planStart) / (7 * 86400 * 1000)) + 1;
+    if (wIdx < 1) continue;
+    if (!weeks.has(wIdx)) weeks.set(wIdx, { sessions: 0, distance: 0, duration: 0, hr_sum: 0, hr_n: 0, pace_sum: 0, pace_n: 0 });
+    const w = weeks.get(wIdx);
+    w.sessions += 1;
+    w.distance += a.distance_m || 0;
+    w.duration += a.duration_s || 0;
+    if (a.avg_hr) { w.hr_sum += a.avg_hr; w.hr_n += 1; }
+    if (a.distance_m && a.moving_duration_s) {
+      w.pace_sum += a.moving_duration_s / a.distance_m * 100;
+      w.pace_n += 1;
+    }
+  }
+
+  // Always render 6 rows (plan length), even if a week has zero activity yet
+  const tbody = document.querySelector('#weeklyTable tbody');
+  tbody.replaceChildren();
+  for (let i = 1; i <= 6; i++) {
+    const w = weeks.get(i);
+    const weekStart = new Date(planStart);
+    weekStart.setDate(weekStart.getDate() + (i - 1) * 7);
+    const weekEnd = new Date(weekStart);
+    weekEnd.setDate(weekEnd.getDate() + 6);
+    const label = `สัปดาห์ ${i}`;
+    const dateRange = `${weekStart.getDate()}–${weekEnd.getDate()} ${['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'][weekStart.getMonth()]}`;
+    if (!w) {
+      tbody.appendChild(el('tr', { style: 'opacity:0.45' }, [
+        el('td', {}, [label, el('div', { style: 'color:var(--muted);font-size:11px', text: dateRange })]),
+        el('td', { class: 'num', text: '—' }),
+        el('td', { class: 'num', text: '—' }),
+        el('td', { class: 'num', text: '—' }),
+        el('td', { class: 'num', text: '—' }),
+        el('td', { class: 'num', text: '—' }),
+      ]));
+      continue;
+    }
+    const paceAvg = w.pace_n ? Math.round(w.pace_sum / w.pace_n) : null;
+    tbody.appendChild(el('tr', {}, [
+      el('td', {}, [label, el('div', { style: 'color:var(--muted);font-size:11px', text: dateRange })]),
+      el('td', { class: 'num', text: String(w.sessions) }),
+      el('td', { class: 'num', text: `${Math.round(w.distance)}m` }),
+      el('td', { class: 'num', text: fmtDuration(w.duration) }),
+      el('td', { class: 'num', text: w.hr_n ? String(Math.round(w.hr_sum / w.hr_n)) : '—' }),
+      el('td', { class: 'num', text: paceAvg ? `${paceAvg}s` : '—' }),
+    ]));
+  }
+}
 
 function loadStats(d) {
   const done = d.stats.sessions_done, total = d.stats.sessions_total;
@@ -336,6 +413,12 @@ function loadCharts(d) {
 
   const hr = d.activities.map(a => Math.round(a.avg_hr || 0));
   const hrLabels = d.activities.map(a => fmtDate(a.date));
+  const paceLabels = hrLabels;
+  // pace s/100m using moving duration (excludes rest)
+  const pace = d.activities.map(a => {
+    if (!a.distance_m || !a.moving_duration_s) return null;
+    return Math.round(a.moving_duration_s / a.distance_m * 100);
+  });
 
   new Chart(document.getElementById('distChart'), {
     type: 'bar',
@@ -375,18 +458,92 @@ function loadCharts(d) {
     },
   });
 
+  new Chart(document.getElementById('paceChart'), {
+    type: 'bar',
+    data: {
+      labels: paceLabels,
+      datasets: [{
+        data: pace,
+        backgroundColor: '#34d399',
+        borderRadius: 6,
+      }],
+    },
+    options: {
+      ...chartCommon(),
+      plugins: {
+        ...chartCommon().plugins,
+        tooltip: {
+          ...chartCommon().plugins.tooltip,
+          callbacks: { label: ctx => ctx.parsed.y ? `${ctx.parsed.y} s/100m` : 'no data' },
+        },
+      },
+      scales: {
+        ...chartCommon().scales,
+        y: {
+          ...chartCommon().scales.y,
+          beginAtZero: false,
+          title: { display: true, text: 's/100m (ต่ำ = เร็ว)', color: '#94a0bb' },
+          reverse: true,  // lower (faster) on top
+        },
+      },
+    },
+  });
+
+  // HR chart with zone bands behind the line
+  const z = d.hr_zones || {};
+  const hrZonesPlugin = {
+    id: 'hrZones',
+    beforeDatasetsDraw(chart) {
+      const { ctx, chartArea, scales } = chart;
+      if (!z.z1_floor) return;
+      const y = scales.y;
+      const bands = [
+        { from: z.z1_floor, to: z.z2_floor, color: 'rgba(110, 231, 183, 0.06)' },  // Z1 recovery
+        { from: z.z2_floor, to: z.z3_floor, color: 'rgba(76, 201, 240, 0.07)' },   // Z2 aerobic
+        { from: z.z3_floor, to: z.z4_floor, color: 'rgba(252, 211, 77, 0.09)' },   // Z3 tempo
+        { from: z.z4_floor, to: z.z5_floor, color: 'rgba(251, 146, 60, 0.10)' },   // Z4 threshold
+        { from: z.z5_floor, to: z.max,      color: 'rgba(253, 164, 175, 0.12)' },  // Z5 VO2
+      ];
+      ctx.save();
+      for (const b of bands) {
+        const yTop = y.getPixelForValue(b.to);
+        const yBot = y.getPixelForValue(b.from);
+        ctx.fillStyle = b.color;
+        ctx.fillRect(chartArea.left, yTop, chartArea.right - chartArea.left, yBot - yTop);
+      }
+      // Zone labels at the right edge
+      ctx.fillStyle = '#94a0bb';
+      ctx.font = '10px Inter, sans-serif';
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+      const zoneLabels = [
+        { hr: (z.z1_floor + z.z2_floor) / 2, label: 'Z1' },
+        { hr: (z.z2_floor + z.z3_floor) / 2, label: 'Z2' },
+        { hr: (z.z3_floor + z.z4_floor) / 2, label: 'Z3' },
+        { hr: (z.z4_floor + z.z5_floor) / 2, label: 'Z4' },
+        { hr: (z.z5_floor + z.max) / 2,      label: 'Z5' },
+      ];
+      for (const zl of zoneLabels) {
+        ctx.fillText(zl.label, chartArea.right - 4, y.getPixelForValue(zl.hr));
+      }
+      ctx.restore();
+    },
+  };
+
   new Chart(document.getElementById('hrChart'), {
     type: 'line',
     data: {
       labels: hrLabels,
       datasets: [{
+        label: 'Avg HR',
         data: hr,
         borderColor: '#fcd34d',
-        backgroundColor: 'rgba(252, 211, 77, 0.1)',
+        backgroundColor: 'rgba(252, 211, 77, 0.0)',
         tension: 0.3,
-        fill: true,
-        pointRadius: 4,
-        pointBackgroundColor: '#fcd34d'
+        fill: false,
+        pointRadius: 5,
+        pointBackgroundColor: '#fcd34d',
+        borderWidth: 2,
       }]
     },
     options: {
@@ -397,11 +554,12 @@ function loadCharts(d) {
           ...chartCommon().scales.y,
           beginAtZero: false,
           min: 80,
-          max: 190,
-          title: { display: true, text: 'bpm', color: '#94a0bb' }
+          max: z.max || 190,
+          title: { display: true, text: 'bpm', color: '#94a0bb' },
         }
       }
-    }
+    },
+    plugins: [hrZonesPlugin],
   });
 }
 
@@ -409,6 +567,7 @@ fetch('data.json')
   .then(r => r.json())
   .then(d => {
     loadStats(d);
+    loadWeekly(d);
     loadActivitiesTable(d);
     loadScheduleTable(d);
     loadCharts(d);
