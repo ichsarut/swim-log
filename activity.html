@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Activity Detail — Swim Log</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg2: #111a2e;
+    --card: #16213b;
+    --line: #25304d;
+    --text: #e6eaf2;
+    --muted: #94a0bb;
+    --accent: #4cc9f0;
+    --good: #6ee7b7;
+    --warn: #fcd34d;
+    --bad: #fda4af;
+
+    --stroke-free: #4cc9f0;
+    --stroke-back: #a78bfa;
+    --stroke-breast: #34d399;
+    --stroke-fly: #fb923c;
+    --stroke-drill: #fcd34d;
+    --stroke-rest: #475569;
+  }
+  * { box-sizing: border-box }
+  body {
+    margin: 0;
+    background: linear-gradient(180deg, var(--bg), var(--bg2));
+    color: var(--text);
+    font-family: 'IBM Plex Sans Thai', 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px }
+  header { margin-bottom: 24px }
+  .back { color: var(--muted); font-size: 13px; text-decoration: none }
+  .back:hover { color: var(--accent) }
+  h1 { font-size: 26px; font-weight: 700; margin: 8px 0 4px; letter-spacing: -0.02em }
+  .subtitle { color: var(--muted); font-size: 14px }
+  h2 { font-size: 18px; font-weight: 600; margin: 32px 0 14px }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 24px }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .stat-label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px }
+  .stat-value { font-size: 22px; font-weight: 700; font-family: 'Inter', system-ui, sans-serif }
+  .stat-value .unit { color: var(--muted); font-size: 14px; font-weight: 500 }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line) }
+  th { color: var(--muted); font-weight: 500; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: 'Inter', system-ui, sans-serif }
+  tr:last-child td { border-bottom: none }
+  tr.rest td { color: var(--muted); font-style: italic; background: rgba(71, 85, 105, 0.08) }
+
+  .stroke-chip {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
+    background: rgba(76, 201, 240, 0.12);
+    color: var(--stroke-free);
+  }
+  .stroke-chip.BACKSTROKE { background: rgba(167, 139, 250, 0.12); color: var(--stroke-back) }
+  .stroke-chip.BREASTSTROKE { background: rgba(52, 211, 153, 0.12); color: var(--stroke-breast) }
+  .stroke-chip.BUTTERFLY { background: rgba(251, 146, 60, 0.12); color: var(--stroke-fly) }
+  .stroke-chip.DRILL { background: rgba(252, 211, 77, 0.12); color: var(--stroke-drill) }
+  .stroke-chip.rest { background: rgba(71, 85, 105, 0.2); color: var(--muted) }
+
+  details.lap {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  details.lap[open] { border-color: rgba(76, 201, 240, 0.35) }
+  details.lap summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 14px 18px;
+    display: grid;
+    grid-template-columns: 32px 1fr auto auto auto;
+    gap: 14px;
+    align-items: center;
+  }
+  details.lap summary::-webkit-details-marker { display: none }
+  details.lap summary::before {
+    content: '›';
+    color: var(--muted);
+    font-size: 18px;
+    transition: transform 0.15s;
+  }
+  details.lap[open] summary::before { transform: rotate(90deg); color: var(--accent) }
+  .lap-idx { color: var(--muted); font-size: 12px; font-family: 'Inter', system-ui, sans-serif }
+  .lap-title { font-weight: 500 }
+  .lap-meta { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; font-family: 'Inter', system-ui, sans-serif }
+  details.lap > .lap-body { padding: 0 18px 14px; border-top: 1px solid var(--line) }
+  details.rest summary { opacity: 0.6 }
+
+  .chart-wrap { position: relative; height: 260px }
+
+  .empty { text-align: center; color: var(--muted); padding: 24px }
+  .error { color: var(--bad); padding: 24px; text-align: center }
+  a { color: var(--accent); text-decoration: none }
+  a:hover { text-decoration: underline }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="back" href="index.html">← กลับ</a>
+  <h1 id="title">Activity</h1>
+  <div class="subtitle" id="subtitle">—</div>
+</header>
+
+<section class="stats" id="stats"></section>
+
+<h2>Heart Rate</h2>
+<div class="card">
+  <div class="chart-wrap"><canvas id="hrChart"></canvas></div>
+</div>
+
+<h2>เซตการว่าย</h2>
+<div id="lapList"></div>
+
+<div id="errorBox"></div>
+
+</div>
+<script>
+const el = (tag, attrs = {}, children = []) => {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === 'class') node.className = v;
+    else if (k === 'text') node.textContent = v;
+    else node.setAttribute(k, v);
+  }
+  for (const c of [].concat(children)) {
+    if (c == null) continue;
+    if (typeof c === 'string') node.appendChild(document.createTextNode(c));
+    else node.appendChild(c);
+  }
+  return node;
+};
+
+const fmtDur = s => {
+  if (s == null) return '—';
+  const m = Math.floor(s / 60), sec = Math.round(s % 60);
+  return `${m}:${String(sec).padStart(2,'0')}`;
+};
+const fmtNum = (v, suffix = '') => v == null ? '—' : `${Math.round(v)}${suffix}`;
+
+const STROKE_LABEL = {
+  FREESTYLE: 'ฟรีสไตล์',
+  BACKSTROKE: 'กรรเชียง',
+  BREASTSTROKE: 'กบ',
+  BUTTERFLY: 'ผีเสื้อ',
+  DRILL: 'ดริล',
+  IM: 'IM',
+  MIXED: 'ผสม',
+};
+
+function statCard(label, value, unit) {
+  return el('div', { class: 'stat-card' }, [
+    el('div', { class: 'stat-label', text: label }),
+    el('div', { class: 'stat-value' }, [
+      String(value),
+      unit ? el('span', { class: 'unit', text: ' ' + unit }) : null,
+    ]),
+  ]);
+}
+
+function renderStats(act) {
+  const s = document.getElementById('stats');
+  s.replaceChildren(
+    statCard('ระยะ', Math.round(act.distance_m), 'm'),
+    statCard('เวลาในน้ำ', fmtDur(act.moving_duration_s)),
+    statCard('เวลารวม', fmtDur(act.duration_s)),
+    statCard('HR avg', fmtNum(act.avg_hr), 'bpm'),
+    statCard('HR max', fmtNum(act.max_hr), 'bpm'),
+    statCard('SWOLF avg', fmtNum(act.avg_swolf)),
+    statCard('Calories', fmtNum(act.calories)),
+    statCard('Pool', act.pool_length ? `${act.pool_length}m` : '—'),
+  );
+}
+
+function renderHrChart(detail) {
+  const ctx = document.getElementById('hrChart');
+  if (!detail.hr_series || !detail.hr_series.length) {
+    ctx.parentElement.replaceChildren(el('div', { class: 'empty', text: 'ไม่มีข้อมูล HR' }));
+    return;
+  }
+  const labels = detail.hr_series.map(p => fmtDur(p.t));
+  const data = detail.hr_series.map(p => p.hr);
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        data,
+        borderColor: '#fda4af',
+        backgroundColor: 'rgba(253, 164, 175, 0.1)',
+        tension: 0.3,
+        fill: true,
+        pointRadius: 0,
+        borderWidth: 2,
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: '#0b1220', borderColor: '#25304d', borderWidth: 1, padding: 10 },
+      },
+      scales: {
+        x: { ticks: { color: '#94a0bb', maxTicksLimit: 8 }, grid: { color: '#1a2440' } },
+        y: {
+          ticks: { color: '#94a0bb' },
+          grid: { color: '#1a2440' },
+          beginAtZero: false,
+          min: 80,
+          max: 190,
+          title: { display: true, text: 'bpm', color: '#94a0bb' },
+        },
+      },
+    },
+  });
+}
+
+function renderLaps(detail) {
+  const list = document.getElementById('lapList');
+  list.replaceChildren();
+
+  // Group lengths into a flat per-length table inside each non-rest lap
+  let swimLapIdx = 0;
+  for (const lap of detail.laps) {
+    if (lap.is_rest) {
+      // Compact rest row
+      list.appendChild(el('details', { class: 'lap rest' }, [
+        el('summary', {}, [
+          el('div', { class: 'lap-idx', text: `#${lap.index}` }),
+          el('div', { class: 'lap-title' }, [
+            el('span', { class: 'stroke-chip rest', text: 'พัก' }),
+          ]),
+          el('div', { class: 'lap-meta', text: '' }),
+          el('div', { class: 'lap-meta', text: '' }),
+          el('div', { class: 'lap-meta', text: fmtDur(lap.duration_s) }),
+        ]),
+      ]));
+      continue;
+    }
+    swimLapIdx += 1;
+    const stroke = lap.stroke || 'MIXED';
+    const pace = lap.distance_m && lap.moving_duration_s
+      ? `${Math.round(lap.moving_duration_s / lap.distance_m * 100)}s/100m`
+      : '—';
+
+    const lengthsTable = el('table', {}, [
+      el('thead', {}, el('tr', {}, [
+        el('th', { class: 'num', text: '#' }),
+        el('th', { text: 'ท่า' }),
+        el('th', { class: 'num', text: 'เวลา' }),
+        el('th', { class: 'num', text: 'Stroke' }),
+        el('th', { class: 'num', text: 'SWOLF' }),
+      ])),
+      el('tbody', {}, lap.lengths.map(ln => el('tr', {}, [
+        el('td', { class: 'num', text: ln.index }),
+        el('td', {}, el('span', {
+          class: 'stroke-chip ' + (ln.stroke || ''),
+          text: STROKE_LABEL[ln.stroke] || (ln.stroke || '—'),
+        })),
+        el('td', { class: 'num', text: ln.duration_s ? `${ln.duration_s.toFixed(1)}s` : '—' }),
+        el('td', { class: 'num', text: fmtNum(ln.strokes) }),
+        el('td', { class: 'num', text: fmtNum(ln.swolf) }),
+      ]))),
+    ]);
+
+    list.appendChild(el('details', { class: 'lap' }, [
+      el('summary', {}, [
+        el('div', { class: 'lap-idx', text: `เซต ${swimLapIdx}` }),
+        el('div', { class: 'lap-title' }, [
+          el('span', { class: 'stroke-chip ' + stroke, text: STROKE_LABEL[stroke] || stroke }),
+          el('span', { style: 'margin-left:10px;color:var(--muted);font-size:12px', text: `${lap.lengths.length} length` }),
+        ]),
+        el('div', { class: 'lap-meta', text: `${Math.round(lap.distance_m)}m` }),
+        el('div', { class: 'lap-meta', text: pace }),
+        el('div', { class: 'lap-meta', text: fmtDur(lap.duration_s) }),
+      ]),
+      el('div', { class: 'lap-body' }, lengthsTable),
+    ]));
+  }
+}
+
+async function main() {
+  const params = new URLSearchParams(location.search);
+  const aid = params.get('id');
+  if (!aid || !/^\d+$/.test(aid)) {
+    document.getElementById('errorBox').replaceChildren(
+      el('div', { class: 'error', text: 'activity id ไม่ถูกต้อง' })
+    );
+    return;
+  }
+
+  try {
+    const [data, detail] = await Promise.all([
+      fetch('data.json').then(r => r.json()),
+      fetch(`activities/${aid}.json`).then(r => {
+        if (!r.ok) throw new Error(`detail ไม่พบ (HTTP ${r.status})`);
+        return r.json();
+      }),
+    ]);
+
+    const act = (data.activities || []).find(a => String(a.activity_id) === aid);
+    if (!act) {
+      document.getElementById('errorBox').replaceChildren(
+        el('div', { class: 'error', text: 'ไม่พบ activity นี้ใน data.json' })
+      );
+      return;
+    }
+
+    document.title = (act.name || 'Activity') + ' — Swim Log';
+    document.getElementById('title').textContent = act.name || 'Activity';
+    const dt = new Date(act.start_local.replace(' ', 'T'));
+    document.getElementById('subtitle').textContent =
+      dt.toLocaleString('th-TH', { dateStyle: 'full', timeStyle: 'short' });
+
+    renderStats(act);
+    renderHrChart(detail);
+    renderLaps(detail);
+  } catch (e) {
+    document.getElementById('errorBox').replaceChildren(
+      el('div', { class: 'error', text: 'โหลดข้อมูลไม่ได้: ' + e.message })
+    );
+  }
+}
+
+main();
+</script>
+</body>
+</html>

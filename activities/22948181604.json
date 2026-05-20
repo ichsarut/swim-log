@@ -1,0 +1,2372 @@
+{
+  "activity_id": 22948181604,
+  "laps": [
+    {
+      "index": 1,
+      "distance_m": 50.0,
+      "duration_s": 78.13,
+      "moving_duration_s": 78.13,
+      "avg_hr": 120.0,
+      "max_hr": 135.0,
+      "calories": 16.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.6399999856948853,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 39.065,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": "DRILL",
+          "duration_s": 39.065,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 2,
+      "distance_m": 0,
+      "duration_s": 15.923,
+      "moving_duration_s": 0.0,
+      "avg_hr": 131.0,
+      "max_hr": 135.0,
+      "calories": 1.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 15.923,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 3,
+      "distance_m": 25.0,
+      "duration_s": 129.291,
+      "moving_duration_s": 129.291,
+      "avg_hr": 131.0,
+      "max_hr": 147.0,
+      "calories": 27.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.19300000369548798,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 129.291,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 4,
+      "distance_m": 0,
+      "duration_s": 3.001,
+      "moving_duration_s": 0.0,
+      "avg_hr": 128.0,
+      "max_hr": 128.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 3.001,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 5,
+      "distance_m": 0,
+      "duration_s": 17.128,
+      "moving_duration_s": 0.0,
+      "avg_hr": 130.0,
+      "max_hr": 132.0,
+      "calories": 3.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 17.128,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 6,
+      "distance_m": 25.0,
+      "duration_s": 44.737,
+      "moving_duration_s": 44.737,
+      "avg_hr": 134.0,
+      "max_hr": 142.0,
+      "calories": 11.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.5590000152587891,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 44.737,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 7,
+      "distance_m": 0,
+      "duration_s": 4.61,
+      "moving_duration_s": 0.0,
+      "avg_hr": 142.0,
+      "max_hr": 142.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 4.61,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 8,
+      "distance_m": 0,
+      "duration_s": 15.471,
+      "moving_duration_s": 0.0,
+      "avg_hr": 138.0,
+      "max_hr": 141.0,
+      "calories": 3.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 15.471,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 9,
+      "distance_m": 25.0,
+      "duration_s": 50.645,
+      "moving_duration_s": 50.645,
+      "avg_hr": 129.0,
+      "max_hr": 136.0,
+      "calories": 11.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.49399998784065247,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 50.645,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 10,
+      "distance_m": 0,
+      "duration_s": 6.14,
+      "moving_duration_s": 0.0,
+      "avg_hr": 136.0,
+      "max_hr": 136.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 6.14,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 11,
+      "distance_m": 0,
+      "duration_s": 13.935,
+      "moving_duration_s": 0.0,
+      "avg_hr": 133.0,
+      "max_hr": 136.0,
+      "calories": 3.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 13.935,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 12,
+      "distance_m": 25.0,
+      "duration_s": 51.522,
+      "moving_duration_s": 51.522,
+      "avg_hr": 131.0,
+      "max_hr": 141.0,
+      "calories": 11.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.48500001430511475,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 51.522,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 13,
+      "distance_m": 0,
+      "duration_s": 4.065,
+      "moving_duration_s": 0.0,
+      "avg_hr": 142.0,
+      "max_hr": 142.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 4.065,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 14,
+      "distance_m": 0,
+      "duration_s": 16.032,
+      "moving_duration_s": 0.0,
+      "avg_hr": 137.0,
+      "max_hr": 143.0,
+      "calories": 4.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 16.032,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 15,
+      "distance_m": 25.0,
+      "duration_s": 71.918,
+      "moving_duration_s": 71.918,
+      "avg_hr": 124.0,
+      "max_hr": 131.0,
+      "calories": 14.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.3479999899864196,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 71.918,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 16,
+      "distance_m": 0,
+      "duration_s": 3.445,
+      "moving_duration_s": 0.0,
+      "avg_hr": 131.0,
+      "max_hr": 131.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 3.445,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 17,
+      "distance_m": 0,
+      "duration_s": 16.664,
+      "moving_duration_s": 0.0,
+      "avg_hr": 130.0,
+      "max_hr": 133.0,
+      "calories": 3.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 16.664,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 18,
+      "distance_m": 25.0,
+      "duration_s": 36.636,
+      "moving_duration_s": 36.636,
+      "avg_hr": 130.0,
+      "max_hr": 136.0,
+      "calories": 8.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.6819999814033508,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 36.636,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 19,
+      "distance_m": 0,
+      "duration_s": 2.33,
+      "moving_duration_s": 0.0,
+      "avg_hr": 137.0,
+      "max_hr": 137.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 2.33,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 20,
+      "distance_m": 0,
+      "duration_s": 17.782,
+      "moving_duration_s": 0.0,
+      "avg_hr": 135.0,
+      "max_hr": 139.0,
+      "calories": 4.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 17.782,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 21,
+      "distance_m": 25.0,
+      "duration_s": 43.887,
+      "moving_duration_s": 43.887,
+      "avg_hr": 129.0,
+      "max_hr": 138.0,
+      "calories": 9.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.5699999928474426,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 43.887,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 22,
+      "distance_m": 0,
+      "duration_s": 2.961,
+      "moving_duration_s": 0.0,
+      "avg_hr": 138.0,
+      "max_hr": 138.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 2.961,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 23,
+      "distance_m": 0,
+      "duration_s": 17.122,
+      "moving_duration_s": 0.0,
+      "avg_hr": 135.0,
+      "max_hr": 138.0,
+      "calories": 4.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 17.122,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 24,
+      "distance_m": 25.0,
+      "duration_s": 44.462,
+      "moving_duration_s": 44.462,
+      "avg_hr": 131.0,
+      "max_hr": 135.0,
+      "calories": 9.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.5619999766349792,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 44.462,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 25,
+      "distance_m": 0,
+      "duration_s": 2.682,
+      "moving_duration_s": 0.0,
+      "avg_hr": 134.0,
+      "max_hr": 134.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 2.682,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 26,
+      "distance_m": 0,
+      "duration_s": 17.417,
+      "moving_duration_s": 0.0,
+      "avg_hr": 133.0,
+      "max_hr": 134.0,
+      "calories": 4.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 17.417,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 27,
+      "distance_m": 50.0,
+      "duration_s": 76.357,
+      "moving_duration_s": 76.357,
+      "avg_hr": 132.0,
+      "max_hr": 143.0,
+      "calories": 16.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.6549999713897705,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 38.178,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": "DRILL",
+          "duration_s": 38.179,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 28,
+      "distance_m": 0,
+      "duration_s": 3.138,
+      "moving_duration_s": 0.0,
+      "avg_hr": 143.0,
+      "max_hr": 144.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 3.138,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 29,
+      "distance_m": 0,
+      "duration_s": 31.941,
+      "moving_duration_s": 0.0,
+      "avg_hr": 134.0,
+      "max_hr": 144.0,
+      "calories": 7.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 31.941,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 30,
+      "distance_m": 50.0,
+      "duration_s": 56.997,
+      "moving_duration_s": 56.997,
+      "avg_hr": 132.0,
+      "max_hr": 149.0,
+      "calories": 12.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.8769999742507935,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 28.498,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": "DRILL",
+          "duration_s": 28.499,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 31,
+      "distance_m": 0,
+      "duration_s": 3.801,
+      "moving_duration_s": 0.0,
+      "avg_hr": 149.0,
+      "max_hr": 149.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 3.801,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 32,
+      "distance_m": 0,
+      "duration_s": 31.282,
+      "moving_duration_s": 0.0,
+      "avg_hr": 134.0,
+      "max_hr": 148.0,
+      "calories": 6.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 31.282,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 33,
+      "distance_m": 50.0,
+      "duration_s": 59.033,
+      "moving_duration_s": 59.033,
+      "avg_hr": 132.0,
+      "max_hr": 147.0,
+      "calories": 12.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.8470000028610231,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 29.516,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": "DRILL",
+          "duration_s": 29.517,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 34,
+      "distance_m": 0,
+      "duration_s": 2.808,
+      "moving_duration_s": 0.0,
+      "avg_hr": 146.0,
+      "max_hr": 146.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 2.808,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 35,
+      "distance_m": 0,
+      "duration_s": 32.292,
+      "moving_duration_s": 0.0,
+      "avg_hr": 134.0,
+      "max_hr": 146.0,
+      "calories": 7.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 32.292,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 36,
+      "distance_m": 50.0,
+      "duration_s": 52.742,
+      "moving_duration_s": 52.742,
+      "avg_hr": 135.0,
+      "max_hr": 150.0,
+      "calories": 11.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.9480000138282776,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 26.371,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": "DRILL",
+          "duration_s": 26.371,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 37,
+      "distance_m": 0,
+      "duration_s": 2.746,
+      "moving_duration_s": 0.0,
+      "avg_hr": 149.0,
+      "max_hr": 149.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 2.746,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 38,
+      "distance_m": 0,
+      "duration_s": 32.334,
+      "moving_duration_s": 0.0,
+      "avg_hr": 138.0,
+      "max_hr": 149.0,
+      "calories": 7.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 32.334,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 39,
+      "distance_m": 50.0,
+      "duration_s": 50.412,
+      "moving_duration_s": 50.412,
+      "avg_hr": 130.0,
+      "max_hr": 144.0,
+      "calories": 10.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.9919999837875366,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 25.206,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": "DRILL",
+          "duration_s": 25.206,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 40,
+      "distance_m": 0,
+      "duration_s": 2.873,
+      "moving_duration_s": 0.0,
+      "avg_hr": 144.0,
+      "max_hr": 144.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 2.873,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 41,
+      "distance_m": 0,
+      "duration_s": 32.218,
+      "moving_duration_s": 0.0,
+      "avg_hr": 145.0,
+      "max_hr": 154.0,
+      "calories": 7.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 32.218,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 42,
+      "distance_m": 50.0,
+      "duration_s": 56.908,
+      "moving_duration_s": 56.908,
+      "avg_hr": 141.0,
+      "max_hr": 154.0,
+      "calories": 13.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.8790000081062317,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 28.454,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": "DRILL",
+          "duration_s": 28.454,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 43,
+      "distance_m": 0,
+      "duration_s": 3.003,
+      "moving_duration_s": 0.0,
+      "avg_hr": 153.0,
+      "max_hr": 153.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 3.003,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 44,
+      "distance_m": 0,
+      "duration_s": 32.094,
+      "moving_duration_s": 0.0,
+      "avg_hr": 141.0,
+      "max_hr": 153.0,
+      "calories": 7.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 32.094,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 45,
+      "distance_m": 100.0,
+      "duration_s": 132.708,
+      "moving_duration_s": 132.708,
+      "avg_hr": 137.0,
+      "max_hr": 155.0,
+      "calories": 27.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.7540000081062317,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 33.177,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": "DRILL",
+          "duration_s": 33.177,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 3,
+          "stroke": "DRILL",
+          "duration_s": 33.177,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 4,
+          "stroke": "DRILL",
+          "duration_s": 33.177,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false
+    },
+    {
+      "index": 46,
+      "distance_m": 0,
+      "duration_s": 4.731,
+      "moving_duration_s": 0.0,
+      "avg_hr": 150.0,
+      "max_hr": 152.0,
+      "calories": 0.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 4.731,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    },
+    {
+      "index": 47,
+      "distance_m": 0,
+      "duration_s": 73.727,
+      "moving_duration_s": 0.0,
+      "avg_hr": 143.0,
+      "max_hr": 154.0,
+      "calories": 16.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": null,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 73.727,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true
+    }
+  ],
+  "hr_series": [
+    {
+      "t": 0,
+      "hr": 109
+    },
+    {
+      "t": 5,
+      "hr": 109
+    },
+    {
+      "t": 10,
+      "hr": 115
+    },
+    {
+      "t": 15,
+      "hr": 113
+    },
+    {
+      "t": 20,
+      "hr": 112
+    },
+    {
+      "t": 25,
+      "hr": 108
+    },
+    {
+      "t": 30,
+      "hr": 110
+    },
+    {
+      "t": 35,
+      "hr": 109
+    },
+    {
+      "t": 40,
+      "hr": 107
+    },
+    {
+      "t": 45,
+      "hr": 110
+    },
+    {
+      "t": 50,
+      "hr": 128
+    },
+    {
+      "t": 55,
+      "hr": 128
+    },
+    {
+      "t": 60,
+      "hr": 133
+    },
+    {
+      "t": 65,
+      "hr": 132
+    },
+    {
+      "t": 70,
+      "hr": 128
+    },
+    {
+      "t": 75,
+      "hr": 121
+    },
+    {
+      "t": 80,
+      "hr": 134
+    },
+    {
+      "t": 85,
+      "hr": 130
+    },
+    {
+      "t": 90,
+      "hr": 128
+    },
+    {
+      "t": 95,
+      "hr": 131
+    },
+    {
+      "t": 100,
+      "hr": 136
+    },
+    {
+      "t": 105,
+      "hr": 135
+    },
+    {
+      "t": 110,
+      "hr": 137
+    },
+    {
+      "t": 115,
+      "hr": 142
+    },
+    {
+      "t": 120,
+      "hr": 137
+    },
+    {
+      "t": 125,
+      "hr": 137
+    },
+    {
+      "t": 130,
+      "hr": 138
+    },
+    {
+      "t": 135,
+      "hr": 138
+    },
+    {
+      "t": 140,
+      "hr": 138
+    },
+    {
+      "t": 145,
+      "hr": 140
+    },
+    {
+      "t": 150,
+      "hr": 139
+    },
+    {
+      "t": 155,
+      "hr": 146
+    },
+    {
+      "t": 160,
+      "hr": 142
+    },
+    {
+      "t": 165,
+      "hr": 134
+    },
+    {
+      "t": 170,
+      "hr": 134
+    },
+    {
+      "t": 175,
+      "hr": 132
+    },
+    {
+      "t": 180,
+      "hr": 113
+    },
+    {
+      "t": 185,
+      "hr": 113
+    },
+    {
+      "t": 190,
+      "hr": 114
+    },
+    {
+      "t": 195,
+      "hr": 117
+    },
+    {
+      "t": 200,
+      "hr": 119
+    },
+    {
+      "t": 205,
+      "hr": 122
+    },
+    {
+      "t": 210,
+      "hr": 122
+    },
+    {
+      "t": 215,
+      "hr": 124
+    },
+    {
+      "t": 220,
+      "hr": 126
+    },
+    {
+      "t": 225,
+      "hr": 128
+    },
+    {
+      "t": 230,
+      "hr": 130
+    },
+    {
+      "t": 235,
+      "hr": 132
+    },
+    {
+      "t": 240,
+      "hr": 130
+    },
+    {
+      "t": 245,
+      "hr": 128
+    },
+    {
+      "t": 250,
+      "hr": 134
+    },
+    {
+      "t": 255,
+      "hr": 134
+    },
+    {
+      "t": 260,
+      "hr": 134
+    },
+    {
+      "t": 265,
+      "hr": 130
+    },
+    {
+      "t": 270,
+      "hr": 130
+    },
+    {
+      "t": 275,
+      "hr": 133
+    },
+    {
+      "t": 280,
+      "hr": 135
+    },
+    {
+      "t": 285,
+      "hr": 136
+    },
+    {
+      "t": 290,
+      "hr": 142
+    },
+    {
+      "t": 295,
+      "hr": 141
+    },
+    {
+      "t": 300,
+      "hr": 137
+    },
+    {
+      "t": 305,
+      "hr": 136
+    },
+    {
+      "t": 310,
+      "hr": 134
+    },
+    {
+      "t": 315,
+      "hr": 128
+    },
+    {
+      "t": 320,
+      "hr": 125
+    },
+    {
+      "t": 325,
+      "hr": 122
+    },
+    {
+      "t": 330,
+      "hr": 124
+    },
+    {
+      "t": 335,
+      "hr": 124
+    },
+    {
+      "t": 340,
+      "hr": 125
+    },
+    {
+      "t": 345,
+      "hr": 127
+    },
+    {
+      "t": 350,
+      "hr": 132
+    },
+    {
+      "t": 355,
+      "hr": 135
+    },
+    {
+      "t": 360,
+      "hr": 136
+    },
+    {
+      "t": 365,
+      "hr": 136
+    },
+    {
+      "t": 370,
+      "hr": 132
+    },
+    {
+      "t": 375,
+      "hr": 133
+    },
+    {
+      "t": 380,
+      "hr": 129
+    },
+    {
+      "t": 385,
+      "hr": 127
+    },
+    {
+      "t": 390,
+      "hr": 126
+    },
+    {
+      "t": 395,
+      "hr": 126
+    },
+    {
+      "t": 400,
+      "hr": 126
+    },
+    {
+      "t": 405,
+      "hr": 128
+    },
+    {
+      "t": 410,
+      "hr": 128
+    },
+    {
+      "t": 415,
+      "hr": 136
+    },
+    {
+      "t": 420,
+      "hr": 138
+    },
+    {
+      "t": 425,
+      "hr": 138
+    },
+    {
+      "t": 430,
+      "hr": 140
+    },
+    {
+      "t": 435,
+      "hr": 142
+    },
+    {
+      "t": 440,
+      "hr": 140
+    },
+    {
+      "t": 445,
+      "hr": 134
+    },
+    {
+      "t": 450,
+      "hr": 131
+    },
+    {
+      "t": 455,
+      "hr": 126
+    },
+    {
+      "t": 460,
+      "hr": 126
+    },
+    {
+      "t": 465,
+      "hr": 124
+    },
+    {
+      "t": 470,
+      "hr": 120
+    },
+    {
+      "t": 475,
+      "hr": 122
+    },
+    {
+      "t": 480,
+      "hr": 121
+    },
+    {
+      "t": 485,
+      "hr": 120
+    },
+    {
+      "t": 490,
+      "hr": 120
+    },
+    {
+      "t": 495,
+      "hr": 122
+    },
+    {
+      "t": 500,
+      "hr": 124
+    },
+    {
+      "t": 505,
+      "hr": 125
+    },
+    {
+      "t": 510,
+      "hr": 128
+    },
+    {
+      "t": 515,
+      "hr": 129
+    },
+    {
+      "t": 520,
+      "hr": 130
+    },
+    {
+      "t": 525,
+      "hr": 130
+    },
+    {
+      "t": 530,
+      "hr": 131
+    },
+    {
+      "t": 535,
+      "hr": 133
+    },
+    {
+      "t": 540,
+      "hr": 126
+    },
+    {
+      "t": 545,
+      "hr": 123
+    },
+    {
+      "t": 550,
+      "hr": 127
+    },
+    {
+      "t": 555,
+      "hr": 130
+    },
+    {
+      "t": 560,
+      "hr": 130
+    },
+    {
+      "t": 565,
+      "hr": 132
+    },
+    {
+      "t": 570,
+      "hr": 132
+    },
+    {
+      "t": 575,
+      "hr": 134
+    },
+    {
+      "t": 580,
+      "hr": 136
+    },
+    {
+      "t": 585,
+      "hr": 138
+    },
+    {
+      "t": 590,
+      "hr": 137
+    },
+    {
+      "t": 595,
+      "hr": 131
+    },
+    {
+      "t": 600,
+      "hr": 133
+    },
+    {
+      "t": 605,
+      "hr": 132
+    },
+    {
+      "t": 610,
+      "hr": 128
+    },
+    {
+      "t": 615,
+      "hr": 124
+    },
+    {
+      "t": 620,
+      "hr": 126
+    },
+    {
+      "t": 625,
+      "hr": 126
+    },
+    {
+      "t": 630,
+      "hr": 129
+    },
+    {
+      "t": 635,
+      "hr": 131
+    },
+    {
+      "t": 640,
+      "hr": 131
+    },
+    {
+      "t": 645,
+      "hr": 138
+    },
+    {
+      "t": 650,
+      "hr": 136
+    },
+    {
+      "t": 655,
+      "hr": 134
+    },
+    {
+      "t": 660,
+      "hr": 132
+    },
+    {
+      "t": 665,
+      "hr": 132
+    },
+    {
+      "t": 670,
+      "hr": 131
+    },
+    {
+      "t": 675,
+      "hr": 128
+    },
+    {
+      "t": 680,
+      "hr": 128
+    },
+    {
+      "t": 685,
+      "hr": 128
+    },
+    {
+      "t": 690,
+      "hr": 129
+    },
+    {
+      "t": 695,
+      "hr": 132
+    },
+    {
+      "t": 700,
+      "hr": 132
+    },
+    {
+      "t": 705,
+      "hr": 134
+    },
+    {
+      "t": 710,
+      "hr": 134
+    },
+    {
+      "t": 715,
+      "hr": 134
+    },
+    {
+      "t": 720,
+      "hr": 133
+    },
+    {
+      "t": 725,
+      "hr": 132
+    },
+    {
+      "t": 730,
+      "hr": 130
+    },
+    {
+      "t": 735,
+      "hr": 128
+    },
+    {
+      "t": 740,
+      "hr": 126
+    },
+    {
+      "t": 745,
+      "hr": 127
+    },
+    {
+      "t": 750,
+      "hr": 126
+    },
+    {
+      "t": 755,
+      "hr": 124
+    },
+    {
+      "t": 760,
+      "hr": 124
+    },
+    {
+      "t": 765,
+      "hr": 127
+    },
+    {
+      "t": 770,
+      "hr": 130
+    },
+    {
+      "t": 775,
+      "hr": 134
+    },
+    {
+      "t": 780,
+      "hr": 134
+    },
+    {
+      "t": 785,
+      "hr": 136
+    },
+    {
+      "t": 790,
+      "hr": 137
+    },
+    {
+      "t": 795,
+      "hr": 140
+    },
+    {
+      "t": 800,
+      "hr": 141
+    },
+    {
+      "t": 805,
+      "hr": 143
+    },
+    {
+      "t": 810,
+      "hr": 144
+    },
+    {
+      "t": 815,
+      "hr": 138
+    },
+    {
+      "t": 820,
+      "hr": 134
+    },
+    {
+      "t": 825,
+      "hr": 132
+    },
+    {
+      "t": 830,
+      "hr": 132
+    },
+    {
+      "t": 835,
+      "hr": 124
+    },
+    {
+      "t": 840,
+      "hr": 124
+    },
+    {
+      "t": 845,
+      "hr": 125
+    },
+    {
+      "t": 850,
+      "hr": 126
+    },
+    {
+      "t": 855,
+      "hr": 126
+    },
+    {
+      "t": 860,
+      "hr": 130
+    },
+    {
+      "t": 865,
+      "hr": 131
+    },
+    {
+      "t": 870,
+      "hr": 130
+    },
+    {
+      "t": 875,
+      "hr": 129
+    },
+    {
+      "t": 880,
+      "hr": 133
+    },
+    {
+      "t": 885,
+      "hr": 138
+    },
+    {
+      "t": 890,
+      "hr": 141
+    },
+    {
+      "t": 895,
+      "hr": 148
+    },
+    {
+      "t": 900,
+      "hr": 148
+    },
+    {
+      "t": 905,
+      "hr": 143
+    },
+    {
+      "t": 910,
+      "hr": 136
+    },
+    {
+      "t": 915,
+      "hr": 133
+    },
+    {
+      "t": 920,
+      "hr": 129
+    },
+    {
+      "t": 925,
+      "hr": 129
+    },
+    {
+      "t": 930,
+      "hr": 127
+    },
+    {
+      "t": 935,
+      "hr": 124
+    },
+    {
+      "t": 940,
+      "hr": 122
+    },
+    {
+      "t": 945,
+      "hr": 122
+    },
+    {
+      "t": 950,
+      "hr": 124
+    },
+    {
+      "t": 955,
+      "hr": 122
+    },
+    {
+      "t": 960,
+      "hr": 128
+    },
+    {
+      "t": 965,
+      "hr": 134
+    },
+    {
+      "t": 970,
+      "hr": 135
+    },
+    {
+      "t": 975,
+      "hr": 137
+    },
+    {
+      "t": 980,
+      "hr": 144
+    },
+    {
+      "t": 985,
+      "hr": 144
+    },
+    {
+      "t": 990,
+      "hr": 146
+    },
+    {
+      "t": 995,
+      "hr": 145
+    },
+    {
+      "t": 1000,
+      "hr": 136
+    },
+    {
+      "t": 1005,
+      "hr": 136
+    },
+    {
+      "t": 1010,
+      "hr": 133
+    },
+    {
+      "t": 1015,
+      "hr": 130
+    },
+    {
+      "t": 1020,
+      "hr": 125
+    },
+    {
+      "t": 1025,
+      "hr": 125
+    },
+    {
+      "t": 1030,
+      "hr": 126
+    },
+    {
+      "t": 1035,
+      "hr": 125
+    },
+    {
+      "t": 1040,
+      "hr": 125
+    },
+    {
+      "t": 1045,
+      "hr": 131
+    },
+    {
+      "t": 1050,
+      "hr": 134
+    },
+    {
+      "t": 1055,
+      "hr": 136
+    },
+    {
+      "t": 1060,
+      "hr": 137
+    },
+    {
+      "t": 1065,
+      "hr": 138
+    },
+    {
+      "t": 1070,
+      "hr": 146
+    },
+    {
+      "t": 1075,
+      "hr": 149
+    },
+    {
+      "t": 1080,
+      "hr": 149
+    },
+    {
+      "t": 1085,
+      "hr": 149
+    },
+    {
+      "t": 1090,
+      "hr": 142
+    },
+    {
+      "t": 1095,
+      "hr": 139
+    },
+    {
+      "t": 1100,
+      "hr": 135
+    },
+    {
+      "t": 1105,
+      "hr": 128
+    },
+    {
+      "t": 1110,
+      "hr": 132
+    },
+    {
+      "t": 1115,
+      "hr": 127
+    },
+    {
+      "t": 1120,
+      "hr": 127
+    },
+    {
+      "t": 1125,
+      "hr": 127
+    },
+    {
+      "t": 1130,
+      "hr": 126
+    },
+    {
+      "t": 1135,
+      "hr": 126
+    },
+    {
+      "t": 1140,
+      "hr": 128
+    },
+    {
+      "t": 1145,
+      "hr": 126
+    },
+    {
+      "t": 1150,
+      "hr": 127
+    },
+    {
+      "t": 1155,
+      "hr": 132
+    },
+    {
+      "t": 1160,
+      "hr": 138
+    },
+    {
+      "t": 1165,
+      "hr": 144
+    },
+    {
+      "t": 1170,
+      "hr": 154
+    },
+    {
+      "t": 1175,
+      "hr": 151
+    },
+    {
+      "t": 1180,
+      "hr": 148
+    },
+    {
+      "t": 1185,
+      "hr": 143
+    },
+    {
+      "t": 1190,
+      "hr": 140
+    },
+    {
+      "t": 1195,
+      "hr": 138
+    },
+    {
+      "t": 1200,
+      "hr": 137
+    },
+    {
+      "t": 1205,
+      "hr": 137
+    },
+    {
+      "t": 1210,
+      "hr": 132
+    },
+    {
+      "t": 1215,
+      "hr": 132
+    },
+    {
+      "t": 1220,
+      "hr": 137
+    },
+    {
+      "t": 1225,
+      "hr": 140
+    },
+    {
+      "t": 1230,
+      "hr": 141
+    },
+    {
+      "t": 1235,
+      "hr": 140
+    },
+    {
+      "t": 1240,
+      "hr": 140
+    },
+    {
+      "t": 1245,
+      "hr": 147
+    },
+    {
+      "t": 1250,
+      "hr": 152
+    },
+    {
+      "t": 1255,
+      "hr": 154
+    },
+    {
+      "t": 1260,
+      "hr": 153
+    },
+    {
+      "t": 1265,
+      "hr": 148
+    },
+    {
+      "t": 1270,
+      "hr": 143
+    },
+    {
+      "t": 1275,
+      "hr": 139
+    },
+    {
+      "t": 1280,
+      "hr": 138
+    },
+    {
+      "t": 1285,
+      "hr": 135
+    },
+    {
+      "t": 1290,
+      "hr": 130
+    },
+    {
+      "t": 1295,
+      "hr": 127
+    },
+    {
+      "t": 1300,
+      "hr": 120
+    },
+    {
+      "t": 1305,
+      "hr": 121
+    },
+    {
+      "t": 1310,
+      "hr": 127
+    },
+    {
+      "t": 1315,
+      "hr": 127
+    },
+    {
+      "t": 1320,
+      "hr": 123
+    },
+    {
+      "t": 1325,
+      "hr": 127
+    },
+    {
+      "t": 1330,
+      "hr": 129
+    },
+    {
+      "t": 1335,
+      "hr": 132
+    },
+    {
+      "t": 1340,
+      "hr": 130
+    },
+    {
+      "t": 1345,
+      "hr": 130
+    },
+    {
+      "t": 1350,
+      "hr": 129
+    },
+    {
+      "t": 1355,
+      "hr": 132
+    },
+    {
+      "t": 1360,
+      "hr": 136
+    },
+    {
+      "t": 1365,
+      "hr": 139
+    },
+    {
+      "t": 1370,
+      "hr": 141
+    },
+    {
+      "t": 1375,
+      "hr": 142
+    },
+    {
+      "t": 1380,
+      "hr": 141
+    },
+    {
+      "t": 1385,
+      "hr": 144
+    },
+    {
+      "t": 1390,
+      "hr": 150
+    },
+    {
+      "t": 1395,
+      "hr": 150
+    },
+    {
+      "t": 1400,
+      "hr": 149
+    },
+    {
+      "t": 1405,
+      "hr": 147
+    },
+    {
+      "t": 1410,
+      "hr": 148
+    },
+    {
+      "t": 1415,
+      "hr": 151
+    },
+    {
+      "t": 1420,
+      "hr": 154
+    },
+    {
+      "t": 1425,
+      "hr": 152
+    },
+    {
+      "t": 1430,
+      "hr": 145
+    },
+    {
+      "t": 1435,
+      "hr": 140
+    },
+    {
+      "t": 1440,
+      "hr": 139
+    },
+    {
+      "t": 1445,
+      "hr": 136
+    },
+    {
+      "t": 1450,
+      "hr": 134
+    },
+    {
+      "t": 1455,
+      "hr": 134
+    },
+    {
+      "t": 1460,
+      "hr": 136
+    },
+    {
+      "t": 1465,
+      "hr": 137
+    },
+    {
+      "t": 1470,
+      "hr": 150
+    },
+    {
+      "t": 1475,
+      "hr": 146
+    },
+    {
+      "t": 1480,
+      "hr": 144
+    },
+    {
+      "t": 1485,
+      "hr": 147
+    },
+    {
+      "t": 1490,
+      "hr": 152
+    },
+    {
+      "t": 1495,
+      "hr": 153
+    },
+    {
+      "t": 1500,
+      "hr": 153
+    }
+  ]
+}

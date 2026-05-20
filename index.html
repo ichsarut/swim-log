@@ -61,11 +61,41 @@
   }
   .card h3 { margin: 0 0 14px; font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em }
 
-  table { width: 100%; border-collapse: collapse; font-size: 14px }
-  th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line) }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; table-layout: auto }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: middle }
   th { color: var(--muted); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em }
-  td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: 'Inter', system-ui, sans-serif }
+  th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: 'Inter', system-ui, sans-serif }
+  th.center, td.center { text-align: center; font-variant-numeric: tabular-nums; font-family: 'Inter', system-ui, sans-serif }
+  td a.activity-link { color: var(--accent); text-decoration: none; font-weight: 500 }
+  td a.activity-link:hover { text-decoration: underline }
   tr:last-child td { border-bottom: none }
+
+  /* Activities table — give workout name room to breathe, keep numeric cols tight */
+  #activitiesTable th:nth-child(1),
+  #activitiesTable td:nth-child(1) { width: 90px; white-space: nowrap }
+  #activitiesTable th:nth-child(2),
+  #activitiesTable td:nth-child(2) { min-width: 200px }
+  #activitiesTable th:nth-child(3),
+  #activitiesTable td:nth-child(3),
+  #activitiesTable th:nth-child(5),
+  #activitiesTable td:nth-child(5) { width: 80px }
+  #activitiesTable th:nth-child(4),
+  #activitiesTable td:nth-child(4) { width: 130px }
+  #activitiesTable th:nth-child(6),
+  #activitiesTable td:nth-child(6),
+  #activitiesTable th:nth-child(7),
+  #activitiesTable td:nth-child(7) { width: 70px }
+
+  #scheduleTable th:nth-child(1),
+  #scheduleTable td:nth-child(1) { width: 90px; white-space: nowrap }
+  #scheduleTable th:nth-child(2),
+  #scheduleTable td:nth-child(2) { min-width: 200px }
+  #scheduleTable th:nth-child(3),
+  #scheduleTable td:nth-child(3),
+  #scheduleTable th:nth-child(4),
+  #scheduleTable td:nth-child(4) { width: 100px }
+  #scheduleTable th:nth-child(5),
+  #scheduleTable td:nth-child(5) { width: 90px }
 
   .pill {
     display: inline-block;
@@ -142,8 +172,8 @@
       <tr>
         <th>วันที่</th>
         <th>Workout</th>
-        <th class="num">เป้าระยะ</th>
-        <th class="num">เป้าเวลา</th>
+        <th class="center">เป้าระยะ</th>
+        <th class="center">เป้าเวลา</th>
         <th>Status</th>
       </tr>
     </thead>
@@ -224,9 +254,14 @@ function loadActivitiesTable(d) {
     tbody.appendChild(el('tr', {}, el('td', { colspan: 7, class: 'empty', text: 'ยังไม่มี activity' })));
     return;
   }
+  // Build name → workout target lookup so we can match by activity name when
+  // schedule.activity_id is missing (e.g. multiple activities on the same day).
+  const targetByName = {};
+  for (const w of Object.values(d.workouts)) targetByName[w.name] = w;
+
   for (const a of acts) {
     const sched = d.schedule.find(s => s.activity_id === a.activity_id);
-    const target = sched ? d.workouts[sched.workout_key] : null;
+    const target = (sched && d.workouts[sched.workout_key]) || targetByName[a.name];
     let vsCell;
     if (target) {
       const diff = a.distance_m - target.target_distance_m;
@@ -239,9 +274,14 @@ function loadActivitiesTable(d) {
     } else {
       vsCell = document.createTextNode('—');
     }
+    const link = el('a', {
+      class: 'activity-link',
+      href: `activity.html?id=${encodeURIComponent(a.activity_id)}`,
+      text: a.name || '—',
+    });
     tbody.appendChild(el('tr', {}, [
       el('td', { text: fmtDate(a.date) }),
-      el('td', { text: a.name || '—' }),
+      el('td', {}, link),
       el('td', { class: 'num', text: `${Math.round(a.distance_m)}m` }),
       el('td', { class: 'num' }, vsCell),
       el('td', { class: 'num', text: fmtDuration(a.duration_s) }),
@@ -251,7 +291,7 @@ function loadActivitiesTable(d) {
   }
 }
 
-const STATUS_LABELS = { done: 'เสร็จ', today: 'วันนี้', missed: 'ข้าม', upcoming: 'จะมา' };
+const STATUS_LABELS = { done: 'เสร็จ', today: 'วันนี้', missed: 'ข้าม', upcoming: 'รอ' };
 
 function loadScheduleTable(d) {
   const tbody = document.querySelector('#scheduleTable tbody');
@@ -261,8 +301,8 @@ function loadScheduleTable(d) {
     tbody.appendChild(el('tr', {}, [
       el('td', { text: fmtDate(s.date) }),
       el('td', { text: w.name }),
-      el('td', { class: 'num', text: `${w.target_distance_m}m` }),
-      el('td', { class: 'num', text: `${Math.round(w.target_duration_s/60)} นาที` }),
+      el('td', { class: 'center', text: `${w.target_distance_m}m` }),
+      el('td', { class: 'center', text: `${Math.round(w.target_duration_s/60)} นาที` }),
       el('td', {}, el('span', { class: `pill ${s.status}`, text: STATUS_LABELS[s.status] || s.status })),
     ]));
   }
