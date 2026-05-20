@@ -61,41 +61,16 @@
   }
   .card h3 { margin: 0 0 14px; font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em }
 
-  table { width: 100%; border-collapse: collapse; font-size: 14px; table-layout: auto }
-  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: middle }
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; table-layout: auto; min-width: 720px }
+  th, td { text-align: left; padding: 10px 10px; border-bottom: 1px solid var(--line); vertical-align: middle; white-space: nowrap }
   th { color: var(--muted); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em }
   th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: 'Inter', system-ui, sans-serif }
   th.center, td.center { text-align: center; font-variant-numeric: tabular-nums; font-family: 'Inter', system-ui, sans-serif }
   td a.activity-link { color: var(--accent); text-decoration: none; font-weight: 500 }
   td a.activity-link:hover { text-decoration: underline }
   tr:last-child td { border-bottom: none }
-
-  /* Activities table — give workout name room to breathe, keep numeric cols tight */
-  #activitiesTable th:nth-child(1),
-  #activitiesTable td:nth-child(1) { width: 90px; white-space: nowrap }
-  #activitiesTable th:nth-child(2),
-  #activitiesTable td:nth-child(2) { min-width: 200px }
-  #activitiesTable th:nth-child(3),
-  #activitiesTable td:nth-child(3),
-  #activitiesTable th:nth-child(5),
-  #activitiesTable td:nth-child(5) { width: 80px }
-  #activitiesTable th:nth-child(4),
-  #activitiesTable td:nth-child(4) { width: 130px }
-  #activitiesTable th:nth-child(6),
-  #activitiesTable td:nth-child(6),
-  #activitiesTable th:nth-child(7),
-  #activitiesTable td:nth-child(7) { width: 70px }
-
-  #scheduleTable th:nth-child(1),
-  #scheduleTable td:nth-child(1) { width: 90px; white-space: nowrap }
-  #scheduleTable th:nth-child(2),
-  #scheduleTable td:nth-child(2) { min-width: 200px }
-  #scheduleTable th:nth-child(3),
-  #scheduleTable td:nth-child(3),
-  #scheduleTable th:nth-child(4),
-  #scheduleTable td:nth-child(4) { width: 100px }
-  #scheduleTable th:nth-child(5),
-  #scheduleTable td:nth-child(5) { width: 90px }
+  .vs-target .diff { display: block; font-size: 11px; opacity: 0.85; margin-top: 1px }
 
   .pill {
     display: inline-block;
@@ -148,7 +123,8 @@
 </div>
 
 <h2>Recent activities</h2>
-<div class="card" style="padding:8px 16px">
+<div class="card" style="padding:8px 4px">
+  <div class="table-wrap">
   <table id="activitiesTable">
     <thead>
       <tr>
@@ -163,10 +139,12 @@
     </thead>
     <tbody></tbody>
   </table>
+  </div>
 </div>
 
 <h2>Schedule</h2>
-<div class="card" style="padding:8px 16px">
+<div class="card" style="padding:8px 4px">
+  <div class="table-wrap">
   <table id="scheduleTable">
     <thead>
       <tr>
@@ -179,6 +157,7 @@
     </thead>
     <tbody></tbody>
   </table>
+  </div>
 </div>
 
 <footer>
@@ -267,10 +246,10 @@ function loadActivitiesTable(d) {
       const diff = a.distance_m - target.target_distance_m;
       const pct = (a.distance_m / target.target_distance_m * 100).toFixed(0);
       const over = Math.abs(diff) > target.target_distance_m * 0.2;
-      vsCell = el('span', {
-        class: 'vs-target' + (over ? ' over' : ''),
-        text: `${pct}% (${diff >= 0 ? '+' : ''}${Math.round(diff)}m)`
-      });
+      vsCell = el('span', { class: 'vs-target' + (over ? ' over' : '') }, [
+        `${pct}%`,
+        el('span', { class: 'diff', text: `${diff >= 0 ? '+' : ''}${Math.round(diff)}m` }),
+      ]);
     } else {
       vsCell = document.createTextNode('—');
     }
