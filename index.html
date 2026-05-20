@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swim Log — Open Water 6 สัปดาห์</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg2: #111a2e;
+    --card: #16213b;
+    --line: #25304d;
+    --text: #e6eaf2;
+    --muted: #94a0bb;
+    --accent: #4cc9f0;
+    --good: #6ee7b7;
+    --warn: #fcd34d;
+    --bad: #fda4af;
+    --upcoming: #6b7a9d;
+  }
+  * { box-sizing: border-box }
+  body {
+    margin: 0;
+    background: linear-gradient(180deg, var(--bg), var(--bg2));
+    color: var(--text);
+    font-family: 'IBM Plex Sans Thai', 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px }
+  header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 32px; flex-wrap: wrap; gap: 12px }
+  h1 { font-size: 28px; font-weight: 700; margin: 0; letter-spacing: -0.02em }
+  h1 .accent { color: var(--accent) }
+  .subtitle { color: var(--muted); font-size: 14px }
+  h2 { font-size: 20px; font-weight: 600; margin: 36px 0 16px; letter-spacing: -0.01em }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 8px }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .stat-label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px }
+  .stat-value { font-size: 26px; font-weight: 700; font-family: 'Inter', system-ui, sans-serif }
+  .stat-value .unit { color: var(--muted); font-size: 18px; font-weight: 500 }
+  .stat-sub { color: var(--muted); font-size: 13px; margin-top: 2px }
+
+  .grid-2 { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px }
+  @media (max-width: 840px) { .grid-2 { grid-template-columns: 1fr } }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .card h3 { margin: 0 0 14px; font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em }
+
+  table { width: 100%; border-collapse: collapse; font-size: 14px }
+  th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line) }
+  th { color: var(--muted); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: 'Inter', system-ui, sans-serif }
+  tr:last-child td { border-bottom: none }
+
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    letter-spacing: 0.03em;
+  }
+  .pill.done { background: rgba(110, 231, 183, 0.15); color: var(--good) }
+  .pill.today { background: rgba(76, 201, 240, 0.15); color: var(--accent) }
+  .pill.missed { background: rgba(253, 164, 175, 0.15); color: var(--bad) }
+  .pill.upcoming { background: rgba(107, 122, 157, 0.15); color: var(--upcoming) }
+
+  .vs-target { font-size: 12px; color: var(--muted) }
+  .vs-target.over { color: var(--warn) }
+
+  footer { margin-top: 60px; color: var(--muted); font-size: 12px; text-align: center }
+  a { color: var(--accent); text-decoration: none }
+  a:hover { text-decoration: underline }
+
+  .chart-wrap { position: relative; height: 260px }
+
+  .empty { text-align: center; color: var(--muted); padding: 24px }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Swim <span class="accent">Log</span></h1>
+    <div class="subtitle">ตารางฝึก 6 สัปดาห์ → 1km Open Water Freestyle</div>
+  </div>
+  <div class="subtitle" id="updated">—</div>
+</header>
+
+<section class="stats" id="stats"></section>
+
+<h2>Progress</h2>
+<div class="grid-2">
+  <div class="card">
+    <h3>Distance per session</h3>
+    <div class="chart-wrap"><canvas id="distChart"></canvas></div>
+  </div>
+  <div class="card">
+    <h3>Average HR per session</h3>
+    <div class="chart-wrap"><canvas id="hrChart"></canvas></div>
+  </div>
+</div>
+
+<h2>Recent activities</h2>
+<div class="card" style="padding:8px 16px">
+  <table id="activitiesTable">
+    <thead>
+      <tr>
+        <th>วันที่</th>
+        <th>Workout</th>
+        <th class="num">ระยะ</th>
+        <th class="num">vs target</th>
+        <th class="num">เวลา</th>
+        <th class="num">HR avg</th>
+        <th class="num">SWOLF</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<h2>Schedule</h2>
+<div class="card" style="padding:8px 16px">
+  <table id="scheduleTable">
+    <thead>
+      <tr>
+        <th>วันที่</th>
+        <th>Workout</th>
+        <th class="num">เป้าระยะ</th>
+        <th class="num">เป้าเวลา</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<footer>
+  Generated by <a id="repoLink" href="#">swim-plan</a> · auto-refresh daily via GitHub Actions
+</footer>
+
+</div>
+<script>
+// --- helpers: build DOM, not innerHTML, so untrusted strings stay safe ---
+const el = (tag, attrs = {}, children = []) => {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === 'class') node.className = v;
+    else if (k === 'text') node.textContent = v;
+    else if (k === 'html') node.innerHTML = v;  // only for trusted constants
+    else node.setAttribute(k, v);
+  }
+  for (const c of [].concat(children)) {
+    if (c == null) continue;
+    if (typeof c === 'string') node.appendChild(document.createTextNode(c));
+    else node.appendChild(c);
+  }
+  return node;
+};
+
+const fmtDate = iso => {
+  const d = new Date(iso + 'T00:00:00');
+  const days = ['อา','จ','อ','พ','พฤ','ศ','ส'];
+  const months = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+  return `${days[d.getDay()]} ${d.getDate()} ${months[d.getMonth()]}`;
+};
+const fmtDuration = s => {
+  if (!s) return '—';
+  const m = Math.floor(s / 60), sec = Math.round(s % 60);
+  return `${m}:${String(sec).padStart(2,'0')}`;
+};
+const fmtNum = (v, suffix='') => v == null ? '—' : `${Math.round(v)}${suffix}`;
+
+function loadStats(d) {
+  const done = d.stats.sessions_done, total = d.stats.sessions_total;
+  const km = (d.stats.total_distance_m / 1000).toFixed(1);
+  const hrs = (d.stats.total_duration_s / 3600).toFixed(1);
+  const pct = total ? Math.round(done / total * 100) : 0;
+
+  const stats = document.getElementById('stats');
+  stats.replaceChildren(
+    statCard('Sessions', `${done}`, `/${total}`, `${pct}% ของแผน`),
+    statCard('Total distance', km, ' km', `${d.stats.total_distance_m.toLocaleString()} เมตร`),
+    statCard('Time in water', hrs, ' hr', `${Math.round(d.stats.total_duration_s/60)} นาที`),
+    statCard('วันที่', new Date(d.today + 'T00:00:00').toLocaleDateString('th-TH', {day:'numeric', month:'short'}), '', `เริ่ม ${fmtDate(d.plan_start)}`),
+  );
+
+  document.getElementById('updated').textContent =
+    'อัปเดต: ' + new Date(d.generated_at).toLocaleString('th-TH', { dateStyle: 'medium', timeStyle: 'short' });
+}
+
+function statCard(label, value, unit, sub) {
+  return el('div', { class: 'stat-card' }, [
+    el('div', { class: 'stat-label', text: label }),
+    el('div', { class: 'stat-value' }, [
+      value,
+      unit ? el('span', { class: 'unit', text: unit }) : null
+    ]),
+    el('div', { class: 'stat-sub', text: sub }),
+  ]);
+}
+
+function loadActivitiesTable(d) {
+  const tbody = document.querySelector('#activitiesTable tbody');
+  tbody.replaceChildren();
+  const acts = d.activities.slice().reverse();
+  if (!acts.length) {
+    tbody.appendChild(el('tr', {}, el('td', { colspan: 7, class: 'empty', text: 'ยังไม่มี activity' })));
+    return;
+  }
+  for (const a of acts) {
+    const sched = d.schedule.find(s => s.activity_id === a.activity_id);
+    const target = sched ? d.workouts[sched.workout_key] : null;
+    let vsCell;
+    if (target) {
+      const diff = a.distance_m - target.target_distance_m;
+      const pct = (a.distance_m / target.target_distance_m * 100).toFixed(0);
+      const over = Math.abs(diff) > target.target_distance_m * 0.2;
+      vsCell = el('span', {
+        class: 'vs-target' + (over ? ' over' : ''),
+        text: `${pct}% (${diff >= 0 ? '+' : ''}${Math.round(diff)}m)`
+      });
+    } else {
+      vsCell = document.createTextNode('—');
+    }
+    tbody.appendChild(el('tr', {}, [
+      el('td', { text: fmtDate(a.date) }),
+      el('td', { text: a.name || '—' }),
+      el('td', { class: 'num', text: `${Math.round(a.distance_m)}m` }),
+      el('td', { class: 'num' }, vsCell),
+      el('td', { class: 'num', text: fmtDuration(a.duration_s) }),
+      el('td', { class: 'num', text: fmtNum(a.avg_hr) }),
+      el('td', { class: 'num', text: fmtNum(a.avg_swolf) }),
+    ]));
+  }
+}
+
+const STATUS_LABELS = { done: 'เสร็จ', today: 'วันนี้', missed: 'ข้าม', upcoming: 'จะมา' };
+
+function loadScheduleTable(d) {
+  const tbody = document.querySelector('#scheduleTable tbody');
+  tbody.replaceChildren();
+  for (const s of d.schedule) {
+    const w = d.workouts[s.workout_key];
+    tbody.appendChild(el('tr', {}, [
+      el('td', { text: fmtDate(s.date) }),
+      el('td', { text: w.name }),
+      el('td', { class: 'num', text: `${w.target_distance_m}m` }),
+      el('td', { class: 'num', text: `${Math.round(w.target_duration_s/60)} นาที` }),
+      el('td', {}, el('span', { class: `pill ${s.status}`, text: STATUS_LABELS[s.status] || s.status })),
+    ]));
+  }
+}
+
+function chartCommon() {
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { backgroundColor: '#0b1220', borderColor: '#25304d', borderWidth: 1, padding: 10 }
+    },
+    scales: {
+      x: { ticks: { color: '#94a0bb' }, grid: { color: '#1a2440' } },
+      y: { ticks: { color: '#94a0bb' }, grid: { color: '#1a2440' }, beginAtZero: true }
+    }
+  };
+}
+
+function loadCharts(d) {
+  const labels = d.activities.map(a => fmtDate(a.date));
+  const dist = d.activities.map(a => Math.round(a.distance_m));
+  const hr = d.activities.map(a => Math.round(a.avg_hr || 0));
+
+  new Chart(document.getElementById('distChart'), {
+    type: 'bar',
+    data: { labels, datasets: [{ data: dist, backgroundColor: '#4cc9f0', borderRadius: 6 }] },
+    options: {
+      ...chartCommon(),
+      scales: {
+        ...chartCommon().scales,
+        y: { ...chartCommon().scales.y, title: { display: true, text: 'เมตร', color: '#94a0bb' } }
+      }
+    }
+  });
+
+  new Chart(document.getElementById('hrChart'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        data: hr,
+        borderColor: '#fcd34d',
+        backgroundColor: 'rgba(252, 211, 77, 0.1)',
+        tension: 0.3,
+        fill: true,
+        pointRadius: 4,
+        pointBackgroundColor: '#fcd34d'
+      }]
+    },
+    options: {
+      ...chartCommon(),
+      scales: {
+        ...chartCommon().scales,
+        y: {
+          ...chartCommon().scales.y,
+          beginAtZero: false,
+          min: 80,
+          max: 190,
+          title: { display: true, text: 'bpm', color: '#94a0bb' }
+        }
+      }
+    }
+  });
+}
+
+fetch('data.json')
+  .then(r => r.json())
+  .then(d => {
+    loadStats(d);
+    loadActivitiesTable(d);
+    loadScheduleTable(d);
+    loadCharts(d);
+  })
+  .catch(e => {
+    const msg = el('p', { text: 'โหลดข้อมูลไม่ได้: ' + e.message });
+    msg.style.color = 'var(--bad)';
+    document.querySelector('.wrap').appendChild(msg);
+  });
+</script>
+</body>
+</html>
