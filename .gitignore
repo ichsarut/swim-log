@@ -1,0 +1,12 @@
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local dev server cache
+__pycache__/
+node_modules/
+
+# Local edits — don't accidentally commit secrets
+.env
