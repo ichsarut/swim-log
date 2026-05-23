@@ -242,12 +242,12 @@
     60%  { transform: scale(1.3) rotate(10deg); opacity: 1 }
     100% { transform: scale(1) rotate(0); opacity: 1 }
   }
-  .pill.today {
+  .pill.today, .pill.next {
     background: rgba(76, 201, 240, 0.15);
     color: var(--accent);
     position: relative;
   }
-  .pill.today::before {
+  .pill.today::before, .pill.next::before {
     content: '';
     width: 6px;
     height: 6px;
@@ -261,11 +261,40 @@
     70%  { box-shadow: 0 0 0 8px rgba(76, 201, 240, 0) }
     100% { box-shadow: 0 0 0 0 rgba(76, 201, 240, 0) }
   }
-  .pill.missed { background: rgba(253, 164, 175, 0.15); color: var(--bad) }
   .pill.upcoming { background: rgba(107, 122, 157, 0.15); color: var(--upcoming) }
 
   .vs-target { font-size: 12px; color: var(--muted) }
   .vs-target.over { color: var(--warn) }
+
+  .next-workout {
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.12), rgba(76, 201, 240, 0.04));
+    border-color: rgba(76, 201, 240, 0.35);
+    padding: 16px 20px;
+    margin-bottom: 8px;
+  }
+  .next-label {
+    font-size: 12px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+  .next-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--fg);
+    margin-bottom: 4px;
+  }
+  .next-meta {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .next-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
 
   footer { margin-top: 60px; color: var(--muted); font-size: 12px; text-align: center }
   a { color: var(--accent); text-decoration: none }
@@ -362,6 +391,13 @@
 
 <section class="stats" id="stats"></section>
 
+<div class="card next-workout" id="nextWorkout" style="--delay:0.05s;display:none">
+  <div class="next-label">🏊 ครั้งต่อไป</div>
+  <div class="next-name" id="nextName">—</div>
+  <div class="next-meta" id="nextMeta">—</div>
+  <div class="next-desc" id="nextDesc"></div>
+</div>
+
 <h2 style="--delay:0.1s">Weekly summary</h2>
 <div class="card" style="padding:8px 4px">
   <div class="table-wrap">
@@ -417,13 +453,13 @@
   </div>
 </div>
 
-<h2 style="--delay:0.4s">Schedule</h2>
+<h2 style="--delay:0.4s">Rotation</h2>
 <div class="card" style="padding:8px 4px">
   <div class="table-wrap">
-  <table id="scheduleTable">
+  <table id="rotationTable">
     <thead>
       <tr>
-        <th>วันที่</th>
+        <th class="num">#</th>
         <th>Workout</th>
         <th class="center">เป้าระยะ</th>
         <th class="center">เป้าเวลา</th>
@@ -624,14 +660,13 @@ function loadActivitiesTable(d) {
     tbody.appendChild(el('tr', {}, el('td', { colspan: 7, class: 'empty', text: 'ยังไม่มี activity' })));
     return;
   }
-  // Build name → workout target lookup so we can match by activity name when
-  // schedule.activity_id is missing (e.g. multiple activities on the same day).
+  // Build name → workout target lookup; activities are matched to workout
+  // template by their activity name.
   const targetByName = {};
   for (const w of Object.values(d.workouts)) targetByName[w.name] = w;
 
   acts.forEach((a, idx) => {
-    const sched = d.schedule.find(s => s.activity_id === a.activity_id);
-    const target = (sched && d.workouts[sched.workout_key]) || targetByName[a.name];
+    const target = targetByName[a.name];
     let vsCell;
     if (target) {
       const diff = a.distance_m - target.target_distance_m;
@@ -664,21 +699,37 @@ function loadActivitiesTable(d) {
   });
 }
 
-const STATUS_LABELS = { done: 'เสร็จ', today: 'วันนี้', missed: 'ข้าม', upcoming: 'รอ' };
+const STATUS_LABELS = { done: 'เสร็จ', next: 'ครั้งต่อไป', upcoming: 'รอ' };
 
-function loadScheduleTable(d) {
-  const tbody = document.querySelector('#scheduleTable tbody');
+function loadNextWorkout(d) {
+  const next = (d.rotation || []).find(r => r.status === 'next');
+  const card = document.getElementById('nextWorkout');
+  if (!next) {
+    card.style.display = 'none';
+    return;
+  }
+  const w = d.workouts[next.workout_key];
+  if (!w) return;
+  card.style.display = '';
+  document.getElementById('nextName').textContent = w.name;
+  document.getElementById('nextMeta').textContent =
+    `เป้าระยะ ${w.target_distance_m}m · ~${Math.round(w.target_duration_s/60)} นาที · rotation ${next.rotation_index}/${d.rotation.length}`;
+  document.getElementById('nextDesc').textContent = w.description || '';
+}
+
+function loadRotationTable(d) {
+  const tbody = document.querySelector('#rotationTable tbody');
   tbody.replaceChildren();
-  d.schedule.forEach((s, i) => {
+  (d.rotation || []).forEach((s, i) => {
     const w = d.workouts[s.workout_key];
     const rowClasses = ['row-reveal'];
     if (s.status === 'done') rowClasses.push('row-done');
-    if (s.status === 'today') rowClasses.push('row-today');
+    if (s.status === 'next') rowClasses.push('row-today');
     tbody.appendChild(el('tr', {
       class: rowClasses.join(' '),
       style: `--delay:${Math.min(i * 0.04, 0.6)}s`,
     }, [
-      el('td', { text: fmtDate(s.date) }),
+      el('td', { class: 'num', text: String(s.rotation_index) }),
       el('td', { text: w.name }),
       el('td', { class: 'center', text: `${w.target_distance_m}m` }),
       el('td', { class: 'center', text: `${Math.round(w.target_duration_s/60)} นาที` }),
@@ -906,9 +957,10 @@ fetch('data.json')
   .then(r => r.json())
   .then(d => {
     loadStats(d);
+    loadNextWorkout(d);
     loadWeekly(d);
     loadActivitiesTable(d);
-    loadScheduleTable(d);
+    loadRotationTable(d);
     loadCharts(d);
     maybeCelebrate(d);
   })
