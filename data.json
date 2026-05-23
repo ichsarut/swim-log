@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-22T15:53:39.198317Z",
+  "generated_at": "2026-05-23T15:22:15.873147Z",
   "plan_start": "2026-05-18",
-  "today": "2026-05-22",
+  "today": "2026-05-23",
   "stats": {
-    "sessions_done": 5,
+    "sessions_done": 7,
     "sessions_total": 18,
-    "total_distance_m": 4150.0,
-    "total_duration_s": 10208.085083007812
+    "total_distance_m": 6125.0,
+    "total_duration_s": 14513.715087890625
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -92,7 +92,7 @@
       "workout_key": "W2.1",
       "date": "2026-05-22",
       "weekday": "Fri",
-      "status": "today",
+      "status": "missed",
       "activity_id": null
     },
     {
@@ -276,6 +276,36 @@
       "pool_length": 2500.0,
       "avg_swolf": 46.0,
       "lap_count": 29
+    },
+    {
+      "activity_id": 22983648853,
+      "name": "OW W2.1 Build to 100m",
+      "start_local": "2026-05-23 19:37:58",
+      "date": "2026-05-23",
+      "distance_m": 1575.0,
+      "duration_s": 3172.39794921875,
+      "moving_duration_s": 1780.574951171875,
+      "avg_hr": 149.0,
+      "max_hr": 182.0,
+      "calories": 780.0,
+      "pool_length": 2500.0,
+      "avg_swolf": 36.0,
+      "lap_count": 49
+    },
+    {
+      "activity_id": 22983987736,
+      "name": "Pool Swim",
+      "start_local": "2026-05-23 20:43:47",
+      "date": "2026-05-23",
+      "distance_m": 400.0,
+      "duration_s": 1133.2320556640625,
+      "moving_duration_s": 796.1690063476562,
+      "avg_hr": 135.0,
+      "max_hr": 150.0,
+      "calories": 245.0,
+      "pool_length": 2500.0,
+      "avg_swolf": 0.0,
+      "lap_count": 19
     }
   ]
 }
