@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-23T15:22:15.873147Z",
+  "generated_at": "2026-05-23T20:13:50.929163Z",
   "plan_start": "2026-05-18",
   "today": "2026-05-23",
   "stats": {
-    "sessions_done": 7,
+    "sessions_done": 3,
     "sessions_total": 18,
     "total_distance_m": 6125.0,
     "total_duration_s": 14513.715087890625
@@ -20,183 +20,165 @@
   "workouts": {
     "W1.1": {
       "name": "OW W1.1 Technique Base",
-      "target_distance_m": 1150.0,
+      "target_distance_m": 0,
       "target_duration_s": 3060,
-      "description": "สัปดาห์ 1-2 เน้นเทคนิค ดริล 50ม. แก้ฟอร์ม + 6x75ม. ฟรีสไตล์ช้า ๆ. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ"
+      "description": "สัปดาห์ 1-2 เน้นเทคนิค ดริล + 6x75ม. ฟรีสไตล์ช้า ๆ. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W1.2": {
       "name": "OW W1.2 Side Kick Focus",
-      "target_distance_m": 1300.0,
+      "target_distance_m": 0,
       "target_duration_s": 3160,
-      "description": "สัปดาห์ 1-2 เน้นเทคนิค Side kick + 6-3-6 + 6x100ม. ฟรีสไตล์ (ไม่ว่ายกบ). ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ"
+      "description": "สัปดาห์ 1-2 เน้นเทคนิค Side kick + 6-3-6 + 6x100ม. ฟรีสไตล์ (ไม่ว่ายกบ). ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W2.1": {
       "name": "OW W2.1 Build to 100m",
-      "target_distance_m": 1200.0,
+      "target_distance_m": 0,
       "target_duration_s": 3060,
-      "description": "สัปดาห์ 1-2 Catch-up + Fingertip drag + 4x125ม. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ"
+      "description": "สัปดาห์ 1-2 Catch-up + Fingertip drag + 4x125ม. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W3.1": {
       "name": "OW W3.1 6x150",
-      "target_distance_m": 1300.0,
+      "target_distance_m": 0,
       "target_duration_s": 3160,
-      "description": "สัปดาห์ 3-4 ต่อระยะ 6x150ม. ว่ายช้า ๆ คุยได้สบาย. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ"
+      "description": "สัปดาห์ 3-4 ต่อระยะ 6x150ม. ว่ายช้า ๆ คุยได้สบาย. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W3.2": {
       "name": "OW W3.2 4x200",
-      "target_distance_m": 1300.0,
+      "target_distance_m": 0,
       "target_duration_s": 3210,
-      "description": "สัปดาห์ 3-4 ดริลวอร์ม + 4x200ม. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ"
+      "description": "สัปดาห์ 3-4 ดริลวอร์ม + 4x200ม. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W4.1": {
       "name": "OW W4.1 Pyramid",
-      "target_distance_m": 1100.0,
+      "target_distance_m": 0,
       "target_duration_s": 3360,
-      "description": "สัปดาห์ 3-4 ปิรามิดลด 300/200/100/50. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ"
+      "description": "สัปดาห์ 3-4 ปิรามิดลด 300/200/100/50. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W5.1": {
       "name": "OW W5.1 Sighting 4x250",
-      "target_distance_m": 1400.0,
+      "target_distance_m": 0,
       "target_duration_s": 3320,
-      "description": "สัปดาห์ 5-6 ทักษะ open water ฝึก sighting (เงยหน้ามองข้างหน้าโดยไม่หยุด). ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ"
+      "description": "สัปดาห์ 5-6 ทักษะ open water ฝึก sighting (เงยหน้ามองข้างหน้าโดยไม่หยุด). ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W5.2": {
       "name": "OW W5.2 Descending Set",
-      "target_distance_m": 1500.0,
+      "target_distance_m": 0,
       "target_duration_s": 3320,
-      "description": "สัปดาห์ 5-6 ลดระยะ 500/250/100 ต่อระยะยาว. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ"
+      "description": "สัปดาห์ 5-6 ลดระยะ 500/250/100 ต่อระยะยาว. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W6": {
       "name": "OW W6 Test 1000m",
-      "target_distance_m": 1400.0,
+      "target_distance_m": 0,
       "target_duration_s": 3260,
       "description": "สัปดาห์ 6 วันทดสอบ ว่ายต่อเนื่อง 1000ม. ไม่หยุด (ช้าก็ได้ ขอให้ครบ)"
     }
   },
-  "schedule": [
+  "rotation": [
     {
       "workout_key": "W1.1",
-      "date": "2026-05-18",
-      "weekday": "Mon",
-      "status": "missed",
-      "activity_id": null
+      "rotation_index": 1,
+      "status": "done",
+      "activity_id": 22935303899
     },
     {
       "workout_key": "W1.2",
-      "date": "2026-05-20",
-      "weekday": "Wed",
+      "rotation_index": 2,
       "status": "done",
       "activity_id": 22948181604
     },
     {
       "workout_key": "W2.1",
-      "date": "2026-05-22",
-      "weekday": "Fri",
-      "status": "missed",
-      "activity_id": null
+      "rotation_index": 3,
+      "status": "done",
+      "activity_id": 22983648853
     },
     {
       "workout_key": "W1.2",
-      "date": "2026-05-25",
-      "weekday": "Mon",
-      "status": "upcoming",
+      "rotation_index": 4,
+      "status": "next",
       "activity_id": null
     },
     {
       "workout_key": "W2.1",
-      "date": "2026-05-27",
-      "weekday": "Wed",
+      "rotation_index": 5,
       "status": "upcoming",
       "activity_id": null
     },
     {
       "workout_key": "W1.1",
-      "date": "2026-05-29",
-      "weekday": "Fri",
+      "rotation_index": 6,
       "status": "upcoming",
       "activity_id": null
     },
     {
       "workout_key": "W3.1",
-      "date": "2026-06-01",
-      "weekday": "Mon",
+      "rotation_index": 7,
       "status": "upcoming",
       "activity_id": null
     },
     {
       "workout_key": "W3.2",
-      "date": "2026-06-03",
-      "weekday": "Wed",
+      "rotation_index": 8,
       "status": "upcoming",
       "activity_id": null
     },
     {
       "workout_key": "W4.1",
-      "date": "2026-06-05",
-      "weekday": "Fri",
+      "rotation_index": 9,
       "status": "upcoming",
       "activity_id": null
     },
     {
       "workout_key": "W3.2",
-      "date": "2026-06-08",
-      "weekday": "Mon",
+      "rotation_index": 10,
       "status": "upcoming",
       "activity_id": null
     },
     {
       "workout_key": "W4.1",
-      "date": "2026-06-10",
-      "weekday": "Wed",
+      "rotation_index": 11,
       "status": "upcoming",
       "activity_id": null
     },
     {
       "workout_key": "W3.1",
-      "date": "2026-06-12",
-      "weekday": "Fri",
+      "rotation_index": 12,
       "status": "upcoming",
       "activity_id": null
     },
     {
       "workout_key": "W5.1",
-      "date": "2026-06-15",
-      "weekday": "Mon",
+      "rotation_index": 13,
       "status": "upcoming",
       "activity_id": null
     },
     {
       "workout_key": "W5.2",
-      "date": "2026-06-17",
-      "weekday": "Wed",
+      "rotation_index": 14,
       "status": "upcoming",
       "activity_id": null
     },
     {
       "workout_key": "W5.1",
-      "date": "2026-06-19",
-      "weekday": "Fri",
+      "rotation_index": 15,
       "status": "upcoming",
       "activity_id": null
     },
     {
       "workout_key": "W5.2",
-      "date": "2026-06-22",
-      "weekday": "Mon",
+      "rotation_index": 16,
       "status": "upcoming",
       "activity_id": null
     },
     {
       "workout_key": "W5.1",
-      "date": "2026-06-24",
-      "weekday": "Wed",
+      "rotation_index": 17,
       "status": "upcoming",
       "activity_id": null
     },
     {
       "workout_key": "W6",
-      "date": "2026-06-26",
-      "weekday": "Fri",
+      "rotation_index": 18,
       "status": "upcoming",
       "activity_id": null
     }
