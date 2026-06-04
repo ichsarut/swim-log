@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-24T15:23:06.320333Z",
+  "generated_at": "2026-06-04T16:06:58.505734Z",
   "plan_start": "2026-05-18",
-  "today": "2026-05-24",
+  "today": "2026-06-04",
   "stats": {
-    "sessions_done": 3,
+    "sessions_done": 5,
     "sessions_total": 18,
-    "total_distance_m": 6125.0,
-    "total_duration_s": 14513.715087890625
+    "total_distance_m": 8550.0,
+    "total_duration_s": 21528.376953125
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -95,19 +95,19 @@
     {
       "workout_key": "W1.2",
       "rotation_index": 4,
-      "status": "next",
-      "activity_id": null
+      "status": "done",
+      "activity_id": 23044145787
     },
     {
       "workout_key": "W2.1",
       "rotation_index": 5,
-      "status": "upcoming",
-      "activity_id": null
+      "status": "done",
+      "activity_id": 23128765119
     },
     {
       "workout_key": "W1.1",
       "rotation_index": 6,
-      "status": "upcoming",
+      "status": "next",
       "activity_id": null
     },
     {
@@ -288,6 +288,36 @@
       "pool_length": 2500.0,
       "avg_swolf": 0.0,
       "lap_count": 19
+    },
+    {
+      "activity_id": 23044145787,
+      "name": "OW W1.2 Side Kick Focus",
+      "start_local": "2026-05-28 19:34:36",
+      "date": "2026-05-28",
+      "distance_m": 1175.0,
+      "duration_s": 3813.345947265625,
+      "moving_duration_s": 1896.2359619140625,
+      "avg_hr": 136.0,
+      "max_hr": 176.0,
+      "calories": 792.0,
+      "pool_length": 2500.0,
+      "avg_swolf": 50.0,
+      "lap_count": 55
+    },
+    {
+      "activity_id": 23128765119,
+      "name": "OW W2.1 Build to 100m",
+      "start_local": "2026-06-04 20:32:10",
+      "date": "2026-06-04",
+      "distance_m": 1250.0,
+      "duration_s": 3201.31591796875,
+      "moving_duration_s": 1934.3179931640625,
+      "avg_hr": 148.0,
+      "max_hr": 186.0,
+      "calories": 735.0,
+      "pool_length": 2500.0,
+      "avg_swolf": 52.0,
+      "lap_count": 52
     }
   ]
 }
