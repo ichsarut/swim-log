@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-14T15:32:35.707625Z",
+  "generated_at": "2026-06-15T16:35:11.078139Z",
   "plan_start": "2026-05-18",
-  "today": "2026-06-14",
+  "today": "2026-06-15",
   "stats": {
     "sessions_done": 5,
     "sessions_total": 18,
-    "total_distance_m": 8550.0,
-    "total_duration_s": 21528.376953125
+    "total_distance_m": 10000.0,
+    "total_duration_s": 25339.681884765625
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -318,6 +318,21 @@
       "pool_length": 2500.0,
       "avg_swolf": 52.0,
       "lap_count": 52
+    },
+    {
+      "activity_id": 23257457466,
+      "name": "OW W3.1 6x150",
+      "start_local": "2026-06-15 19:51:58",
+      "date": "2026-06-15",
+      "distance_m": 1450.0,
+      "duration_s": 3811.304931640625,
+      "moving_duration_s": 2011.323974609375,
+      "avg_hr": 146.0,
+      "max_hr": 185.0,
+      "calories": 744.0,
+      "pool_length": 2500.0,
+      "avg_swolf": 42.0,
+      "lap_count": 48
     }
   ]
 }
