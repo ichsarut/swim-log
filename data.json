@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-17T16:15:04.375786Z",
+  "generated_at": "2026-06-18T16:08:56.716376Z",
   "plan_start": "2026-05-18",
-  "today": "2026-06-17",
+  "today": "2026-06-18",
   "stats": {
     "sessions_done": 5,
     "sessions_total": 18,
-    "total_distance_m": 13325.0,
-    "total_duration_s": 31724.493896484375
+    "total_distance_m": 14525.0,
+    "total_duration_s": 33874.72900390625
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -19,58 +19,82 @@
   },
   "workouts": {
     "W1.1": {
-      "name": "OW W1.1 Technique Base",
-      "target_distance_m": 0,
-      "target_duration_s": 3060,
-      "description": "สัปดาห์ 1-2 เน้นเทคนิค ดริล + 6x75ม. ฟรีสไตล์ช้า ๆ. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
+      "name": "W1.1 • 1350m • Technique Base",
+      "target_distance_m": 1350.0,
+      "target_duration_s": 3300,
+      "description": "สัปดาห์ 1-2 แก้หายใจซ้าย/ตัวจม: Kick on side + 6-1-6 + 6x75ม. ฟรีสไตล์. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W1.2": {
-      "name": "OW W1.2 Side Kick Focus",
-      "target_distance_m": 0,
-      "target_duration_s": 3160,
-      "description": "สัปดาห์ 1-2 เน้นเทคนิค Side kick + 6-3-6 + 6x100ม. ฟรีสไตล์ (ไม่ว่ายกบ). ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
+      "name": "W1.2 • 1500m • Side Kick Focus",
+      "target_distance_m": 1500.0,
+      "target_duration_s": 3420,
+      "description": "สัปดาห์ 1-2 แก้หายใจซ้าย: Kick on side+pull buoy + single-arm + 6x100ม. (ฟรีสไตล์ล้วน). ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W2.1": {
-      "name": "OW W2.1 Build to 100m",
-      "target_distance_m": 0,
-      "target_duration_s": 3060,
-      "description": "สัปดาห์ 1-2 Catch-up + Fingertip drag + 4x125ม. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
+      "name": "W2.1 • 1400m • Build to 100m",
+      "target_distance_m": 1400.0,
+      "target_duration_s": 3300,
+      "description": "สัปดาห์ 1-2 6-1-6 + Catch-up + 5x100ม. (เป้า: 100ม. ติดสบาย หายใจ bilateral). ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W3.1": {
-      "name": "OW W3.1 6x150",
-      "target_distance_m": 0,
+      "name": "W3.1 • 1300m • 6x150",
+      "target_distance_m": 1300.0,
       "target_duration_s": 3160,
       "description": "สัปดาห์ 3-4 ต่อระยะ 6x150ม. ว่ายช้า ๆ คุยได้สบาย. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W3.2": {
-      "name": "OW W3.2 4x200",
-      "target_distance_m": 0,
+      "name": "W3.2 • 1300m • 4x200",
+      "target_distance_m": 1300.0,
       "target_duration_s": 3210,
       "description": "สัปดาห์ 3-4 ดริลวอร์ม + 4x200ม. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W4.1": {
-      "name": "OW W4.1 Pyramid",
-      "target_distance_m": 0,
+      "name": "W4.1 • 1100m • Pyramid",
+      "target_distance_m": 1100.0,
       "target_duration_s": 3360,
       "description": "สัปดาห์ 3-4 ปิรามิดลด 300/200/100/50. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W5.1": {
-      "name": "OW W5.1 Sighting 4x250",
-      "target_distance_m": 0,
+      "name": "W5.1 • 1400m • Sighting 4x250",
+      "target_distance_m": 1400.0,
       "target_duration_s": 3320,
       "description": "สัปดาห์ 5-6 ทักษะ open water ฝึก sighting (เงยหน้ามองข้างหน้าโดยไม่หยุด). ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W5.2": {
-      "name": "OW W5.2 Descending Set",
-      "target_distance_m": 0,
+      "name": "W5.2 • 1500m • Descending Set",
+      "target_distance_m": 1500.0,
       "target_duration_s": 3320,
       "description": "สัปดาห์ 5-6 ลดระยะ 500/250/100 ต่อระยะยาว. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
     },
     "W6": {
-      "name": "OW W6 Test 1000m",
-      "target_distance_m": 0,
+      "name": "W6 • 1400m • Test 1000m",
+      "target_distance_m": 1400.0,
       "target_duration_s": 3260,
       "description": "สัปดาห์ 6 วันทดสอบ ว่ายต่อเนื่อง 1000ม. ไม่หยุด (ช้าก็ได้ ขอให้ครบ)"
+    },
+    "B.KICK": {
+      "name": "B.KICK • 250m • Bonus Kickboard",
+      "target_distance_m": 250.0,
+      "target_duration_s": 720,
+      "description": "โบนัสหลัง main session: kickboard 4x50ม. เน้นจังหวะเตะและ body position"
+    },
+    "B.BREATH": {
+      "name": "B.BREATH • 350m • Bonus Bilateral",
+      "target_distance_m": 350.0,
+      "target_duration_s": 900,
+      "description": "โบนัสหลัง main session: 6x50ม. ฟรีสไตล์หายใจสองฝั่งทุก 3 จังหวะ เน้น balance"
+    },
+    "B.PULL": {
+      "name": "B.PULL • 250m • Bonus Pull/Catch",
+      "target_distance_m": 250.0,
+      "target_duration_s": 720,
+      "description": "โบนัสหลัง main session: pull buoy 4x50ม. เน้น catch ตอนแรกของ stroke"
+    },
+    "B.EASY": {
+      "name": "B.EASY • 350m • Bonus Easy",
+      "target_distance_m": 350.0,
+      "target_duration_s": 720,
+      "description": "โบนัสหลัง main session: 300ม. ต่อเนื่อง pace สบาย ๆ ไม่หยุด + คูลดาวน์"
     }
   },
   "rotation": [
@@ -195,7 +219,7 @@
       "avg_hr": 139.0,
       "max_hr": 179.0,
       "calories": 637.0,
-      "pool_length": 2500.0,
+      "pool_length": 25.0,
       "avg_swolf": 31.0,
       "lap_count": 60
     },
@@ -210,7 +234,7 @@
       "avg_hr": 134.0,
       "max_hr": 158.0,
       "calories": 288.0,
-      "pool_length": 2500.0,
+      "pool_length": 25.0,
       "avg_swolf": 0.0,
       "lap_count": 47
     },
@@ -225,7 +249,7 @@
       "avg_hr": 133.0,
       "max_hr": 155.0,
       "calories": 303.0,
-      "pool_length": 2500.0,
+      "pool_length": 25.0,
       "avg_swolf": 0.0,
       "lap_count": 47
     },
@@ -240,7 +264,7 @@
       "avg_hr": 139.0,
       "max_hr": 172.0,
       "calories": 533.0,
-      "pool_length": 2500.0,
+      "pool_length": 25.0,
       "avg_swolf": 51.0,
       "lap_count": 38
     },
@@ -255,7 +279,7 @@
       "avg_hr": 141.0,
       "max_hr": 166.0,
       "calories": 365.0,
-      "pool_length": 2500.0,
+      "pool_length": 25.0,
       "avg_swolf": 46.0,
       "lap_count": 29
     },
@@ -270,7 +294,7 @@
       "avg_hr": 149.0,
       "max_hr": 182.0,
       "calories": 780.0,
-      "pool_length": 2500.0,
+      "pool_length": 25.0,
       "avg_swolf": 36.0,
       "lap_count": 49
     },
@@ -285,7 +309,7 @@
       "avg_hr": 135.0,
       "max_hr": 150.0,
       "calories": 245.0,
-      "pool_length": 2500.0,
+      "pool_length": 25.0,
       "avg_swolf": 0.0,
       "lap_count": 19
     },
@@ -300,7 +324,7 @@
       "avg_hr": 136.0,
       "max_hr": 176.0,
       "calories": 792.0,
-      "pool_length": 2500.0,
+      "pool_length": 25.0,
       "avg_swolf": 50.0,
       "lap_count": 55
     },
@@ -315,7 +339,7 @@
       "avg_hr": 148.0,
       "max_hr": 186.0,
       "calories": 735.0,
-      "pool_length": 2500.0,
+      "pool_length": 25.0,
       "avg_swolf": 52.0,
       "lap_count": 52
     },
@@ -330,7 +354,7 @@
       "avg_hr": 146.0,
       "max_hr": 185.0,
       "calories": 744.0,
-      "pool_length": 2500.0,
+      "pool_length": 25.0,
       "avg_swolf": 42.0,
       "lap_count": 48
     },
@@ -345,7 +369,7 @@
       "avg_hr": 136.0,
       "max_hr": 170.0,
       "calories": 619.0,
-      "pool_length": 2500.0,
+      "pool_length": 25.0,
       "avg_swolf": 42.0,
       "lap_count": 43
     },
@@ -360,9 +384,24 @@
       "avg_hr": 145.0,
       "max_hr": 177.0,
       "calories": 684.0,
-      "pool_length": 2500.0,
+      "pool_length": 25.0,
       "avg_swolf": 45.0,
       "lap_count": 56
+    },
+    {
+      "activity_id": 23295114841,
+      "name": "W1.2 • 1500m • Side Kick Foc",
+      "start_local": "2026-06-18 20:32:35",
+      "date": "2026-06-18",
+      "distance_m": 1200.0,
+      "duration_s": 2150.235107421875,
+      "moving_duration_s": 1379.239013671875,
+      "avg_hr": 148.0,
+      "max_hr": 175.0,
+      "calories": 466.0,
+      "pool_length": 25.0,
+      "avg_swolf": 37.0,
+      "lap_count": 44
     }
   ]
 }
