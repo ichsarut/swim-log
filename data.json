@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-19T16:01:02.146795Z",
+  "generated_at": "2026-06-20T15:31:36.083387Z",
   "plan_start": "2026-05-18",
-  "today": "2026-06-19",
+  "today": "2026-06-20",
   "stats": {
     "sessions_done": 5,
     "sessions_total": 18,
-    "total_distance_m": 14525.0,
-    "total_duration_s": 33874.72900390625
+    "total_distance_m": 15875.0,
+    "total_duration_s": 36556.151123046875
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -402,6 +402,21 @@
       "pool_length": 25.0,
       "avg_swolf": 37.0,
       "lap_count": 44
+    },
+    {
+      "activity_id": 23317918763,
+      "name": "W4.1 • 1100m • Pyramid",
+      "start_local": "2026-06-20 20:20:51",
+      "date": "2026-06-20",
+      "distance_m": 1350.0,
+      "duration_s": 2681.422119140625,
+      "moving_duration_s": 1656.1280517578125,
+      "avg_hr": 132.0,
+      "max_hr": 165.0,
+      "calories": 491.0,
+      "pool_length": 25.0,
+      "avg_swolf": 37.0,
+      "lap_count": 33
     }
   ]
 }
