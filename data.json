@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-21T15:33:07.370185Z",
+  "generated_at": "2026-06-22T16:32:46.044237Z",
   "plan_start": "2026-05-18",
-  "today": "2026-06-21",
+  "today": "2026-06-22",
   "stats": {
     "sessions_done": 5,
     "sessions_total": 18,
-    "total_distance_m": 15875.0,
-    "total_duration_s": 36556.151123046875
+    "total_distance_m": 17475.0,
+    "total_duration_s": 39624.4541015625
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -417,6 +417,21 @@
       "pool_length": 25.0,
       "avg_swolf": 37.0,
       "lap_count": 33
+    },
+    {
+      "activity_id": 23339770232,
+      "name": "W2.1 • 1400m • Build to 100m",
+      "start_local": "2026-06-22 19:55:12",
+      "date": "2026-06-22",
+      "distance_m": 1600.0,
+      "duration_s": 3068.302978515625,
+      "moving_duration_s": 2066.344970703125,
+      "avg_hr": 142.0,
+      "max_hr": 167.0,
+      "calories": 616.0,
+      "pool_length": 25.0,
+      "avg_swolf": 43.0,
+      "lap_count": 57
     }
   ]
 }
