@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-23T15:58:34.808903Z",
+  "generated_at": "2026-06-24T15:45:16.375377Z",
   "plan_start": "2026-05-18",
-  "today": "2026-06-23",
+  "today": "2026-06-24",
   "stats": {
     "sessions_done": 5,
     "sessions_total": 18,
-    "total_distance_m": 17475.0,
-    "total_duration_s": 39624.4541015625
+    "total_distance_m": 18975.0,
+    "total_duration_s": 42408.44110107422
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -432,6 +432,51 @@
       "pool_length": 25.0,
       "avg_swolf": 43.0,
       "lap_count": 57
+    },
+    {
+      "activity_id": 23364316103,
+      "name": "W3.1 • 1300m • 6x150",
+      "start_local": "2026-06-24 20:20:38",
+      "date": "2026-06-24",
+      "distance_m": 1050.0,
+      "duration_s": 1787.7239990234375,
+      "moving_duration_s": 1446.447021484375,
+      "avg_hr": 130.0,
+      "max_hr": 152.0,
+      "calories": 339.0,
+      "pool_length": 25.0,
+      "avg_swolf": 44.0,
+      "lap_count": 25
+    },
+    {
+      "activity_id": 23364316768,
+      "name": "B.KICK • 250m • Bonus Kickbo",
+      "start_local": "2026-06-24 20:53:21",
+      "date": "2026-06-24",
+      "distance_m": 50.0,
+      "duration_s": 530.1329956054688,
+      "moving_duration_s": 71.49199676513672,
+      "avg_hr": 122.0,
+      "max_hr": 142.0,
+      "calories": 95.0,
+      "pool_length": 25.0,
+      "avg_swolf": 45.0,
+      "lap_count": 11
+    },
+    {
+      "activity_id": 23364317497,
+      "name": "B.EASY • 350m • Bonus Easy",
+      "start_local": "2026-06-24 21:03:24",
+      "date": "2026-06-24",
+      "distance_m": 400.0,
+      "duration_s": 466.1300048828125,
+      "moving_duration_s": 377.5769958496094,
+      "avg_hr": 138.0,
+      "max_hr": 156.0,
+      "calories": 97.0,
+      "pool_length": 25.0,
+      "avg_swolf": 30.0,
+      "lap_count": 6
     }
   ]
 }
