@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-13T17:04:53.582425Z",
+  "generated_at": "2026-07-14T16:07:33.356734Z",
   "plan_start": "2026-05-18",
-  "today": "2026-07-13",
+  "today": "2026-07-14",
   "stats": {
     "sessions_done": 5,
     "sessions_total": 18,
-    "total_distance_m": 18975.0,
-    "total_duration_s": 42408.44110107422
+    "total_distance_m": 20425.0,
+    "total_duration_s": 45491.518005371094
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -477,6 +477,51 @@
       "pool_length": 25.0,
       "avg_swolf": 30.0,
       "lap_count": 6
+    },
+    {
+      "activity_id": 23595310099,
+      "name": "W2.1 • 1400m • Build to 100m",
+      "start_local": "2026-07-14 19:46:41",
+      "date": "2026-07-14",
+      "distance_m": 1200.0,
+      "duration_s": 2168.431884765625,
+      "moving_duration_s": 1446.7879638671875,
+      "avg_hr": 137.0,
+      "max_hr": 176.0,
+      "calories": 447.0,
+      "pool_length": 25.0,
+      "avg_swolf": 38.0,
+      "lap_count": 55
+    },
+    {
+      "activity_id": 23595310790,
+      "name": "B.KICK • 250m • Bonus Kickbo",
+      "start_local": "2026-07-14 20:30:45",
+      "date": "2026-07-14",
+      "distance_m": 50.0,
+      "duration_s": 495.8330078125,
+      "moving_duration_s": 69.6520004272461,
+      "avg_hr": 133.0,
+      "max_hr": 160.0,
+      "calories": 95.0,
+      "pool_length": 25.0,
+      "avg_swolf": 42.0,
+      "lap_count": 14
+    },
+    {
+      "activity_id": 23595311412,
+      "name": "B.PULL • 250m • Bonus Pull/C",
+      "start_local": "2026-07-14 20:41:14",
+      "date": "2026-07-14",
+      "distance_m": 200.0,
+      "duration_s": 418.81201171875,
+      "moving_duration_s": 336.2250061035156,
+      "avg_hr": 137.0,
+      "max_hr": 161.0,
+      "calories": 87.0,
+      "pool_length": 25.0,
+      "avg_swolf": 54.0,
+      "lap_count": 11
     }
   ]
 }
