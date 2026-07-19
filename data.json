@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-18T15:43:53.713879Z",
+  "generated_at": "2026-07-19T15:44:49.375809Z",
   "plan_start": "2026-05-18",
-  "today": "2026-07-18",
+  "today": "2026-07-19",
   "stats": {
     "sessions_done": 5,
     "sessions_total": 18,
-    "total_distance_m": 21850.0,
-    "total_duration_s": 48244.314025878906
+    "total_distance_m": 24950.0,
+    "total_duration_s": 53282.183166503906
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -552,6 +552,36 @@
       "pool_length": 25.0,
       "avg_swolf": 38.0,
       "lap_count": 47
+    },
+    {
+      "activity_id": 23652472932,
+      "name": "W3.1 • 1300m • 6x150",
+      "start_local": "2026-07-18 19:44:15",
+      "date": "2026-07-18",
+      "distance_m": 1575.0,
+      "duration_s": 2614.613037109375,
+      "moving_duration_s": 2008.843017578125,
+      "avg_hr": 144.0,
+      "max_hr": 179.0,
+      "calories": 599.0,
+      "pool_length": 25.0,
+      "avg_swolf": 38.0,
+      "lap_count": 31
+    },
+    {
+      "activity_id": 23654366166,
+      "name": "W3.2 • 1300m • 4x200",
+      "start_local": "2026-07-19 19:56:20",
+      "date": "2026-07-19",
+      "distance_m": 1525.0,
+      "duration_s": 2423.256103515625,
+      "moving_duration_s": 1838.0589599609375,
+      "avg_hr": 148.0,
+      "max_hr": 180.0,
+      "calories": 532.0,
+      "pool_length": 25.0,
+      "avg_swolf": 36.0,
+      "lap_count": 37
     }
   ]
 }
