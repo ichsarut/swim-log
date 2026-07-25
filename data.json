@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-23T16:18:25.310511Z",
+  "generated_at": "2026-07-25T15:55:05.059416Z",
   "plan_start": "2026-05-18",
-  "today": "2026-07-23",
+  "today": "2026-07-25",
   "stats": {
     "sessions_done": 5,
     "sessions_total": 18,
-    "total_distance_m": 24950.0,
-    "total_duration_s": 53282.183166503906
+    "total_distance_m": 28100.0,
+    "total_duration_s": 59054.157287597656
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -582,6 +582,36 @@
       "pool_length": 25.0,
       "avg_swolf": 36.0,
       "lap_count": 37
+    },
+    {
+      "activity_id": 23715828477,
+      "name": "R1.1 • 1900m • Re-entry Dril",
+      "start_local": "2026-07-23 19:49:32",
+      "date": "2026-07-23",
+      "distance_m": 1450.0,
+      "duration_s": 2841.22607421875,
+      "moving_duration_s": 1696.3580322265625,
+      "avg_hr": 137.0,
+      "max_hr": 170.0,
+      "calories": 526.0,
+      "pool_length": 25.0,
+      "avg_swolf": 38.0,
+      "lap_count": 57
+    },
+    {
+      "activity_id": 23715829377,
+      "name": "R1.2 • 1800m • Re-entry Dril",
+      "start_local": "2026-07-24 19:27:18",
+      "date": "2026-07-24",
+      "distance_m": 1700.0,
+      "duration_s": 2930.748046875,
+      "moving_duration_s": 1893.7130126953125,
+      "avg_hr": 128.0,
+      "max_hr": 149.0,
+      "calories": 554.0,
+      "pool_length": 25.0,
+      "avg_swolf": 36.0,
+      "lap_count": 42
     }
   ]
 }
