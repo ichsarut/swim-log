@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-02T15:51:35.040491Z",
+  "generated_at": "2026-08-03T17:03:28.168207Z",
   "plan_start": "2026-05-18",
-  "today": "2026-08-02",
+  "today": "2026-08-03",
   "stats": {
     "sessions_done": 5,
     "sessions_total": 18,
-    "total_distance_m": 28100.0,
-    "total_duration_s": 59054.157287597656
+    "total_distance_m": 32900.0,
+    "total_duration_s": 66084.77429199219
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -612,6 +612,66 @@
       "pool_length": 25.0,
       "avg_swolf": 36.0,
       "lap_count": 42
+    },
+    {
+      "activity_id": 23835591029,
+      "name": "R1.2 • 1800m • Re-entry Dril",
+      "start_local": "2026-07-29 19:51:33",
+      "date": "2026-07-29",
+      "distance_m": 1750.0,
+      "duration_s": 2904.361083984375,
+      "moving_duration_s": 2041.759033203125,
+      "avg_hr": 137.0,
+      "max_hr": 166.0,
+      "calories": 588.0,
+      "pool_length": 25.0,
+      "avg_swolf": 39.0,
+      "lap_count": 47
+    },
+    {
+      "activity_id": 23835591890,
+      "name": "Z2LOCK • 1900m • Z2 Lock",
+      "start_local": "2026-07-30 20:08:02",
+      "date": "2026-07-30",
+      "distance_m": 1875.0,
+      "duration_s": 2284.534912109375,
+      "moving_duration_s": 1893.70703125,
+      "avg_hr": 140.0,
+      "max_hr": 169.0,
+      "calories": 535.0,
+      "pool_length": 25.0,
+      "avg_swolf": 33.0,
+      "lap_count": 18
+    },
+    {
+      "activity_id": 23835592560,
+      "name": "Z2LOCK • 1900m • Z2 Lock",
+      "start_local": "2026-08-01 19:42:12",
+      "date": "2026-08-01",
+      "distance_m": 500.0,
+      "duration_s": 818.8070068359375,
+      "moving_duration_s": 625.1099853515625,
+      "avg_hr": 131.0,
+      "max_hr": 155.0,
+      "calories": 158.0,
+      "pool_length": 25.0,
+      "avg_swolf": 40.0,
+      "lap_count": 4
+    },
+    {
+      "activity_id": 23835593368,
+      "name": "Z2LOCK • 1900m • Z2 Lock",
+      "start_local": "2026-08-01 20:02:54",
+      "date": "2026-08-01",
+      "distance_m": 675.0,
+      "duration_s": 1022.9140014648438,
+      "moving_duration_s": 767.7050170898438,
+      "avg_hr": 136.0,
+      "max_hr": 159.0,
+      "calories": 254.0,
+      "pool_length": 25.0,
+      "avg_swolf": 37.0,
+      "lap_count": 9
     }
   ]
 }
