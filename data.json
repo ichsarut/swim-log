@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-18T15:20:15.213064Z",
-  "plan_start": "2026-05-18",
-  "today": "2026-08-18",
+  "generated_at": "2026-09-28T15:47:37.163395Z",
+  "plan_start": "2026-09-25",
+  "today": "2026-09-28",
   "stats": {
-    "sessions_done": 5,
+    "sessions_done": 4,
     "sessions_total": 18,
-    "total_distance_m": 32900.0,
-    "total_duration_s": 66084.77429199219
+    "total_distance_m": 40500.0,
+    "total_duration_s": 80571.09619140625
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -18,59 +18,47 @@
     "resting": 70
   },
   "workouts": {
-    "W1.1": {
-      "name": "W1.1 • 1350m • Technique Base",
-      "target_distance_m": 1350.0,
-      "target_duration_s": 3300,
-      "description": "สัปดาห์ 1-2 แก้หายใจซ้าย/ตัวจม: Kick on side + 6-1-6 + 6x75ม. ฟรีสไตล์. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
-    },
-    "W1.2": {
-      "name": "W1.2 • 1500m • Side Kick Focus",
+    "F1.1": {
+      "name": "F1.1 • 1500m • Foundation A",
       "target_distance_m": 1500.0,
-      "target_duration_s": 3420,
-      "description": "สัปดาห์ 1-2 แก้หายใจซ้าย: Kick on side+pull buoy + single-arm + 6x100ม. (ฟรีสไตล์ล้วน). ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
+      "target_duration_s": 3900,
+      "description": "Block 1: kick on side + 6-1-6 + 16x25 พักตาม HR + buoy 6x100. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. นาฬิกาสั่น (HR 140) = หยุดที่ผนังทันที. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
     },
-    "W2.1": {
-      "name": "W2.1 • 1400m • Build to 100m",
-      "target_distance_m": 1400.0,
-      "target_duration_s": 3300,
-      "description": "สัปดาห์ 1-2 6-1-6 + Catch-up + 5x100ม. (เป้า: 100ม. ติดสบาย หายใจ bilateral). ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
-    },
-    "W3.1": {
-      "name": "W3.1 • 1300m • 6x150",
-      "target_distance_m": 1300.0,
-      "target_duration_s": 3160,
-      "description": "สัปดาห์ 3-4 ต่อระยะ 6x150ม. ว่ายช้า ๆ คุยได้สบาย. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
-    },
-    "W3.2": {
-      "name": "W3.2 • 1300m • 4x200",
-      "target_distance_m": 1300.0,
-      "target_duration_s": 3210,
-      "description": "สัปดาห์ 3-4 ดริลวอร์ม + 4x200ม. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
-    },
-    "W4.1": {
-      "name": "W4.1 • 1100m • Pyramid",
-      "target_distance_m": 1100.0,
-      "target_duration_s": 3360,
-      "description": "สัปดาห์ 3-4 ปิรามิดลด 300/200/100/50. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
-    },
-    "W5.1": {
-      "name": "W5.1 • 1400m • Sighting 4x250",
-      "target_distance_m": 1400.0,
-      "target_duration_s": 3320,
-      "description": "สัปดาห์ 5-6 ทักษะ open water ฝึก sighting (เงยหน้ามองข้างหน้าโดยไม่หยุด). ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
-    },
-    "W5.2": {
-      "name": "W5.2 • 1500m • Descending Set",
+    "F1.2": {
+      "name": "F1.2 • 1500m • Foundation B",
       "target_distance_m": 1500.0,
-      "target_duration_s": 3320,
-      "description": "สัปดาห์ 5-6 ลดระยะ 500/250/100 ต่อระยะยาว. ถ้า HR เกิน 150 ตอน easy ให้พักเพิ่ม 15 วิ ถ้าหายใจ 3 จังหวะไม่ทันให้กลับมา 2 จังหวะ. เช็คจบเซสชัน: avg ควรอยู่ 110-129 (Z2) — ถ้าเกิน 130 = เร็วเกิน เซสชันหน้า pace ลง"
+      "target_duration_s": 3900,
+      "description": "Block 1: side kick + single-arm + 16x25 (สลับหายใจซ้ายล้วน) + buoy 6x100. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. นาฬิกาสั่น (HR 140) = หยุดที่ผนังทันที. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
     },
-    "W6": {
-      "name": "W6 • 1400m • Test 1000m",
-      "target_distance_m": 1400.0,
-      "target_duration_s": 3260,
-      "description": "สัปดาห์ 6 วันทดสอบ ว่ายต่อเนื่อง 1000ม. ไม่หยุด (ช้าก็ได้ ขอให้ครบ)"
+    "E2.1": {
+      "name": "E2.1 • 1850m • Extend A",
+      "target_distance_m": 1850.0,
+      "target_duration_s": 4500,
+      "description": "Block 2: 6-1-6 + 12x50 พักตาม HR + buoy 4x200. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. นาฬิกาสั่น (HR 140) = หยุดที่ผนังทันที. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+    },
+    "E2.2": {
+      "name": "E2.2 • 1850m • Extend B",
+      "target_distance_m": 1850.0,
+      "target_duration_s": 4500,
+      "description": "Block 2: single-arm + 12x50 พักตาม HR + buoy 2x400. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. นาฬิกาสั่น (HR 140) = หยุดที่ผนังทันที. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+    },
+    "X3.1": {
+      "name": "X3.1 • 2200m • Carry-over A",
+      "target_distance_m": 2200.0,
+      "target_duration_s": 5400,
+      "description": "Block 3: ดริลสั้น + 6x100 พักตาม HR + buoy 3x400. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. นาฬิกาสั่น (HR 140) = หยุดที่ผนังทันที. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+    },
+    "X3.2": {
+      "name": "X3.2 • 2200m • Carry-over B",
+      "target_distance_m": 2200.0,
+      "target_duration_s": 5400,
+      "description": "Block 3: ดริลสั้น + 6x100 พักตาม HR + buoy 2x600. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. นาฬิกาสั่น (HR 140) = หยุดที่ผนังทันที. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+    },
+    "TEST": {
+      "name": "TEST • 1500m • Carry-over Test",
+      "target_distance_m": 1500.0,
+      "target_duration_s": 3900,
+      "description": "จบ v5: 300 ม. ต่อเนื่องไม่ใช้ buoy เป้า max HR < 148 + buoy 2x400. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. นาฬิกาสั่น (HR 140) = หยุดที่ผนังทันที. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
     },
     "B.KICK": {
       "name": "B.KICK • 250m • Bonus Kickboard",
@@ -99,109 +87,109 @@
   },
   "rotation": [
     {
-      "workout_key": "W1.1",
+      "workout_key": "F1.1",
       "rotation_index": 1,
       "status": "done",
-      "activity_id": 22935303899
+      "activity_id": 24501084934
     },
     {
-      "workout_key": "W1.2",
+      "workout_key": "F1.2",
       "rotation_index": 2,
       "status": "done",
-      "activity_id": 22948181604
+      "activity_id": 24505323379
     },
     {
-      "workout_key": "W2.1",
+      "workout_key": "F1.1",
       "rotation_index": 3,
       "status": "done",
-      "activity_id": 22983648853
+      "activity_id": 24517775173
     },
     {
-      "workout_key": "W1.2",
+      "workout_key": "F1.2",
       "rotation_index": 4,
-      "status": "done",
-      "activity_id": 23044145787
+      "status": "skipped",
+      "activity_id": null
     },
     {
-      "workout_key": "W2.1",
+      "workout_key": "F1.1",
       "rotation_index": 5,
-      "status": "done",
-      "activity_id": 23128765119
+      "status": "skipped",
+      "activity_id": null
     },
     {
-      "workout_key": "W1.1",
+      "workout_key": "F1.2",
       "rotation_index": 6,
+      "status": "skipped",
+      "activity_id": null
+    },
+    {
+      "workout_key": "E2.1",
+      "rotation_index": 7,
+      "status": "done",
+      "activity_id": 24529258267
+    },
+    {
+      "workout_key": "E2.2",
+      "rotation_index": 8,
       "status": "next",
       "activity_id": null
     },
     {
-      "workout_key": "W3.1",
-      "rotation_index": 7,
-      "status": "upcoming",
-      "activity_id": null
-    },
-    {
-      "workout_key": "W3.2",
-      "rotation_index": 8,
-      "status": "upcoming",
-      "activity_id": null
-    },
-    {
-      "workout_key": "W4.1",
+      "workout_key": "E2.1",
       "rotation_index": 9,
       "status": "upcoming",
       "activity_id": null
     },
     {
-      "workout_key": "W3.2",
+      "workout_key": "E2.2",
       "rotation_index": 10,
       "status": "upcoming",
       "activity_id": null
     },
     {
-      "workout_key": "W4.1",
+      "workout_key": "E2.1",
       "rotation_index": 11,
       "status": "upcoming",
       "activity_id": null
     },
     {
-      "workout_key": "W3.1",
+      "workout_key": "E2.2",
       "rotation_index": 12,
       "status": "upcoming",
       "activity_id": null
     },
     {
-      "workout_key": "W5.1",
+      "workout_key": "X3.1",
       "rotation_index": 13,
       "status": "upcoming",
       "activity_id": null
     },
     {
-      "workout_key": "W5.2",
+      "workout_key": "X3.2",
       "rotation_index": 14,
       "status": "upcoming",
       "activity_id": null
     },
     {
-      "workout_key": "W5.1",
+      "workout_key": "X3.1",
       "rotation_index": 15,
       "status": "upcoming",
       "activity_id": null
     },
     {
-      "workout_key": "W5.2",
+      "workout_key": "X3.2",
       "rotation_index": 16,
       "status": "upcoming",
       "activity_id": null
     },
     {
-      "workout_key": "W5.1",
+      "workout_key": "X3.1",
       "rotation_index": 17,
       "status": "upcoming",
       "activity_id": null
     },
     {
-      "workout_key": "W6",
+      "workout_key": "TEST",
       "rotation_index": 18,
       "status": "upcoming",
       "activity_id": null
@@ -672,6 +660,156 @@
       "pool_length": 25.0,
       "avg_swolf": 37.0,
       "lap_count": 9
+    },
+    {
+      "activity_id": 24501084934,
+      "name": "R1.1 • 1900m • Re-entry Dril",
+      "start_local": "2026-09-25 18:56:25",
+      "date": "2026-09-25",
+      "distance_m": 1275.0,
+      "duration_s": 2325.39697265625,
+      "moving_duration_s": 1500.9749755859375,
+      "avg_hr": 139.0,
+      "max_hr": 165.0,
+      "calories": 490.0,
+      "pool_length": 25.0,
+      "avg_swolf": 39.0,
+      "lap_count": 47
+    },
+    {
+      "activity_id": 24501085464,
+      "name": "B.KICK • 250m • Bonus Kickbo",
+      "start_local": "2026-09-25 19:40:02",
+      "date": "2026-09-25",
+      "distance_m": 0.0,
+      "duration_s": 363.08099365234375,
+      "moving_duration_s": 0.0,
+      "avg_hr": 130.0,
+      "max_hr": 148.0,
+      "calories": 68.0,
+      "pool_length": 25.0,
+      "avg_swolf": null,
+      "lap_count": 8
+    },
+    {
+      "activity_id": 24501086129,
+      "name": "B.BREATH • 350m • Bonus Bila",
+      "start_local": "2026-09-25 19:48:32",
+      "date": "2026-09-25",
+      "distance_m": 375.0,
+      "duration_s": 573.5609741210938,
+      "moving_duration_s": 415.9939880371094,
+      "avg_hr": 145.0,
+      "max_hr": 162.0,
+      "calories": 125.0,
+      "pool_length": 25.0,
+      "avg_swolf": 36.0,
+      "lap_count": 17
+    },
+    {
+      "activity_id": 24505323379,
+      "name": "R1.1 • 1900m • Re-entry Dril",
+      "start_local": "2026-09-26 19:17:27",
+      "date": "2026-09-26",
+      "distance_m": 1950.0,
+      "duration_s": 3063.60693359375,
+      "moving_duration_s": 2014.4549560546875,
+      "avg_hr": 144.0,
+      "max_hr": 172.0,
+      "calories": 748.0,
+      "pool_length": 25.0,
+      "avg_swolf": 33.0,
+      "lap_count": 53
+    },
+    {
+      "activity_id": 24505324251,
+      "name": "B.KICK • 250m • Bonus Kickbo",
+      "start_local": "2026-09-26 20:11:16",
+      "date": "2026-09-26",
+      "distance_m": 50.0,
+      "duration_s": 528.6309814453125,
+      "moving_duration_s": 54.90999984741211,
+      "avg_hr": 127.0,
+      "max_hr": 142.0,
+      "calories": 95.0,
+      "pool_length": 25.0,
+      "avg_swolf": 34.0,
+      "lap_count": 13
+    },
+    {
+      "activity_id": 24517775173,
+      "name": "F1.1 • 1200m • Foundation A",
+      "start_local": "2026-09-27 19:09:02",
+      "date": "2026-09-27",
+      "distance_m": 1125.0,
+      "duration_s": 2355.299072265625,
+      "moving_duration_s": 1238.4329833984375,
+      "avg_hr": 107.0,
+      "max_hr": 141.0,
+      "calories": 344.0,
+      "pool_length": 25.0,
+      "avg_swolf": 35.0,
+      "lap_count": 56
+    },
+    {
+      "activity_id": 24517776008,
+      "name": "B.BREATH • 350m • Bonus Bila",
+      "start_local": "2026-09-27 19:51:32",
+      "date": "2026-09-27",
+      "distance_m": 325.0,
+      "duration_s": 594.0380249023438,
+      "moving_duration_s": 447.7829895019531,
+      "avg_hr": 109.0,
+      "max_hr": 122.0,
+      "calories": 77.0,
+      "pool_length": 25.0,
+      "avg_swolf": 43.0,
+      "lap_count": 15
+    },
+    {
+      "activity_id": 24517776916,
+      "name": "B.EASY • 350m • Bonus Easy",
+      "start_local": "2026-09-27 20:02:51",
+      "date": "2026-09-27",
+      "distance_m": 350.0,
+      "duration_s": 432.1099853515625,
+      "moving_duration_s": 302.04400634765625,
+      "avg_hr": 111.0,
+      "max_hr": 134.0,
+      "calories": 94.0,
+      "pool_length": 25.0,
+      "avg_swolf": 28.0,
+      "lap_count": 5
+    },
+    {
+      "activity_id": 24517777878,
+      "name": "B.KICK • 250m • Bonus Kickbo",
+      "start_local": "2026-09-27 20:10:51",
+      "date": "2026-09-27",
+      "distance_m": 125.0,
+      "duration_s": 532.9080200195312,
+      "moving_duration_s": 127.4280014038086,
+      "avg_hr": 108.0,
+      "max_hr": 126.0,
+      "calories": 79.0,
+      "pool_length": 25.0,
+      "avg_swolf": 32.0,
+      "lap_count": 12
+    },
+    {
+      "activity_id": 24529258267,
+      "name": "E2.1 • 1850m • Extend A",
+      "start_local": "2026-09-28 19:45:12",
+      "date": "2026-09-28",
+      "distance_m": 2025.0,
+      "duration_s": 3717.68994140625,
+      "moving_duration_s": 2064.697021484375,
+      "avg_hr": 118.0,
+      "max_hr": 149.0,
+      "calories": 616.0,
+      "pool_length": 25.0,
+      "avg_swolf": 32.0,
+      "lap_count": 58
     }
   ]
 }
