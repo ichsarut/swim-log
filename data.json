@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-29T19:42:07.481535Z",
+  "generated_at": "2026-09-30T19:43:24.046951Z",
   "plan_start": "2026-09-25",
-  "today": "2026-09-29",
+  "today": "2026-09-30",
   "stats": {
-    "sessions_done": 4,
+    "sessions_done": 5,
     "sessions_total": 18,
-    "total_distance_m": 40500.0,
-    "total_duration_s": 80571.09619140625
+    "total_distance_m": 43250.0,
+    "total_duration_s": 85718.658203125
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -131,13 +131,13 @@
     {
       "workout_key": "E2.2",
       "rotation_index": 8,
-      "status": "next",
-      "activity_id": null
+      "status": "done",
+      "activity_id": 24554215159
     },
     {
       "workout_key": "E2.1",
       "rotation_index": 9,
-      "status": "upcoming",
+      "status": "next",
       "activity_id": null
     },
     {
@@ -810,6 +810,21 @@
       "pool_length": 25.0,
       "avg_swolf": 32.0,
       "lap_count": 58
+    },
+    {
+      "activity_id": 24554215159,
+      "name": "E2.2 • 1850m • Extend B",
+      "start_local": "2026-09-30 18:44:58",
+      "date": "2026-09-30",
+      "distance_m": 2750.0,
+      "duration_s": 5147.56201171875,
+      "moving_duration_s": 3124.739013671875,
+      "avg_hr": 120.0,
+      "max_hr": 149.0,
+      "calories": 726.0,
+      "pool_length": 25.0,
+      "avg_swolf": 34.0,
+      "lap_count": 69
     }
   ]
 }
