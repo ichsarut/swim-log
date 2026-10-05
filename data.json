@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-04T18:26:43.058612Z",
+  "generated_at": "2026-10-05T21:42:57.352870Z",
   "plan_start": "2026-09-25",
-  "today": "2026-10-04",
+  "today": "2026-10-05",
   "stats": {
-    "sessions_done": 7,
+    "sessions_done": 8,
     "sessions_total": 18,
-    "total_distance_m": 47300.0,
-    "total_duration_s": 93540.8349609375
+    "total_distance_m": 49700.0,
+    "total_duration_s": 97540.02807617188
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -173,13 +173,13 @@
     {
       "workout_key": "X3.1",
       "rotation_index": 15,
-      "status": "next",
-      "activity_id": null
+      "status": "done",
+      "activity_id": 24614345525
     },
     {
       "workout_key": "X3.2",
       "rotation_index": 16,
-      "status": "upcoming",
+      "status": "next",
       "activity_id": null
     },
     {
@@ -855,6 +855,21 @@
       "pool_length": 25.0,
       "avg_swolf": 37.0,
       "lap_count": 36
+    },
+    {
+      "activity_id": 24614345525,
+      "name": "X3.1 • 2200m • Carry-over A",
+      "start_local": "2026-10-05 19:33:57",
+      "date": "2026-10-05",
+      "distance_m": 2400.0,
+      "duration_s": 3999.193115234375,
+      "moving_duration_s": 2495.743896484375,
+      "avg_hr": 134.0,
+      "max_hr": 162.0,
+      "calories": 756.0,
+      "pool_length": 25.0,
+      "avg_swolf": 33.0,
+      "lap_count": 44
     }
   ]
 }
