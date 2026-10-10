@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-09T19:52:42.025252Z",
+  "generated_at": "2026-10-10T19:02:23.894251Z",
   "plan_start": "2026-09-25",
-  "today": "2026-10-09",
+  "today": "2026-10-10",
   "stats": {
-    "sessions_done": 10,
+    "sessions_done": 11,
     "sessions_total": 18,
-    "total_distance_m": 54775.0,
-    "total_duration_s": 107377.74536132812
+    "total_distance_m": 56300.0,
+    "total_duration_s": 109848.41748046875
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -191,8 +191,8 @@
     {
       "workout_key": "TEST",
       "rotation_index": 18,
-      "status": "next",
-      "activity_id": null
+      "status": "done",
+      "activity_id": 24674122086
     }
   ],
   "activities": [
@@ -900,6 +900,21 @@
       "pool_length": 25.0,
       "avg_swolf": 38.0,
       "lap_count": 39
+    },
+    {
+      "activity_id": 24674122086,
+      "name": "TEST • 1500m • Carry-over Te",
+      "start_local": "2026-10-10 19:22:23",
+      "date": "2026-10-10",
+      "distance_m": 1525.0,
+      "duration_s": 2470.672119140625,
+      "moving_duration_s": 1641.4029541015625,
+      "avg_hr": 118.0,
+      "max_hr": 140.0,
+      "calories": 382.0,
+      "pool_length": 25.0,
+      "avg_swolf": 34.0,
+      "lap_count": 23
     }
   ]
 }
