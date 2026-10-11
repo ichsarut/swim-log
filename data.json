@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-10T19:02:23.894251Z",
+  "generated_at": "2026-10-11T19:15:47.113370Z",
   "plan_start": "2026-09-25",
-  "today": "2026-10-10",
+  "today": "2026-10-11",
   "stats": {
     "sessions_done": 11,
     "sessions_total": 18,
-    "total_distance_m": 56300.0,
-    "total_duration_s": 109848.41748046875
+    "total_distance_m": 58450.0,
+    "total_duration_s": 113164.46337890625
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -915,6 +915,21 @@
       "pool_length": 25.0,
       "avg_swolf": 34.0,
       "lap_count": 23
+    },
+    {
+      "activity_id": 24686358973,
+      "name": "TEST • 1500m • Carry-over Te",
+      "start_local": "2026-10-11 19:30:51",
+      "date": "2026-10-11",
+      "distance_m": 2150.0,
+      "duration_s": 3316.0458984375,
+      "moving_duration_s": 2469.95703125,
+      "avg_hr": 121.0,
+      "max_hr": 137.0,
+      "calories": 585.0,
+      "pool_length": 25.0,
+      "avg_swolf": 34.0,
+      "lap_count": 47
     }
   ]
 }
