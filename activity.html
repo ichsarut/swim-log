@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Activity Detail — Swim Log</title>
+<title>Activity — Swim Log</title>
+<meta name="description" content="รายละเอียดการว่ายหนึ่งครั้ง — HR ตลอด session และแต่ละเซต/length">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
@@ -27,25 +28,38 @@
     --stroke-fly: #fb923c;
     --stroke-drill: #fcd34d;
     --stroke-rest: #475569;
+
+    --grid: #1a2440;
+    --hr-line: #fda4af;
+    --zone-1: rgba(110, 231, 183, 0.06);
+    --zone-2: rgba(76, 201, 240, 0.07);
+    --zone-3: rgba(252, 211, 77, 0.09);
+    --zone-4: rgba(251, 146, 60, 0.10);
+    --zone-5: rgba(253, 164, 175, 0.12);
+    --font-body: 'IBM Plex Sans Thai', 'Inter', system-ui, sans-serif;
+    --font-num: 'Inter', 'IBM Plex Sans Thai', system-ui, sans-serif;
   }
   * { box-sizing: border-box }
+  html, body { overflow-x: clip }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px }
   body {
     margin: 0;
     background: linear-gradient(180deg, var(--bg), var(--bg2));
     color: var(--text);
-    font-family: 'IBM Plex Sans Thai', 'Inter', system-ui, sans-serif;
+    font-family: var(--font-body);
     min-height: 100vh;
     line-height: 1.5;
   }
-  .wrap { padding: 32px 32px 80px }
+  .wrap { padding: 32px 32px 80px; max-width: 1200px; margin: 0 auto }
+  @media (max-width: 600px) { .wrap { padding: 20px 16px 60px } }
   header { margin-bottom: 24px }
-  .back { color: var(--muted); font-size: 13px; text-decoration: none }
+  .back { display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); font-size: 14px; text-decoration: none }
   .back:hover { color: var(--accent) }
   h1 { font-size: 26px; font-weight: 700; margin: 8px 0 4px; letter-spacing: -0.02em }
   .subtitle { color: var(--muted); font-size: 14px }
   h2 { font-size: 18px; font-weight: 600; margin: 32px 0 14px }
 
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 24px }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr)); gap: 12px; margin-bottom: 24px }
   .stat-card {
     background: var(--card);
     border: 1px solid var(--line);
@@ -53,7 +67,7 @@
     padding: 14px 16px;
   }
   .stat-label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px }
-  .stat-value { font-size: 22px; font-weight: 700; font-family: 'Inter', system-ui, sans-serif }
+  .stat-value { font-size: 22px; font-weight: 700; font-family: var(--font-num) }
   .stat-value .unit { color: var(--muted); font-size: 14px; font-weight: 500 }
 
   .card {
@@ -61,14 +75,15 @@
     border: 1px solid var(--line);
     border-radius: 12px;
     padding: 20px;
+    min-width: 0;
   }
 
+  .table-wrap { overflow-x: auto }
   table { width: 100%; border-collapse: collapse; font-size: 13px }
   th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line) }
   th { color: var(--muted); font-weight: 500; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em }
-  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: 'Inter', system-ui, sans-serif }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--font-num) }
   tr:last-child td { border-bottom: none }
-  tr.rest td { color: var(--muted); font-style: italic; background: rgba(71, 85, 105, 0.08) }
 
   .stroke-chip {
     display: inline-block;
@@ -99,10 +114,19 @@
     cursor: pointer;
     padding: 14px 18px;
     display: grid;
-    grid-template-columns: 32px 1fr auto auto auto;
+    grid-template-columns: auto auto minmax(0, 1fr) auto auto auto;
     gap: 14px;
     align-items: center;
+    min-height: 48px;
   }
+  @media (max-width: 600px) {
+    details.lap summary { display: flex; flex-wrap: wrap; gap: 4px 12px; padding: 12px 14px }
+    /* line break between title row and the metas row */
+    details.lap summary::after { content: ''; flex-basis: 100%; order: 1 }
+    details.lap summary .lap-meta { order: 2 }
+    details.lap summary .lap-meta:nth-child(3) { margin-left: 22px }
+  }
+  details.lap summary:focus-visible { outline-offset: -2px }
   details.lap summary::-webkit-details-marker { display: none }
   details.lap summary::before {
     content: '›';
@@ -111,10 +135,11 @@
     transition: transform 0.15s;
   }
   details.lap[open] summary::before { transform: rotate(90deg); color: var(--accent) }
-  .lap-idx { color: var(--muted); font-size: 12px; font-family: 'Inter', system-ui, sans-serif }
+  .lap-idx { color: var(--muted); font-size: 12px; font-family: var(--font-num) }
   .lap-title { font-weight: 500 }
-  .lap-meta { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; font-family: 'Inter', system-ui, sans-serif }
+  .lap-meta { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; font-family: var(--font-num) }
   details.lap > .lap-body { padding: 0 18px 14px; border-top: 1px solid var(--line) }
+  @media (prefers-reduced-motion: reduce) { details.lap summary::before { transition: none } }
 
   .rest-row {
     display: flex;
@@ -125,7 +150,7 @@
     color: var(--muted);
     font-size: 11px;
     font-variant-numeric: tabular-nums;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: var(--font-num);
   }
   .rest-row::before {
     content: '⏸';
@@ -133,7 +158,7 @@
     opacity: 0.6;
   }
 
-  .chart-wrap { position: relative; height: 260px }
+  .chart-wrap { position: relative; height: 260px; min-width: 0 }
 
   .empty { text-align: center; color: var(--muted); padding: 24px }
   .error { color: var(--bad); padding: 24px; text-align: center }
@@ -142,7 +167,7 @@
 </style>
 </head>
 <body>
-<div class="wrap">
+<main class="wrap">
 
 <header>
   <a class="back" href="index.html">← กลับ</a>
@@ -154,15 +179,15 @@
 
 <h2>Heart Rate</h2>
 <div class="card">
-  <div class="chart-wrap"><canvas id="hrChart"></canvas></div>
+  <div class="chart-wrap"><canvas id="hrChart" role="img" aria-label="กราฟ HR ระหว่าง session"></canvas></div>
 </div>
 
 <h2>เซตการว่าย</h2>
 <div id="lapList"></div>
 
-<div id="errorBox"></div>
+<div id="errorBox" role="alert"></div>
 
-</div>
+</main>
 <script>
 const el = (tag, attrs = {}, children = []) => {
   const node = document.createElement(tag);
@@ -184,6 +209,8 @@ const fmtDur = s => {
   const m = Math.floor(s / 60), sec = Math.round(s % 60);
   return `${m}:${String(sec).padStart(2,'0')}`;
 };
+const fmtPace = s => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, '0')}`;
+const tok = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 const fmtNum = (v, suffix = '') => v == null ? '—' : `${Math.round(v)}${suffix}`;
 
 const STROKE_LABEL = {
@@ -233,49 +260,39 @@ function renderHrChart(detail, hrZones) {
   const hrZonesPlugin = {
     id: 'hrZones',
     beforeDatasetsDraw(chart) {
-      const { ctx, chartArea, scales } = chart;
       if (!z.z1_floor) return;
-      const y = scales.y;
+      const { ctx, chartArea, scales: { y } } = chart;
       const bands = [
-        { from: z.z1_floor, to: z.z2_floor, color: 'rgba(110, 231, 183, 0.06)' },
-        { from: z.z2_floor, to: z.z3_floor, color: 'rgba(76, 201, 240, 0.07)' },
-        { from: z.z3_floor, to: z.z4_floor, color: 'rgba(252, 211, 77, 0.09)' },
-        { from: z.z4_floor, to: z.z5_floor, color: 'rgba(251, 146, 60, 0.10)' },
-        { from: z.z5_floor, to: z.max,      color: 'rgba(253, 164, 175, 0.12)' },
+        [z.z1_floor, z.z2_floor, '--zone-1', 'Z1'],
+        [z.z2_floor, z.z3_floor, '--zone-2', 'Z2'],
+        [z.z3_floor, z.z4_floor, '--zone-3', 'Z3'],
+        [z.z4_floor, z.z5_floor, '--zone-4', 'Z4'],
+        [z.z5_floor, z.max,      '--zone-5', 'Z5'],
       ];
       ctx.save();
-      for (const b of bands) {
-        const yTop = y.getPixelForValue(b.to);
-        const yBot = y.getPixelForValue(b.from);
-        ctx.fillStyle = b.color;
-        ctx.fillRect(chartArea.left, yTop, chartArea.right - chartArea.left, yBot - yTop);
-      }
-      ctx.fillStyle = '#94a0bb';
-      ctx.font = '10px Inter, sans-serif';
-      ctx.textAlign = 'right';
+      ctx.font = `11px ${tok('--font-num')}`;
+      ctx.textAlign = 'left';
       ctx.textBaseline = 'middle';
-      const zls = [
-        { hr: (z.z1_floor + z.z2_floor) / 2, label: 'Z1' },
-        { hr: (z.z2_floor + z.z3_floor) / 2, label: 'Z2' },
-        { hr: (z.z3_floor + z.z4_floor) / 2, label: 'Z3' },
-        { hr: (z.z4_floor + z.z5_floor) / 2, label: 'Z4' },
-        { hr: (z.z5_floor + z.max) / 2,      label: 'Z5' },
-      ];
-      for (const zl of zls) {
-        ctx.fillText(zl.label, chartArea.right - 4, y.getPixelForValue(zl.hr));
+      for (const [from, to, color, label] of bands) {
+        const yTop = y.getPixelForValue(to), yBot = y.getPixelForValue(from);
+        ctx.fillStyle = tok(color);
+        ctx.fillRect(chartArea.left, yTop, chartArea.right - chartArea.left, yBot - yTop);
+        ctx.fillStyle = tok('--muted');
+        ctx.fillText(label, chartArea.right + 6, (yTop + yBot) / 2);
       }
       ctx.restore();
     },
   };
 
+  const muted = tok('--muted');
+  Chart.defaults.font.family = tok('--font-body');
   new Chart(ctx, {
     type: 'line',
     data: {
       labels,
       datasets: [{
         data,
-        borderColor: '#fda4af',
-        backgroundColor: 'rgba(253, 164, 175, 0.0)',
+        borderColor: tok('--hr-line'),
         tension: 0.3,
         fill: false,
         pointRadius: 0,
@@ -285,24 +302,30 @@ function renderHrChart(detail, hrZones) {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      layout: { padding: { right: 28 } },
+      interaction: { mode: 'index', intersect: false },
       plugins: {
         legend: { display: false },
-        tooltip: { backgroundColor: '#0b1220', borderColor: '#25304d', borderWidth: 1, padding: 10 },
+        tooltip: {
+          backgroundColor: tok('--bg'), borderColor: tok('--line'), borderWidth: 1, padding: 10,
+          callbacks: { label: c => `${c.parsed.y} bpm` },
+        },
       },
       scales: {
-        x: { ticks: { color: '#94a0bb', maxTicksLimit: 8 }, grid: { color: '#1a2440' } },
+        x: { ticks: { color: muted, maxTicksLimit: 8, maxRotation: 0 }, grid: { display: false } },
         y: {
-          ticks: { color: '#94a0bb' },
-          grid: { color: '#1a2440' },
-          beginAtZero: false,
+          ticks: { color: muted },
+          grid: { color: tok('--grid') },
           min: 80,
           max: z.max || 190,
-          title: { display: true, text: 'bpm', color: '#94a0bb' },
+          title: { display: true, text: 'bpm', color: muted },
         },
       },
     },
     plugins: [hrZonesPlugin],
   });
+  const peak = Math.max(...data.filter(v => v != null));
+  ctx.setAttribute('aria-label', `กราฟ HR ระหว่าง session · ${data.length} จุด · สูงสุด ${peak} bpm`);
 }
 
 function renderLaps(detail) {
@@ -319,12 +342,12 @@ function renderLaps(detail) {
     swimLapIdx += 1;
     const stroke = lap.stroke || 'MIXED';
     const pace = lap.distance_m && lap.moving_duration_s
-      ? `${Math.round(lap.moving_duration_s / lap.distance_m * 100)}s/100m`
+      ? `${fmtPace(lap.moving_duration_s / lap.distance_m * 100)} /100m`
       : '—';
 
-    const lengthsTable = el('table', {}, [
+    const lengthsTable = el('div', { class: 'table-wrap' }, el('table', {}, [
       el('thead', {}, el('tr', {}, [
-        el('th', { class: 'num', text: '#' }),
+        el('th', { class: 'num', scope: 'col', text: '#' }),
         el('th', { text: 'ท่า' }),
         el('th', { class: 'num', text: 'เวลา' }),
         el('th', { class: 'num', text: 'Stroke' }),
@@ -340,7 +363,7 @@ function renderLaps(detail) {
         el('td', { class: 'num', text: fmtNum(ln.strokes) }),
         el('td', { class: 'num', text: fmtNum(ln.swolf) }),
       ]))),
-    ]);
+    ]));
 
     list.appendChild(el('details', { class: 'lap' }, [
       el('summary', {}, [
@@ -370,11 +393,12 @@ async function main() {
 
   try {
     const [data, detail] = await Promise.all([
-      fetch('data.json').then(r => r.json()),
-      fetch(`activities/${aid}.json`).then(r => {
-        if (!r.ok) throw new Error(`detail ไม่พบ (HTTP ${r.status})`);
+      fetch('data.json').then(r => {
+        if (!r.ok) throw new Error(`data.json HTTP ${r.status}`);
         return r.json();
       }),
+      // Detail is optional: older runs didn't publish it, so fall back to the summary.
+      fetch(`activities/${aid}.json`).then(r => r.ok ? r.json() : null).catch(() => null),
     ]);
 
     const act = (data.activities || []).find(a => String(a.activity_id) === aid);
@@ -392,6 +416,12 @@ async function main() {
       dt.toLocaleString('th-TH', { dateStyle: 'full', timeStyle: 'short' });
 
     renderStats(act);
+    if (!detail) {
+      const msg = 'ยังไม่มีข้อมูลรายละเอียดของครั้งนี้ (จะมาหลัง workflow รอบถัดไป)';
+      document.getElementById('hrChart').parentElement.replaceChildren(el('div', { class: 'empty', text: msg }));
+      document.getElementById('lapList').replaceChildren(el('div', { class: 'empty', text: msg }));
+      return;
+    }
     renderHrChart(detail, data.hr_zones);
     renderLaps(detail);
   } catch (e) {

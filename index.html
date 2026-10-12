@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Swim Log — Open Water 6 สัปดาห์</title>
+<title>Swim Log</title>
+<meta name="description" content="บันทึกการว่ายน้ำจาก Garmin — ระยะ, pace และ HR ต่อวัน พร้อมสรุปรายสัปดาห์ของแผนฝึก">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,15 +15,34 @@
     --bg2: #111a2e;
     --card: #16213b;
     --line: #25304d;
+    --grid: #1a2440;
     --text: #e6eaf2;
     --muted: #94a0bb;
     --accent: #4cc9f0;
+    --accent-hover: #7dd3fc;
     --good: #6ee7b7;
     --warn: #fcd34d;
     --bad: #fda4af;
-    --upcoming: #6b7a9d;
+
+    /* chart series — read by JS via tok() so the palette lives in one place */
+    --series-1: #4cc9f0;
+    --series-2: #a78bfa;
+    --series-3: #34d399;
+    --series-4: #fb923c;
+    --pace: #34d399;
+    --hr: #fcd34d;
+    --zone-1: rgba(110, 231, 183, 0.06);
+    --zone-2: rgba(76, 201, 240, 0.07);
+    --zone-3: rgba(252, 211, 77, 0.09);
+    --zone-4: rgba(251, 146, 60, 0.10);
+    --zone-5: rgba(253, 164, 175, 0.12);
+
+    --font-body: 'IBM Plex Sans Thai', 'Inter', system-ui, sans-serif;
+    --font-num: 'Inter', 'IBM Plex Sans Thai', system-ui, sans-serif;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   }
   * { box-sizing: border-box }
+  html, body { overflow-x: clip }
   body {
     margin: 0;
     background:
@@ -30,271 +50,128 @@
       radial-gradient(900px 500px at -10% 110%, rgba(167, 139, 250, 0.06), transparent 60%),
       linear-gradient(180deg, var(--bg), var(--bg2));
     color: var(--text);
-    font-family: 'IBM Plex Sans Thai', 'Inter', system-ui, sans-serif;
+    font-family: var(--font-body);
     min-height: 100vh;
     line-height: 1.5;
-    overflow-x: hidden;
   }
-  .wrap { padding: 32px 32px 80px; position: relative; z-index: 1 }
+  .wrap { padding: 32px 32px 80px; position: relative; z-index: 1; max-width: 1480px; margin: 0 auto }
+  @media (max-width: 600px) { .wrap { padding: 20px 16px 60px } }
 
-  /* ===== Floating bubbles background ===== */
-  .bubbles {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    overflow: hidden;
-  }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px }
+
+  /* ===== Floating bubbles background (decorative, behind content) ===== */
+  .bubbles { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden }
   .bubble {
     position: absolute;
     bottom: -60px;
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), rgba(76, 201, 240, 0.18) 60%, rgba(76, 201, 240, 0.04) 100%);
-    box-shadow: inset 0 0 8px rgba(255,255,255,0.25);
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), rgba(76, 201, 240, 0.15) 60%, rgba(76, 201, 240, 0.03) 100%);
     opacity: 0;
     animation: rise linear infinite;
   }
   @keyframes rise {
-    0%   { transform: translate(0, 0) scale(0.9); opacity: 0 }
-    10%  { opacity: 0.65 }
-    50%  { transform: translate(20px, -50vh) scale(1.05); opacity: 0.55 }
-    90%  { opacity: 0.4 }
-    100% { transform: translate(-15px, -110vh) scale(1); opacity: 0 }
+    0%   { transform: translate(0, 0); opacity: 0 }
+    10%  { opacity: 0.45 }
+    50%  { transform: translate(20px, -50vh); opacity: 0.35 }
+    100% { transform: translate(-15px, -110vh); opacity: 0 }
   }
 
-  /* ===== Header wave ===== */
-  header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 32px; flex-wrap: wrap; gap: 12px; animation: fadeDown 0.7s ease both }
-  h1 { font-size: 28px; font-weight: 700; margin: 0; letter-spacing: -0.02em; display: inline-flex; align-items: baseline; gap: 4px }
+  header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 28px; flex-wrap: wrap; gap: 12px }
+  h1 { font-size: 28px; font-weight: 700; margin: 0; letter-spacing: -0.02em }
   h1 .accent {
-    color: var(--accent);
-    background: linear-gradient(90deg, #4cc9f0, #a78bfa, #4cc9f0);
-    background-size: 200% 100%;
+    background: linear-gradient(90deg, var(--series-1), var(--series-2));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shimmer 4s linear infinite;
-  }
-  @keyframes shimmer {
-    0%   { background-position: 0% 50% }
-    100% { background-position: 200% 50% }
-  }
-  h1 .swimmer {
-    display: inline-block;
-    margin-left: 6px;
-    font-size: 22px;
-    animation: swim 3.2s ease-in-out infinite;
-    transform-origin: center;
-  }
-  @keyframes swim {
-    0%, 100% { transform: translate(0, 0) rotate(-4deg) }
-    25%      { transform: translate(3px, -3px) rotate(4deg) }
-    50%      { transform: translate(6px, 0) rotate(-4deg) }
-    75%      { transform: translate(3px, 3px) rotate(4deg) }
   }
   .subtitle { color: var(--muted); font-size: 14px }
-  h2 {
-    font-size: 20px; font-weight: 600; margin: 36px 0 16px; letter-spacing: -0.01em;
-    opacity: 0;
-    animation: fadeUp 0.6s ease forwards;
-    animation-delay: var(--delay, 0.1s);
-  }
+  .header-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px }
+  @media (max-width: 600px) { .header-actions { align-items: flex-start } }
+  h2 { font-size: 20px; font-weight: 600; margin: 40px 0 16px; letter-spacing: -0.01em }
 
-  /* ===== Reveal on load ===== */
   @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(12px) }
+    from { opacity: 0; transform: translateY(8px) }
     to   { opacity: 1; transform: translateY(0) }
   }
-  @keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-10px) }
-    to   { opacity: 1; transform: translateY(0) }
-  }
-  @keyframes pop {
-    0%   { opacity: 0; transform: scale(0.92) translateY(8px) }
-    60%  { opacity: 1; transform: scale(1.03) translateY(-2px) }
-    100% { opacity: 1; transform: scale(1) translateY(0) }
-  }
+  .reveal { animation: fadeUp 0.5s var(--ease-out) both; animation-delay: var(--delay, 0s) }
 
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 8px }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap: 12px; margin-bottom: 12px; grid-auto-rows: minmax(98px, auto) }
+  .stats:empty { min-height: 98px }
   .stat-card {
     background: var(--card);
     border: 1px solid var(--line);
     border-radius: 12px;
     padding: 16px 18px;
-    opacity: 0;
-    animation: pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-    animation-delay: var(--delay, 0s);
-    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-    position: relative;
-    overflow: hidden;
+    min-width: 0;
   }
-  .stat-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(120deg, transparent 30%, rgba(76, 201, 240, 0.08) 50%, transparent 70%);
-    transform: translateX(-100%);
-    transition: transform 0.6s ease;
-    pointer-events: none;
-  }
-  .stat-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(76, 201, 240, 0.4);
-    box-shadow: 0 8px 24px -8px rgba(76, 201, 240, 0.25);
-  }
-  .stat-card:hover::before { transform: translateX(100%) }
   .stat-label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px }
-  .stat-value { font-size: 26px; font-weight: 700; font-family: 'Inter', system-ui, sans-serif }
+  .stat-value { font-size: 26px; font-weight: 700; font-family: var(--font-num); font-variant-numeric: tabular-nums }
   .stat-value .unit { color: var(--muted); font-size: 18px; font-weight: 500 }
   .stat-sub { color: var(--muted); font-size: 13px; margin-top: 2px }
 
-  .grid-2 { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px }
-  @media (max-width: 840px) { .grid-2 { grid-template-columns: 1fr } }
+  .grid-2 { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 20px }
+  @media (max-width: 960px) { .grid-2 { grid-template-columns: minmax(0, 1fr) } }
 
   .card {
     background: var(--card);
     border: 1px solid var(--line);
     border-radius: 12px;
     padding: 20px;
-    opacity: 0;
-    animation: fadeUp 0.6s ease forwards;
-    animation-delay: var(--delay, 0.15s);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    min-width: 0;
   }
-  .card:hover { border-color: rgba(76, 201, 240, 0.25) }
-  .card h3 { margin: 0 0 14px; font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em }
+  .card.flush { padding: 8px 4px }
+  .stack-gap { margin-top: 20px }
+  .card h3 { margin: 0 0 4px; font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em }
+  .card .hint { margin: 0 0 12px; font-size: 12px; color: var(--muted) }
+  @media (max-width: 600px) { .card { padding: 16px 12px } }
 
   .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch }
-  table { width: 100%; border-collapse: collapse; font-size: 14px; table-layout: auto; min-width: 720px }
-  th, td { text-align: left; padding: 10px 10px; border-bottom: 1px solid var(--line); vertical-align: middle; white-space: nowrap }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px }
+  th, td { text-align: left; padding: 10px; border-bottom: 1px solid var(--line); vertical-align: middle; white-space: nowrap }
   th { color: var(--muted); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em }
-  th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: 'Inter', system-ui, sans-serif }
-  th.center, td.center { text-align: center; font-variant-numeric: tabular-nums; font-family: 'Inter', system-ui, sans-serif }
-  td a.activity-link { color: var(--accent); text-decoration: none; font-weight: 500; transition: color 0.2s ease }
-  td a.activity-link:hover { text-decoration: underline; color: #7dd3fc }
-  tbody tr {
-    transition: background-color 0.25s ease, transform 0.25s ease;
-  }
-  tbody tr:hover {
-    background-color: rgba(76, 201, 240, 0.04);
-  }
-  tr.row-reveal {
-    opacity: 0;
-    animation: rowIn 0.45s ease forwards;
-    animation-delay: var(--delay, 0s);
-  }
-  @keyframes rowIn {
-    from { opacity: 0; transform: translateX(-8px) }
-    to   { opacity: 1; transform: translateX(0) }
-  }
-  tr.row-done td:first-child { position: relative }
-  tr.row-done td:first-child::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 3px;
-    height: 60%;
-    transform: translateY(-50%);
-    background: linear-gradient(180deg, transparent, var(--good), transparent);
-    border-radius: 3px;
-    opacity: 0.6;
-  }
-  tr.row-today td {
-    animation: todayPulse 2.4s ease-in-out infinite;
-  }
-  @keyframes todayPulse {
-    0%, 100% { background-color: rgba(76, 201, 240, 0.04) }
-    50%      { background-color: rgba(76, 201, 240, 0.12) }
-  }
+  th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--font-num) }
+  th.center, td.center { text-align: center; font-variant-numeric: tabular-nums; font-family: var(--font-num) }
   tr:last-child td { border-bottom: none }
-  .vs-target .diff { display: block; font-size: 11px; opacity: 0.85; margin-top: 1px }
+  tbody tr:hover { background-color: rgba(76, 201, 240, 0.04) }
+  td .sub { display: block; color: var(--muted); font-size: 11px }
+  td a.activity-link { display: inline-block; padding: 8px 0; color: var(--accent); font-weight: 500 }
+  td a.activity-link:hover { color: var(--accent-hover) }
+  tr.row-done td:first-child { box-shadow: inset 3px 0 0 -0.5px rgba(110, 231, 183, 0.6) }
+  tr.row-next td { background-color: rgba(76, 201, 240, 0.08) }
+  tr.row-current td:first-child { box-shadow: inset 3px 0 0 -0.5px var(--accent) }
+
+  .vs-target { font-size: 12px; color: var(--muted) }
+  .vs-target.over { color: var(--warn) }
+  .vs-target .diff { display: block; font-size: 11px; margin-top: 1px }
 
   .pill {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    font-size: 11px;
+    gap: 5px;
+    font-size: 12px;
     font-weight: 600;
-    padding: 3px 9px;
+    padding: 3px 10px;
     border-radius: 999px;
-    letter-spacing: 0.03em;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    letter-spacing: 0.02em;
   }
-  .pill:hover { transform: scale(1.08) }
-  .pill.done {
-    background: rgba(110, 231, 183, 0.15);
-    color: var(--good);
-    box-shadow: 0 0 0 0 rgba(110, 231, 183, 0.4);
-    animation: doneGlow 3s ease-in-out infinite;
-  }
-  @keyframes doneGlow {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(110, 231, 183, 0) }
-    50%      { box-shadow: 0 0 12px 0 rgba(110, 231, 183, 0.25) }
-  }
-  .pill.done::before {
-    content: '✓';
-    font-weight: 800;
-    display: inline-block;
-    animation: checkPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-  }
-  @keyframes checkPop {
-    0%   { transform: scale(0) rotate(-90deg); opacity: 0 }
-    60%  { transform: scale(1.3) rotate(10deg); opacity: 1 }
-    100% { transform: scale(1) rotate(0); opacity: 1 }
-  }
-  .pill.today, .pill.next {
-    background: rgba(76, 201, 240, 0.15);
-    color: var(--accent);
-    position: relative;
-  }
-  .pill.today::before, .pill.next::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 0 0 rgba(76, 201, 240, 0.6);
-    animation: ping 1.6s ease-out infinite;
-  }
-  @keyframes ping {
-    0%   { box-shadow: 0 0 0 0 rgba(76, 201, 240, 0.6) }
-    70%  { box-shadow: 0 0 0 8px rgba(76, 201, 240, 0) }
-    100% { box-shadow: 0 0 0 0 rgba(76, 201, 240, 0) }
-  }
-  .pill.upcoming { background: rgba(107, 122, 157, 0.15); color: var(--upcoming) }
-
-  .vs-target { font-size: 12px; color: var(--muted) }
-  .vs-target.over { color: var(--warn) }
+  .pill.done { background: rgba(110, 231, 183, 0.15); color: var(--good) }
+  .pill.done::before { content: '✓'; font-weight: 800 }
+  .pill.next { background: rgba(76, 201, 240, 0.15); color: var(--accent) }
+  .pill.next::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent) }
+  .pill.upcoming { border: 1px dashed var(--line); color: var(--muted) }
+  .pill.skipped { background: rgba(148, 160, 187, 0.12); color: var(--muted) }
+  .pill.skipped::before { content: '↷' }
+  tr.row-skipped td:not(:last-child) { color: var(--muted) }
 
   .next-workout {
     background: linear-gradient(135deg, rgba(76, 201, 240, 0.12), rgba(76, 201, 240, 0.04));
     border-color: rgba(76, 201, 240, 0.35);
     padding: 16px 20px;
-    margin-bottom: 8px;
   }
-  .next-label {
-    font-size: 12px;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 4px;
-  }
-  .next-name {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--fg);
-    margin-bottom: 4px;
-  }
-  .next-meta {
-    font-size: 13px;
-    color: var(--muted);
-    margin-bottom: 8px;
-  }
-  .next-desc {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.5;
-  }
+  .next-label { font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px }
+  .next-name { font-size: 22px; font-weight: 600; color: var(--text); margin-bottom: 4px }
+  .next-meta, .next-desc { font-size: 13px; color: var(--muted) }
+  .next-meta { margin-bottom: 8px }
 
   footer { margin-top: 60px; color: var(--muted); font-size: 12px; text-align: center }
   a { color: var(--accent); text-decoration: none }
@@ -304,51 +181,48 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 8px 14px;
+    min-height: 44px;
+    padding: 0 16px;
     border-radius: 999px;
     background: rgba(76, 201, 240, 0.1);
     border: 1px solid rgba(76, 201, 240, 0.3);
     color: var(--accent);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
-    font-family: inherit;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    transition: background 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
   }
-  .refresh-btn:hover {
-    background: rgba(76, 201, 240, 0.18);
-    border-color: rgba(76, 201, 240, 0.55);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 18px -8px rgba(76, 201, 240, 0.5);
-    text-decoration: none;
-  }
-  .refresh-btn:active { transform: translateY(0) }
-  .refresh-btn .refresh-icon {
-    display: inline-block;
-    transition: transform 0.6s ease;
-  }
-  .refresh-btn:hover .refresh-icon { transform: rotate(180deg) }
+  .refresh-btn:hover { background: rgba(76, 201, 240, 0.18); border-color: rgba(76, 201, 240, 0.55); text-decoration: none }
+  .refresh-btn:active { transform: translateY(1px) }
 
-  .chart-wrap { position: relative; height: 260px }
+  .chart-wrap { position: relative; height: 260px; min-width: 0 }
+  .chart-wrap.tall { height: 300px }
 
   .empty { text-align: center; color: var(--muted); padding: 24px }
+  .show-more {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    margin-top: 4px;
+    background: none;
+    border: 0;
+    border-top: 1px solid var(--line);
+    color: var(--accent);
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .show-more:hover { background: rgba(76, 201, 240, 0.06) }
+  .error { color: var(--bad) }
 
   /* ===== Confetti for milestone celebration ===== */
-  .confetti {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 50;
-    overflow: hidden;
-  }
+  .confetti { position: fixed; inset: 0; pointer-events: none; z-index: 50; overflow: hidden }
   .confetti-piece {
     position: absolute;
     top: -20px;
     width: 8px;
     height: 14px;
     opacity: 0;
-    animation: confettiFall 2.6s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+    animation: confettiFall 2.6s var(--ease-out) forwards;
   }
   @keyframes confettiFall {
     0%   { transform: translateY(-20px) rotate(0); opacity: 0 }
@@ -356,7 +230,6 @@
     100% { transform: translateY(110vh) rotate(720deg); opacity: 0.9 }
   }
 
-  /* Respect users who prefer less motion */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.001ms !important;
@@ -370,46 +243,45 @@
 <body>
 <div class="bubbles" id="bubbles" aria-hidden="true"></div>
 <div class="confetti" id="confetti" aria-hidden="true"></div>
-<div class="wrap">
+<main class="wrap">
 
-<header>
+<header class="reveal">
   <div>
-    <h1>Swim <span class="accent">Log</span><span class="swimmer" aria-hidden="true">🏊</span></h1>
-    <div class="subtitle">ตารางฝึก 6 สัปดาห์ → 1km Open Water Freestyle</div>
+    <h1>Swim <span class="accent">Log</span> <span aria-hidden="true">🏊</span></h1>
+    <div class="subtitle" id="planLine">บันทึกการว่ายจาก Garmin</div>
   </div>
-  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+  <div class="header-actions">
     <a class="refresh-btn"
        href="https://github.com/ichsarut/swim-plan/actions/workflows/update-log.yml"
-       target="_blank" rel="noopener"
-       title="เปิดหน้า Actions เพื่อกด Run workflow ดึงข้อมูลใหม่">
-      <span class="refresh-icon" aria-hidden="true">↻</span>
+       target="_blank" rel="noopener">
+      <span aria-hidden="true">↻</span>
       <span>ดึงข้อมูลใหม่</span>
     </a>
     <div class="subtitle" id="updated">—</div>
   </div>
 </header>
 
-<section class="stats" id="stats"></section>
+<section class="stats" id="stats" aria-label="สรุป"></section>
 
-<div class="card next-workout" id="nextWorkout" style="--delay:0.05s;display:none">
-  <div class="next-label">🏊 ครั้งต่อไป</div>
+<div class="card next-workout reveal" id="nextWorkout" style="--delay:0.05s" hidden>
+  <div class="next-label">ครั้งต่อไป</div>
   <div class="next-name" id="nextName">—</div>
   <div class="next-meta" id="nextMeta">—</div>
   <div class="next-desc" id="nextDesc"></div>
 </div>
 
-<h2 style="--delay:0.1s">Weekly summary</h2>
-<div class="card" style="padding:8px 4px">
+<h2>Weekly summary</h2>
+<div class="card flush">
   <div class="table-wrap">
   <table id="weeklyTable">
     <thead>
       <tr>
-        <th>สัปดาห์</th>
-        <th class="num">Sessions</th>
-        <th class="num">ระยะรวม</th>
-        <th class="num">เวลาในน้ำ</th>
-        <th class="num">HR avg</th>
-        <th class="num">Pace avg</th>
+        <th scope="col">สัปดาห์</th>
+        <th scope="col" class="num">Sessions</th>
+        <th scope="col" class="num">ระยะรวม</th>
+        <th scope="col" class="num">เวลาในน้ำ</th>
+        <th scope="col" class="num">HR avg</th>
+        <th scope="col" class="num">Pace avg</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -417,53 +289,57 @@
   </div>
 </div>
 
-<h2 style="--delay:0.2s">Progress</h2>
+<h2>Progress</h2>
 <div class="grid-2">
   <div class="card">
-    <h3>Distance per session</h3>
-    <div class="chart-wrap"><canvas id="distChart"></canvas></div>
+    <h3>Distance per day</h3>
+    <p class="hint">วันที่ว่ายหลายครั้งจะซ้อนกันเป็นแท่งเดียว</p>
+    <div class="chart-wrap"><canvas id="distChart" role="img" aria-label="กราฟระยะต่อวัน"></canvas></div>
   </div>
   <div class="card">
-    <h3>Pace per session (s/100m)</h3>
-    <div class="chart-wrap"><canvas id="paceChart"></canvas></div>
+    <h3>Pace per day</h3>
+    <p class="hint">นาที:วินาที ต่อ 100m · ยิ่งสูงยิ่งเร็ว</p>
+    <div class="chart-wrap"><canvas id="paceChart" role="img" aria-label="กราฟ pace ต่อวัน"></canvas></div>
   </div>
 </div>
-<div class="card" style="margin-top:20px">
-  <h3>Average HR per session</h3>
-  <div class="chart-wrap" style="height:300px"><canvas id="hrChart"></canvas></div>
+<div class="card stack-gap">
+  <h3>Average HR per day</h3>
+  <p class="hint">แถบสีพื้นหลังคือ HR zone (Z1–Z5)</p>
+  <div class="chart-wrap tall"><canvas id="hrChart" role="img" aria-label="กราฟ HR เฉลี่ยต่อวัน"></canvas></div>
 </div>
 
-<h2 style="--delay:0.3s">Recent activities</h2>
-<div class="card" style="padding:8px 4px">
+<h2>Recent activities</h2>
+<div class="card flush">
   <div class="table-wrap">
   <table id="activitiesTable">
     <thead>
       <tr>
-        <th>วันที่</th>
-        <th>Workout</th>
-        <th class="num">ระยะ</th>
-        <th class="num">vs target</th>
-        <th class="num">เวลา</th>
-        <th class="num">HR avg</th>
-        <th class="num">SWOLF</th>
+        <th scope="col">วันที่</th>
+        <th scope="col">Workout</th>
+        <th scope="col" class="num">ระยะ</th>
+        <th scope="col" class="num">vs target</th>
+        <th scope="col" class="num">เวลา</th>
+        <th scope="col" class="num">HR avg</th>
+        <th scope="col" class="num">SWOLF</th>
       </tr>
     </thead>
     <tbody></tbody>
   </table>
   </div>
+  <button type="button" class="show-more" id="showAllActs" aria-controls="activitiesTable" hidden></button>
 </div>
 
-<h2 style="--delay:0.4s">Rotation</h2>
-<div class="card" style="padding:8px 4px">
+<h2>Rotation</h2>
+<div class="card flush">
   <div class="table-wrap">
   <table id="rotationTable">
     <thead>
       <tr>
-        <th class="num">#</th>
-        <th>Workout</th>
-        <th class="center">เป้าระยะ</th>
-        <th class="center">เป้าเวลา</th>
-        <th>Status</th>
+        <th scope="col" class="num">#</th>
+        <th scope="col">Workout</th>
+        <th scope="col" class="center">เป้าระยะ</th>
+        <th scope="col" class="center">เป้าเวลา</th>
+        <th scope="col">Status</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -472,10 +348,10 @@
 </div>
 
 <footer>
-  Generated by <a id="repoLink" href="https://github.com/ichsarut/swim-plan" target="_blank" rel="noopener">swim-plan</a> · auto-refresh daily via GitHub Actions
+  Generated by <a href="https://github.com/ichsarut/swim-plan" target="_blank" rel="noopener">swim-plan</a> · auto-refresh daily via GitHub Actions
 </footer>
 
-</div>
+</main>
 <script>
 // --- helpers: build DOM, not innerHTML, so untrusted strings stay safe ---
 const el = (tag, attrs = {}, children = []) => {
@@ -483,7 +359,6 @@ const el = (tag, attrs = {}, children = []) => {
   for (const [k, v] of Object.entries(attrs)) {
     if (k === 'class') node.className = v;
     else if (k === 'text') node.textContent = v;
-    else if (k === 'html') node.innerHTML = v;  // only for trusted constants
     else node.setAttribute(k, v);
   }
   for (const c of [].concat(children)) {
@@ -494,163 +369,180 @@ const el = (tag, attrs = {}, children = []) => {
   return node;
 };
 
-const fmtDate = iso => {
-  const d = new Date(iso + 'T00:00:00');
-  const days = ['อา','จ','อ','พ','พฤ','ศ','ส'];
-  const months = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
-  return `${days[d.getDay()]} ${d.getDate()} ${months[d.getMonth()]}`;
-};
-const fmtDuration = s => {
+// Read a design token from :root so chart colours stay in the CSS token block.
+const tok = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+const DAYS = ['อา','จ','อ','พ','พฤ','ศ','ส'];
+const MONTHS = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+const toDate = iso => new Date(iso + 'T00:00:00');
+const fmtDate = iso => { const d = toDate(iso); return `${DAYS[d.getDay()]} ${d.getDate()} ${MONTHS[d.getMonth()]}`; };
+const fmtDayMonth = d => `${d.getDate()} ${MONTHS[d.getMonth()]}`;
+const fmtShort = iso => fmtDayMonth(toDate(iso));
+// "9–15 ต.ค." within one month, "25 ก.ย.–1 ต.ค." across months
+const fmtRange = (a, b) => a.getMonth() === b.getMonth()
+  ? `${a.getDate()}–${b.getDate()} ${MONTHS[b.getMonth()]}`
+  : `${fmtDayMonth(a)}–${fmtDayMonth(b)}`;
+const pad2 = n => String(n).padStart(2, '0');
+// Single-session clock: m:ss, or h:mm:ss past an hour
+const fmtClock = s => {
   if (!s) return '—';
-  const m = Math.floor(s / 60), sec = Math.round(s % 60);
-  return `${m}:${String(sec).padStart(2,'0')}`;
+  s = Math.round(s);
+  const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), sec = s % 60;
+  return h ? `${h}:${pad2(m)}:${pad2(sec)}` : `${m}:${pad2(sec)}`;
 };
-const fmtNum = (v, suffix='') => v == null ? '—' : `${Math.round(v)}${suffix}`;
+// Totals: "5 ชม. 27 นาที" / "48 นาที"
+const fmtTotal = s => {
+  if (!s) return '—';
+  const mins = Math.round(s / 60), h = Math.floor(mins / 60), m = mins % 60;
+  return h ? `${h} ชม. ${m} นาที` : `${m} นาที`;
+};
+// Pace seconds per 100m → "1:49"
+const fmtPace = s => s == null ? '—' : `${Math.floor(s / 60)}:${pad2(Math.round(s % 60))}`;
+const fmtNum = (v, suffix = '') => v == null ? '—' : `${Math.round(v)}${suffix}`;
+const fmtKm = m => (m / 1000).toFixed(1);
+
+const paceOf = (movingS, distM) => (movingS && distM) ? movingS / distM * 100 : null;
+const inPlan = (a, d) => a.date >= d.plan_start;
+
+function planWeekOf(iso, planStart) {
+  return Math.floor((toDate(iso) - planStart) / (7 * 86400 * 1000)) + 1;
+}
+
+function loadHeader(d) {
+  const n = (d.rotation || []).length;
+  document.getElementById('planLine').textContent =
+    `แผนเริ่ม ${fmtDate(d.plan_start)}` + (n ? ` · rotation ${n} sessions` : '');
+  document.getElementById('updated').textContent =
+    'อัปเดต ' + new Date(d.generated_at).toLocaleString('th-TH', { dateStyle: 'medium', timeStyle: 'short' });
+}
 
 function loadWeekly(d) {
-  const planStart = new Date(d.plan_start + 'T00:00:00');
-  // Bucket activities into 7-day windows from plan_start
-  const weeks = new Map();  // week_idx -> { sessions, distance, duration, hr_sum, hr_n, pace_sum, pace_n }
+  const planStart = toDate(d.plan_start);
+  const weeks = new Map();
   for (const a of d.activities) {
-    const dt = new Date(a.date + 'T00:00:00');
-    const wIdx = Math.floor((dt - planStart) / (7 * 86400 * 1000)) + 1;
+    const wIdx = planWeekOf(a.date, planStart);
     if (wIdx < 1) continue;
-    if (!weeks.has(wIdx)) weeks.set(wIdx, { sessions: 0, distance: 0, duration: 0, hr_sum: 0, hr_n: 0, pace_sum: 0, pace_n: 0 });
+    if (!weeks.has(wIdx)) weeks.set(wIdx, { sessions: 0, distance: 0, duration: 0, hr_sum: 0, hr_n: 0, moving: 0, pace_dist: 0 });
     const w = weeks.get(wIdx);
     w.sessions += 1;
     w.distance += a.distance_m || 0;
     w.duration += a.duration_s || 0;
     if (a.avg_hr) { w.hr_sum += a.avg_hr; w.hr_n += 1; }
-    if (a.distance_m && a.moving_duration_s) {
-      w.pace_sum += a.moving_duration_s / a.distance_m * 100;
-      w.pace_n += 1;
-    }
+    if (a.distance_m && a.moving_duration_s) { w.moving += a.moving_duration_s; w.pace_dist += a.distance_m; }
   }
 
-  // Always render 6 rows (plan length), even if a week has zero activity yet
+  // Show every plan week up to the current one (plus any week that already has data)
+  const currentWeek = Math.max(1, planWeekOf(d.today, planStart));
+  const lastWeek = Math.max(currentWeek, ...weeks.keys());
+
   const tbody = document.querySelector('#weeklyTable tbody');
   tbody.replaceChildren();
-  for (let i = 1; i <= 6; i++) {
+  for (let i = 1; i <= lastWeek; i++) {
     const w = weeks.get(i);
-    const weekStart = new Date(planStart);
-    weekStart.setDate(weekStart.getDate() + (i - 1) * 7);
-    const weekEnd = new Date(weekStart);
-    weekEnd.setDate(weekEnd.getDate() + 6);
-    const label = `สัปดาห์ ${i}`;
-    const dateRange = `${weekStart.getDate()}–${weekEnd.getDate()} ${['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'][weekStart.getMonth()]}`;
-    const rowDelay = `--delay:${(i - 1) * 0.06}s`;
+    const start = new Date(planStart);
+    start.setDate(start.getDate() + (i - 1) * 7);
+    const end = new Date(start);
+    end.setDate(end.getDate() + 6);
+    const firstCell = el('td', {}, [`สัปดาห์ ${i}`, el('span', { class: 'sub', text: fmtRange(start, end) })]);
+    const cls = i === currentWeek ? 'row-current' : '';
     if (!w) {
-      tbody.appendChild(el('tr', { class: 'row-reveal', style: `opacity:0;${rowDelay}` }, [
-        el('td', {}, [label, el('div', { style: 'color:var(--muted);font-size:11px', text: dateRange })]),
-        el('td', { class: 'num', text: '—' }),
-        el('td', { class: 'num', text: '—' }),
-        el('td', { class: 'num', text: '—' }),
-        el('td', { class: 'num', text: '—' }),
-        el('td', { class: 'num', text: '—' }),
-      ]));
+      tbody.appendChild(el('tr', { class: cls }, [firstCell, ...Array.from({ length: 5 }, () => el('td', { class: 'num', text: '—' }))]));
       continue;
     }
-    const paceAvg = w.pace_n ? Math.round(w.pace_sum / w.pace_n) : null;
-    tbody.appendChild(el('tr', { class: 'row-reveal', style: rowDelay }, [
-      el('td', {}, [label, el('div', { style: 'color:var(--muted);font-size:11px', text: dateRange })]),
+    tbody.appendChild(el('tr', { class: cls }, [
+      firstCell,
       el('td', { class: 'num', text: String(w.sessions) }),
-      el('td', { class: 'num', text: `${Math.round(w.distance)}m` }),
-      el('td', { class: 'num', text: fmtDuration(w.duration) }),
+      el('td', { class: 'num', text: `${Math.round(w.distance).toLocaleString()} m` }),
+      el('td', { class: 'num', text: fmtTotal(w.duration) }),
       el('td', { class: 'num', text: w.hr_n ? String(Math.round(w.hr_sum / w.hr_n)) : '—' }),
-      el('td', { class: 'num', text: paceAvg ? `${paceAvg}s` : '—' }),
+      el('td', { class: 'num', text: w.pace_dist ? `${fmtPace(paceOf(w.moving, w.pace_dist))} /100m` : '—' }),
     ]));
   }
 }
 
 function loadStats(d) {
   const done = d.stats.sessions_done, total = d.stats.sessions_total;
-  const km = (d.stats.total_distance_m / 1000).toFixed(1);
-  const hrs = (d.stats.total_duration_s / 3600).toFixed(1);
   const pct = total ? Math.round(done / total * 100) : 0;
+  const skipped = (d.rotation || []).filter(r => r.status === 'skipped').length;
+  const plan = d.activities.filter(a => inPlan(a, d));
+  const sum = (arr, k) => arr.reduce((s, a) => s + (a[k] || 0), 0);
+  const planDist = sum(plan, 'distance_m'), allDist = sum(d.activities, 'distance_m');
+  const planDur = sum(plan, 'duration_s'), allDur = sum(d.activities, 'duration_s');
 
-  const stats = document.getElementById('stats');
-  stats.replaceChildren(
-    statCard('Sessions', done, `/${total}`, `${pct}% ของแผน`, 0),
-    statCard('Total distance', parseFloat(km), ' km', `${d.stats.total_distance_m.toLocaleString()} เมตร`, 0.1),
-    statCard('Time in water', parseFloat(hrs), ' hr', `${Math.round(d.stats.total_duration_s/60)} นาที`, 0.2),
-    statCard('วันที่', new Date(d.today + 'T00:00:00').toLocaleDateString('th-TH', {day:'numeric', month:'short'}), '', `เริ่ม ${fmtDate(d.plan_start)}`, 0.3),
+  document.getElementById('stats').replaceChildren(
+    statCard('Sessions ในแผน', done, `/${total}`, skipped ? `${pct}% · ข้าม ${skipped} ครั้ง` : `${pct}% ของ rotation`, 0),
+    statCard('ระยะในแผน', parseFloat(fmtKm(planDist)), ' km', `ทั้งหมด ${fmtKm(allDist)} km`, 0.05),
+    statCard('เวลาในน้ำ (แผน)', parseFloat((planDur / 3600).toFixed(1)), ' ชม.', `ทั้งหมด ${(allDur / 3600).toFixed(1)} ชม.`, 0.1),
+    statCard('วันนี้', fmtShort(d.today), '', `สัปดาห์ที่ ${planWeekOf(d.today, toDate(d.plan_start))} ของแผน`, 0.15),
   );
-
-  document.getElementById('updated').textContent =
-    'อัปเดต: ' + new Date(d.generated_at).toLocaleString('th-TH', { dateStyle: 'medium', timeStyle: 'short' });
 }
 
 function statCard(label, value, unit, sub, delaySec = 0) {
   const valueNode = el('div', { class: 'stat-value' });
-  // If value is numeric, animate it counting up. Otherwise just place it.
-  const isNumeric = typeof value === 'number' && isFinite(value);
-  if (isNumeric) {
+  if (typeof value === 'number' && isFinite(value)) {
     const decimals = String(value).includes('.') ? 1 : 0;
-    valueNode.appendChild(document.createTextNode('0'));
-    animateCount(valueNode.firstChild, 0, value, 900, decimals, delaySec * 1000 + 250);
+    valueNode.appendChild(document.createTextNode(value.toFixed(decimals)));
+    animateCount(valueNode.firstChild, value, decimals, delaySec * 1000 + 200);
   } else {
     valueNode.appendChild(document.createTextNode(String(value)));
   }
   if (unit) valueNode.appendChild(el('span', { class: 'unit', text: unit }));
 
-  return el('div', { class: 'stat-card', style: `--delay:${delaySec}s` }, [
+  return el('div', { class: 'stat-card reveal', style: `--delay:${delaySec}s` }, [
     el('div', { class: 'stat-label', text: label }),
     valueNode,
     el('div', { class: 'stat-sub', text: sub }),
   ]);
 }
 
-function animateCount(textNode, from, to, durationMs, decimals, delayMs) {
+// Count up from 0; the final value is already in the DOM so no-JS-timing / reduced-motion users see it.
+function animateCount(textNode, to, decimals, delayMs) {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const durationMs = 800;
   const start = performance.now() + delayMs;
   const easeOut = t => 1 - Math.pow(1 - t, 3);
+  textNode.data = (0).toFixed(decimals);
   function frame(now) {
     if (now < start) { requestAnimationFrame(frame); return }
     const t = Math.min(1, (now - start) / durationMs);
-    const v = from + (to - from) * easeOut(t);
-    textNode.data = v.toFixed(decimals);
+    textNode.data = (to * easeOut(t)).toFixed(decimals);
     if (t < 1) requestAnimationFrame(frame);
-    else textNode.data = to.toFixed(decimals);
   }
   requestAnimationFrame(frame);
 }
 
-// === Floating bubbles ===
 function spawnBubbles() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const host = document.getElementById('bubbles');
-  if (!host) return;
-  const COUNT = 14;
-  for (let i = 0; i < COUNT; i++) {
+  for (let i = 0; i < 8; i++) {
     const b = document.createElement('span');
     b.className = 'bubble';
-    const size = 8 + Math.random() * 28;
+    const size = 8 + Math.random() * 24;
     b.style.width = b.style.height = `${size}px`;
     b.style.left = `${Math.random() * 100}%`;
-    b.style.animationDuration = `${12 + Math.random() * 14}s`;
+    b.style.animationDuration = `${14 + Math.random() * 14}s`;
     b.style.animationDelay = `${-Math.random() * 20}s`;
     host.appendChild(b);
   }
 }
 
-// === Confetti burst (called when a "done" milestone is celebrated) ===
 function burstConfetti() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const host = document.getElementById('confetti');
-  if (!host) return;
-  const colors = ['#4cc9f0', '#a78bfa', '#6ee7b7', '#fcd34d', '#fb923c', '#fda4af'];
-  const COUNT = 60;
-  for (let i = 0; i < COUNT; i++) {
+  const colors = ['--series-1', '--series-2', '--series-3', '--series-4', '--hr', '--bad'].map(tok);
+  for (let i = 0; i < 60; i++) {
     const piece = document.createElement('span');
     piece.className = 'confetti-piece';
     piece.style.left = `${Math.random() * 100}%`;
     piece.style.background = colors[i % colors.length];
-    piece.style.transform = `rotate(${Math.random() * 360}deg)`;
     piece.style.animationDelay = `${Math.random() * 0.4}s`;
     piece.style.animationDuration = `${2.2 + Math.random() * 1.4}s`;
     host.appendChild(piece);
     setTimeout(() => piece.remove(), 4500);
   }
 }
+
+const RECENT_LIMIT = 15;
 
 function loadActivitiesTable(d) {
   const tbody = document.querySelector('#activitiesTable tbody');
@@ -660,15 +552,25 @@ function loadActivitiesTable(d) {
     tbody.appendChild(el('tr', {}, el('td', { colspan: 7, class: 'empty', text: 'ยังไม่มี activity' })));
     return;
   }
-  // Build name → workout target lookup; activities are matched to workout
-  // template by their activity name.
+  // Activities are matched to a workout template by their activity name.
   const targetByName = {};
   for (const w of Object.values(d.workouts)) targetByName[w.name] = w;
 
-  acts.forEach((a, idx) => {
+  const btn = document.getElementById('showAllActs');
+  btn.hidden = acts.length <= RECENT_LIMIT;
+  btn.textContent = `แสดงทั้งหมด (${acts.length})`;
+  btn.setAttribute('aria-expanded', 'false');
+  btn.onclick = () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    tbody.querySelectorAll('tr').forEach((tr, i) => { tr.hidden = !expanded ? false : i >= RECENT_LIMIT; });
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.textContent = expanded ? `แสดงทั้งหมด (${acts.length})` : 'แสดงน้อยลง';
+  };
+
+  acts.forEach((a, i) => {
     const target = targetByName[a.name];
-    let vsCell;
-    if (target) {
+    let vsCell = '—';
+    if (target && target.target_distance_m) {
       const diff = a.distance_m - target.target_distance_m;
       const pct = (a.distance_m / target.target_distance_m * 100).toFixed(0);
       const over = Math.abs(diff) > target.target_distance_m * 0.2;
@@ -676,286 +578,327 @@ function loadActivitiesTable(d) {
         `${pct}%`,
         el('span', { class: 'diff', text: `${diff >= 0 ? '+' : ''}${Math.round(diff)}m` }),
       ]);
-    } else {
-      vsCell = document.createTextNode('—');
     }
-    const link = el('a', {
-      class: 'activity-link',
-      href: `activity.html?id=${encodeURIComponent(a.activity_id)}`,
-      text: a.name || '—',
-    });
-    tbody.appendChild(el('tr', {
-      class: 'row-reveal',
-      style: `--delay:${Math.min(idx * 0.05, 0.5)}s`,
-    }, [
+    const row = el('tr', {}, [
       el('td', { text: fmtDate(a.date) }),
-      el('td', {}, link),
-      el('td', { class: 'num', text: `${Math.round(a.distance_m)}m` }),
+      el('td', {}, el('a', {
+        class: 'activity-link',
+        href: `activity.html?id=${encodeURIComponent(a.activity_id)}`,
+        text: a.name || '—',
+      })),
+      el('td', { class: 'num', text: `${Math.round(a.distance_m).toLocaleString()} m` }),
       el('td', { class: 'num' }, vsCell),
-      el('td', { class: 'num', text: fmtDuration(a.duration_s) }),
+      el('td', { class: 'num', text: fmtClock(a.duration_s) }),
       el('td', { class: 'num', text: fmtNum(a.avg_hr) }),
       el('td', { class: 'num', text: fmtNum(a.avg_swolf) }),
-    ]));
+    ]);
+    row.hidden = i >= RECENT_LIMIT;
+    tbody.appendChild(row);
   });
 }
 
-const STATUS_LABELS = { done: 'เสร็จ', next: 'ครั้งต่อไป', upcoming: 'รอ' };
+const STATUS_LABELS = { done: 'เสร็จ', next: 'ครั้งต่อไป', upcoming: 'รอ', skipped: 'ข้าม' };
 
 function loadNextWorkout(d) {
   const next = (d.rotation || []).find(r => r.status === 'next');
   const card = document.getElementById('nextWorkout');
-  if (!next) {
-    card.style.display = 'none';
-    return;
-  }
-  const w = d.workouts[next.workout_key];
-  if (!w) return;
-  card.style.display = '';
+  const w = next && d.workouts[next.workout_key];
+  if (!w) { card.hidden = true; return; }
+  card.hidden = false;
   document.getElementById('nextName').textContent = w.name;
   document.getElementById('nextMeta').textContent =
-    `เป้าระยะ ${w.target_distance_m}m · ~${Math.round(w.target_duration_s/60)} นาที · rotation ${next.rotation_index}/${d.rotation.length}`;
+    `เป้าระยะ ${w.target_distance_m}m · ~${Math.round(w.target_duration_s / 60)} นาที · rotation ${next.rotation_index}/${d.rotation.length}`;
   document.getElementById('nextDesc').textContent = w.description || '';
 }
 
 function loadRotationTable(d) {
   const tbody = document.querySelector('#rotationTable tbody');
   tbody.replaceChildren();
-  (d.rotation || []).forEach((s, i) => {
+  for (const s of d.rotation || []) {
     const w = d.workouts[s.workout_key];
-    const rowClasses = ['row-reveal'];
-    if (s.status === 'done') rowClasses.push('row-done');
-    if (s.status === 'next') rowClasses.push('row-today');
-    tbody.appendChild(el('tr', {
-      class: rowClasses.join(' '),
-      style: `--delay:${Math.min(i * 0.04, 0.6)}s`,
-    }, [
+    if (!w) continue;
+    const cls = { done: 'row-done', next: 'row-next', skipped: 'row-skipped' }[s.status] || '';
+    tbody.appendChild(el('tr', { class: cls }, [
       el('td', { class: 'num', text: String(s.rotation_index) }),
       el('td', { text: w.name }),
       el('td', { class: 'center', text: `${w.target_distance_m}m` }),
-      el('td', { class: 'center', text: `${Math.round(w.target_duration_s/60)} นาที` }),
+      el('td', { class: 'center', text: `${Math.round(w.target_duration_s / 60)} นาที` }),
       el('td', {}, el('span', { class: `pill ${s.status}`, text: STATUS_LABELS[s.status] || s.status })),
     ]));
-  });
+  }
 }
 
 // Celebrate milestones: each multiple of 5 completed sessions, plus completion of plan
 function maybeCelebrate(d) {
-  const done = d.stats.sessions_done;
-  const total = d.stats.sessions_total;
-  if (!done) return;
+  const done = d.stats.sessions_done, total = d.stats.sessions_total;
+  if (!done || !(done === total || done % 5 === 0)) return;
   const key = `swim-celebrated-${done}`;
-  if (sessionStorage.getItem(key)) return;
-  const shouldCelebrate = done === total || done % 5 === 0;
-  if (!shouldCelebrate) return;
-  sessionStorage.setItem(key, '1');
-  // Delay so the page has settled into view first
+  try {
+    if (sessionStorage.getItem(key)) return;
+    sessionStorage.setItem(key, '1');
+  } catch { return; }
   setTimeout(burstConfetti, 700);
 }
 
-function chartCommon() {
-  return {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: { backgroundColor: '#0b1220', borderColor: '#25304d', borderWidth: 1, padding: 10 }
-    },
-    scales: {
-      x: { ticks: { color: '#94a0bb' }, grid: { color: '#1a2440' } },
-      y: { ticks: { color: '#94a0bb' }, grid: { color: '#1a2440' }, beginAtZero: true }
-    }
-  };
-}
+// --- Charts ---------------------------------------------------------------
 
-function loadCharts(d) {
-  // --- Distance: stack sessions on the same day ---
-  // Group activities by date in chronological order
+// Aggregate activities per calendar day so all three charts share one x-axis.
+function dailySeries(acts) {
   const byDate = new Map();
-  for (const a of d.activities) {
+  for (const a of acts) {
     if (!byDate.has(a.date)) byDate.set(a.date, []);
     byDate.get(a.date).push(a);
   }
-  const dateLabels = [...byDate.keys()];
-  const labels = dateLabels.map(fmtDate);
-
-  // Max sessions in any one day = number of stack layers we need
-  const maxSessions = Math.max(1, ...[...byDate.values()].map(arr => arr.length));
-  const SESSION_COLORS = ['#4cc9f0', '#a78bfa', '#34d399', '#fb923c'];
-
-  // Build N datasets: dataset[i] = i-th session of each day (or null if no such session)
-  const distDatasets = [];
-  for (let i = 0; i < maxSessions; i++) {
-    distDatasets.push({
-      label: maxSessions === 1 ? 'ระยะ' : `Session ${i + 1}`,
-      data: dateLabels.map(date => {
-        const sess = byDate.get(date)[i];
-        return sess ? Math.round(sess.distance_m) : null;
-      }),
-      // Per-bar metadata for tooltips
-      sessionNames: dateLabels.map(date => byDate.get(date)[i]?.name || null),
-      backgroundColor: SESSION_COLORS[i % SESSION_COLORS.length],
-      borderRadius: 6,
-      stack: 'distance',
-    });
-  }
-
-  const hr = d.activities.map(a => Math.round(a.avg_hr || 0));
-  const hrLabels = d.activities.map(a => fmtDate(a.date));
-  const paceLabels = hrLabels;
-  // pace s/100m using moving duration (excludes rest)
-  const pace = d.activities.map(a => {
-    if (!a.distance_m || !a.moving_duration_s) return null;
-    return Math.round(a.moving_duration_s / a.distance_m * 100);
+  return [...byDate.entries()].map(([date, sessions]) => {
+    let moving = 0, paceDist = 0, hrW = 0, hrDur = 0;
+    for (const s of sessions) {
+      if (s.distance_m && s.moving_duration_s) { moving += s.moving_duration_s; paceDist += s.distance_m; }
+      if (s.avg_hr && s.duration_s) { hrW += s.avg_hr * s.duration_s; hrDur += s.duration_s; }
+    }
+    return {
+      date,
+      sessions,
+      distance: sessions.reduce((t, s) => t + (s.distance_m || 0), 0),
+      pace: paceDist ? Math.round(paceOf(moving, paceDist)) : null,   // distance-weighted
+      hr: hrDur ? Math.round(hrW / hrDur) : null,                     // time-weighted
+    };
   });
+}
 
+// Dashed vertical marker where the current plan starts.
+function planStartPlugin(index) {
+  return {
+    id: 'planStart',
+    beforeDatasetsDraw(chart) {
+      if (index < 0) return;
+      const { ctx, chartArea, scales } = chart;
+      const x = scales.x.getPixelForValue(index) - (index > 0 ? (scales.x.getPixelForValue(index) - scales.x.getPixelForValue(index - 1)) / 2 : 0);
+      ctx.save();
+      ctx.strokeStyle = tok('--muted');
+      ctx.globalAlpha = 0.6;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.moveTo(x, chartArea.top);
+      ctx.lineTo(x, chartArea.bottom);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = tok('--muted');
+      ctx.font = `11px ${tok('--font-body')}`;
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'top';
+      ctx.fillText('เริ่มแผน', x + 4, chartArea.top + 2);
+      ctx.restore();
+    },
+  };
+}
+
+function chartBase(days) {
+  const muted = tok('--muted'), grid = tok('--grid');
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: tok('--bg'), borderColor: tok('--line'), borderWidth: 1, padding: 10,
+        callbacks: { title: items => fmtDate(days[items[0].dataIndex].date) },
+      },
+    },
+    scales: {
+      x: {
+        ticks: { color: muted, maxRotation: 0, autoSkip: true, autoSkipPadding: 16 },
+        grid: { display: false },
+      },
+      y: { ticks: { color: muted }, grid: { color: grid } },
+    },
+  };
+}
+
+function describe(days, key, fmt) {
+  const vals = days.filter(x => x[key] != null);
+  if (!vals.length) return 'ไม่มีข้อมูล';
+  const last = vals[vals.length - 1];
+  return `${vals.length} วัน · ล่าสุด ${fmtDate(last.date)} ${fmt(last[key])}`;
+}
+
+function loadCharts(d) {
+  Chart.defaults.font.family = tok('--font-body');
+  Chart.defaults.color = tok('--muted');
+
+  const days = dailySeries(d.activities);
+  const labels = days.map(x => fmtShort(x.date));
+  const planIdx = days.findIndex(x => x.date >= d.plan_start);
+  const marker = planStartPlugin(planIdx > 0 ? planIdx : -1);
+
+  // --- Distance: stack sessions on the same day ---
+  const maxSessions = Math.max(1, ...days.map(x => x.sessions.length));
+  const seriesColors = ['--series-1', '--series-2', '--series-3', '--series-4'].map(tok);
+  const distDatasets = Array.from({ length: maxSessions }, (_, i) => ({
+    label: maxSessions === 1 ? 'ระยะ' : `ครั้งที่ ${i + 1}`,
+    data: days.map(x => x.sessions[i] ? Math.round(x.sessions[i].distance_m) : null),
+    backgroundColor: seriesColors[i % seriesColors.length],
+    borderRadius: 4,
+    stack: 'distance',
+  }));
+
+  const distBase = chartBase(days);
   new Chart(document.getElementById('distChart'), {
     type: 'bar',
     data: { labels, datasets: distDatasets },
     options: {
-      ...chartCommon(),
+      ...distBase,
       plugins: {
-        ...chartCommon().plugins,
-        legend: { display: maxSessions > 1, labels: { color: '#94a0bb' } },
+        ...distBase.plugins,
+        legend: { display: maxSessions > 1, labels: { color: tok('--muted'), boxWidth: 12 } },
         tooltip: {
-          ...chartCommon().plugins.tooltip,
+          ...distBase.plugins.tooltip,
+          filter: item => item.parsed.y != null,
           callbacks: {
-            title: items => items[0].label,
+            ...distBase.plugins.tooltip.callbacks,
             label: ctx => {
-              const ds = ctx.dataset;
-              const name = ds.sessionNames?.[ctx.dataIndex];
-              const val = ctx.parsed.y;
-              return name ? `${name}: ${val}m` : `${val}m`;
+              const s = days[ctx.dataIndex].sessions[ctx.datasetIndex];
+              return s ? `${s.name || 'Session'}: ${ctx.parsed.y.toLocaleString()} m` : '';
             },
-            footer: items => {
-              if (items.length < 2) return '';
-              const total = items.reduce((s, it) => s + (it.parsed.y || 0), 0);
-              return `รวม: ${total}m`;
-            },
+            footer: items => items.length < 2 ? '' : `รวม ${days[items[0].dataIndex].distance.toLocaleString()} m`,
           },
         },
       },
       scales: {
-        ...chartCommon().scales,
-        x: { ...chartCommon().scales.x, stacked: true },
-        y: {
-          ...chartCommon().scales.y,
-          stacked: true,
-          title: { display: true, text: 'เมตร', color: '#94a0bb' },
-        },
+        x: { ...distBase.scales.x, stacked: true },
+        y: { ...distBase.scales.y, stacked: true, beginAtZero: true, title: { display: true, text: 'เมตร', color: tok('--muted') } },
       },
     },
+    plugins: [marker],
   });
+  document.getElementById('distChart').setAttribute('aria-label',
+    'กราฟระยะต่อวัน · ' + describe(days, 'distance', v => `${v.toLocaleString()} m`));
 
+  // --- Pace: line, faster (lower s/100m) drawn higher ---
+  const paceBase = chartBase(days);
   new Chart(document.getElementById('paceChart'), {
-    type: 'bar',
+    type: 'line',
     data: {
-      labels: paceLabels,
+      labels,
       datasets: [{
-        data: pace,
-        backgroundColor: '#34d399',
-        borderRadius: 6,
+        label: 'Pace',
+        data: days.map(x => x.pace),
+        borderColor: tok('--pace'),
+        backgroundColor: tok('--pace'),
+        pointRadius: 3,
+        pointHoverRadius: 5,
+        borderWidth: 2,
+        tension: 0.25,
+        spanGaps: true,
       }],
     },
     options: {
-      ...chartCommon(),
+      ...paceBase,
       plugins: {
-        ...chartCommon().plugins,
+        ...paceBase.plugins,
         tooltip: {
-          ...chartCommon().plugins.tooltip,
-          callbacks: { label: ctx => ctx.parsed.y ? `${ctx.parsed.y} s/100m` : 'no data' },
+          ...paceBase.plugins.tooltip,
+          callbacks: {
+            ...paceBase.plugins.tooltip.callbacks,
+            label: ctx => `${fmtPace(ctx.parsed.y)} /100m`,
+          },
         },
       },
       scales: {
-        ...chartCommon().scales,
+        ...paceBase.scales,
         y: {
-          ...chartCommon().scales.y,
-          beginAtZero: false,
-          title: { display: true, text: 's/100m (ต่ำ = เร็ว)', color: '#94a0bb' },
-          reverse: true,  // lower (faster) on top
+          ...paceBase.scales.y,
+          reverse: true,
+          grace: '5%',
+          ticks: { ...paceBase.scales.y.ticks, callback: v => fmtPace(v) },
+          title: { display: true, text: 'นาที /100m', color: tok('--muted') },
         },
       },
     },
+    plugins: [marker],
   });
+  document.getElementById('paceChart').setAttribute('aria-label',
+    'กราฟ pace ต่อวัน · ' + describe(days, 'pace', v => `${fmtPace(v)} ต่อ 100 เมตร`));
 
-  // HR chart with zone bands behind the line
+  // --- HR: line over zone bands, zone labels in the right gutter ---
   const z = d.hr_zones || {};
   const hrZonesPlugin = {
     id: 'hrZones',
     beforeDatasetsDraw(chart) {
-      const { ctx, chartArea, scales } = chart;
       if (!z.z1_floor) return;
-      const y = scales.y;
+      const { ctx, chartArea, scales: { y } } = chart;
       const bands = [
-        { from: z.z1_floor, to: z.z2_floor, color: 'rgba(110, 231, 183, 0.06)' },  // Z1 recovery
-        { from: z.z2_floor, to: z.z3_floor, color: 'rgba(76, 201, 240, 0.07)' },   // Z2 aerobic
-        { from: z.z3_floor, to: z.z4_floor, color: 'rgba(252, 211, 77, 0.09)' },   // Z3 tempo
-        { from: z.z4_floor, to: z.z5_floor, color: 'rgba(251, 146, 60, 0.10)' },   // Z4 threshold
-        { from: z.z5_floor, to: z.max,      color: 'rgba(253, 164, 175, 0.12)' },  // Z5 VO2
+        [z.z1_floor, z.z2_floor, '--zone-1', 'Z1'],
+        [z.z2_floor, z.z3_floor, '--zone-2', 'Z2'],
+        [z.z3_floor, z.z4_floor, '--zone-3', 'Z3'],
+        [z.z4_floor, z.z5_floor, '--zone-4', 'Z4'],
+        [z.z5_floor, z.max,      '--zone-5', 'Z5'],
       ];
       ctx.save();
-      for (const b of bands) {
-        const yTop = y.getPixelForValue(b.to);
-        const yBot = y.getPixelForValue(b.from);
-        ctx.fillStyle = b.color;
-        ctx.fillRect(chartArea.left, yTop, chartArea.right - chartArea.left, yBot - yTop);
-      }
-      // Zone labels at the right edge
-      ctx.fillStyle = '#94a0bb';
-      ctx.font = '10px Inter, sans-serif';
-      ctx.textAlign = 'right';
+      ctx.font = `11px ${tok('--font-num')}`;
+      ctx.textAlign = 'left';
       ctx.textBaseline = 'middle';
-      const zoneLabels = [
-        { hr: (z.z1_floor + z.z2_floor) / 2, label: 'Z1' },
-        { hr: (z.z2_floor + z.z3_floor) / 2, label: 'Z2' },
-        { hr: (z.z3_floor + z.z4_floor) / 2, label: 'Z3' },
-        { hr: (z.z4_floor + z.z5_floor) / 2, label: 'Z4' },
-        { hr: (z.z5_floor + z.max) / 2,      label: 'Z5' },
-      ];
-      for (const zl of zoneLabels) {
-        ctx.fillText(zl.label, chartArea.right - 4, y.getPixelForValue(zl.hr));
+      for (const [from, to, color, label] of bands) {
+        const yTop = y.getPixelForValue(to), yBot = y.getPixelForValue(from);
+        ctx.fillStyle = tok(color);
+        ctx.fillRect(chartArea.left, yTop, chartArea.right - chartArea.left, yBot - yTop);
+        ctx.fillStyle = tok('--muted');
+        ctx.fillText(label, chartArea.right + 6, (yTop + yBot) / 2);
       }
       ctx.restore();
     },
   };
 
+  const hrBase = chartBase(days);
   new Chart(document.getElementById('hrChart'), {
     type: 'line',
     data: {
-      labels: hrLabels,
+      labels,
       datasets: [{
         label: 'Avg HR',
-        data: hr,
-        borderColor: '#fcd34d',
-        backgroundColor: 'rgba(252, 211, 77, 0.0)',
+        data: days.map(x => x.hr),
+        borderColor: tok('--hr'),
+        backgroundColor: tok('--hr'),
         tension: 0.3,
-        fill: false,
-        pointRadius: 5,
-        pointBackgroundColor: '#fcd34d',
+        pointRadius: 3,
+        pointHoverRadius: 5,
         borderWidth: 2,
-      }]
+        spanGaps: true,
+      }],
     },
     options: {
-      ...chartCommon(),
+      ...hrBase,
+      layout: { padding: { right: 28 } },
+      plugins: {
+        ...hrBase.plugins,
+        tooltip: {
+          ...hrBase.plugins.tooltip,
+          callbacks: { ...hrBase.plugins.tooltip.callbacks, label: ctx => `${ctx.parsed.y} bpm` },
+        },
+      },
       scales: {
-        ...chartCommon().scales,
+        ...hrBase.scales,
         y: {
-          ...chartCommon().scales.y,
-          beginAtZero: false,
+          ...hrBase.scales.y,
           min: 80,
           max: z.max || 190,
-          title: { display: true, text: 'bpm', color: '#94a0bb' },
-        }
-      }
+          title: { display: true, text: 'bpm', color: tok('--muted') },
+        },
+      },
     },
-    plugins: [hrZonesPlugin],
+    plugins: [hrZonesPlugin, marker],
   });
+  document.getElementById('hrChart').setAttribute('aria-label',
+    'กราฟ HR เฉลี่ยต่อวัน · ' + describe(days, 'hr', v => `${v} bpm`));
 }
 
 spawnBubbles();
 
 fetch('data.json')
-  .then(r => r.json())
+  .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
   .then(d => {
+    loadHeader(d);
     loadStats(d);
     loadNextWorkout(d);
     loadWeekly(d);
@@ -965,9 +908,8 @@ fetch('data.json')
     maybeCelebrate(d);
   })
   .catch(e => {
-    const msg = el('p', { text: 'โหลดข้อมูลไม่ได้: ' + e.message });
-    msg.style.color = 'var(--bad)';
-    document.querySelector('.wrap').appendChild(msg);
+    document.querySelector('.wrap').appendChild(
+      el('p', { class: 'error', role: 'alert', text: 'โหลดข้อมูลไม่ได้: ' + e.message }));
   });
 </script>
 </body>
