@@ -11,54 +11,54 @@
       "calories": 48.0,
       "stroke": "MIXED",
       "avg_speed": 0.5249999761581421,
-      "avg_swolf": null,
+      "avg_swolf": 59.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "FREESTYLE",
           "duration_s": 34.187,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 7,
+          "swolf": 41.0,
           "distance_m": 25.0
         },
         {
           "index": 2,
           "stroke": "BREASTSTROKE",
           "duration_s": 50.625,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 14,
+          "swolf": 65.0,
           "distance_m": 25.0
         },
         {
           "index": 3,
           "stroke": "BREASTSTROKE",
           "duration_s": 56.125,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 14,
+          "swolf": 70.0,
           "distance_m": 25.0
         },
         {
           "index": 4,
           "stroke": "BREASTSTROKE",
           "duration_s": 50.062,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 12,
+          "swolf": 62.0,
           "distance_m": 25.0
         },
         {
           "index": 5,
           "stroke": "BREASTSTROKE",
           "duration_s": 51.5,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 14,
+          "swolf": 66.0,
           "distance_m": 25.0
         },
         {
           "index": 6,
           "stroke": "BREASTSTROKE",
           "duration_s": 43.102,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 7,
+          "swolf": 50.0,
           "distance_m": 25.0
         }
       ],
@@ -75,7 +75,7 @@
       "calories": 5.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -99,7 +99,7 @@
       "calories": 39.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -123,7 +123,7 @@
       "calories": 5.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -147,7 +147,7 @@
       "calories": 29.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -171,7 +171,7 @@
       "calories": 4.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -195,7 +195,7 @@
       "calories": 25.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -219,7 +219,7 @@
       "calories": 5.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -243,7 +243,7 @@
       "calories": 24.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -267,7 +267,7 @@
       "calories": 5.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -291,7 +291,7 @@
       "calories": 4.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -315,22 +315,22 @@
       "calories": 15.0,
       "stroke": "BREASTSTROKE",
       "avg_speed": 0.7120000123977661,
-      "avg_swolf": null,
+      "avg_swolf": 42.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "BREASTSTROKE",
           "duration_s": 25.062,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 6,
+          "swolf": 31.0,
           "distance_m": 25.0
         },
         {
           "index": 2,
           "stroke": "BREASTSTROKE",
           "duration_s": 45.17,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 7,
+          "swolf": 52.0,
           "distance_m": 25.0
         }
       ],
@@ -347,7 +347,7 @@
       "calories": 5.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -371,14 +371,14 @@
       "calories": 13.0,
       "stroke": "BREASTSTROKE",
       "avg_speed": 0.42399999499320984,
-      "avg_swolf": null,
+      "avg_swolf": 73.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "BREASTSTROKE",
           "duration_s": 58.928,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 14,
+          "swolf": 73.0,
           "distance_m": 25.0
         }
       ],
@@ -395,7 +395,7 @@
       "calories": 1.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -419,22 +419,22 @@
       "calories": 13.0,
       "stroke": "MIXED",
       "avg_speed": 0.8529999852180481,
-      "avg_swolf": null,
+      "avg_swolf": 35.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "BREASTSTROKE",
           "duration_s": 26.75,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 5,
+          "swolf": 32.0,
           "distance_m": 25.0
         },
         {
           "index": 2,
           "stroke": "FREESTYLE",
           "duration_s": 31.893,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 6,
+          "swolf": 38.0,
           "distance_m": 25.0
         }
       ],
@@ -451,7 +451,7 @@
       "calories": 5.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -475,22 +475,22 @@
       "calories": 16.0,
       "stroke": "BREASTSTROKE",
       "avg_speed": 0.9850000143051147,
-      "avg_swolf": null,
+      "avg_swolf": 31.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "BREASTSTROKE",
           "duration_s": 24.562,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 6,
+          "swolf": 31.0,
           "distance_m": 25.0
         },
         {
           "index": 2,
           "stroke": "BREASTSTROKE",
           "duration_s": 26.211,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 5,
+          "swolf": 31.0,
           "distance_m": 25.0
         }
       ],
@@ -507,7 +507,7 @@
       "calories": 5.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -531,7 +531,7 @@
       "calories": 4.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -555,14 +555,14 @@
       "calories": 8.0,
       "stroke": "BREASTSTROKE",
       "avg_speed": 0.4309999942779541,
-      "avg_swolf": null,
+      "avg_swolf": 71.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "BREASTSTROKE",
           "duration_s": 58.062,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 13,
+          "swolf": 71.0,
           "distance_m": 25.0
         },
         {
@@ -587,7 +587,7 @@
       "calories": 7.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -611,30 +611,30 @@
       "calories": 24.0,
       "stroke": "BREASTSTROKE",
       "avg_speed": 0.8799999952316284,
-      "avg_swolf": null,
+      "avg_swolf": 35.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "BREASTSTROKE",
           "duration_s": 29.375,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 6,
+          "swolf": 35.0,
           "distance_m": 25.0
         },
         {
           "index": 2,
           "stroke": "BREASTSTROKE",
           "duration_s": 26.437,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 7,
+          "swolf": 33.0,
           "distance_m": 25.0
         },
         {
           "index": 3,
           "stroke": "BREASTSTROKE",
           "duration_s": 29.385,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 7,
+          "swolf": 36.0,
           "distance_m": 25.0
         }
       ],
@@ -651,7 +651,7 @@
       "calories": 7.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -675,22 +675,22 @@
       "calories": 14.0,
       "stroke": "BREASTSTROKE",
       "avg_speed": 0.6190000176429749,
-      "avg_swolf": null,
+      "avg_swolf": 51.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "BREASTSTROKE",
           "duration_s": 52.187,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 14,
+          "swolf": 66.0,
           "distance_m": 25.0
         },
         {
           "index": 2,
           "stroke": "BREASTSTROKE",
           "duration_s": 28.584,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 7,
+          "swolf": 36.0,
           "distance_m": 25.0
         }
       ],
@@ -707,7 +707,7 @@
       "calories": 7.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -731,30 +731,30 @@
       "calories": 24.0,
       "stroke": "BREASTSTROKE",
       "avg_speed": 0.8999999761581421,
-      "avg_swolf": null,
+      "avg_swolf": 34.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "BREASTSTROKE",
           "duration_s": 28.75,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 6,
+          "swolf": 35.0,
           "distance_m": 25.0
         },
         {
           "index": 2,
           "stroke": "BREASTSTROKE",
           "duration_s": 26.812,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 7,
+          "swolf": 34.0,
           "distance_m": 25.0
         },
         {
           "index": 3,
           "stroke": "BREASTSTROKE",
           "duration_s": 27.771,
-          "strokes": null,
-          "swolf": null,
+          "strokes": 7,
+          "swolf": 35.0,
           "distance_m": 25.0
         }
       ],
@@ -771,7 +771,7 @@
       "calories": 4.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,

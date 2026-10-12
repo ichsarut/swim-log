@@ -11,13 +11,13 @@
       "calories": 13.0,
       "stroke": "DRILL",
       "avg_speed": 0.6890000104904174,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 36.285,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         },
@@ -25,7 +25,7 @@
           "index": 2,
           "stroke": "DRILL",
           "duration_s": 36.286,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -43,13 +43,13 @@
       "calories": 18.0,
       "stroke": "DRILL",
       "avg_speed": 0.2809999883174896,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 89.016,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -67,7 +67,7 @@
       "calories": 3.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -91,13 +91,13 @@
       "calories": 8.0,
       "stroke": "DRILL",
       "avg_speed": 0.6489999890327454,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 38.507,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -115,7 +115,7 @@
       "calories": 3.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -139,13 +139,13 @@
       "calories": 11.0,
       "stroke": "DRILL",
       "avg_speed": 0.479999989271164,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 52.048,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -163,7 +163,7 @@
       "calories": 4.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -187,13 +187,13 @@
       "calories": 12.0,
       "stroke": "DRILL",
       "avg_speed": 0.4779999852180481,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 52.323,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -211,7 +211,7 @@
       "calories": 4.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -235,13 +235,13 @@
       "calories": 11.0,
       "stroke": "DRILL",
       "avg_speed": 0.44200000166893005,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 56.577,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -259,7 +259,7 @@
       "calories": 4.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -283,13 +283,13 @@
       "calories": 6.0,
       "stroke": "DRILL",
       "avg_speed": 0.8180000185966492,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 30.577,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -307,7 +307,7 @@
       "calories": 3.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -331,13 +331,13 @@
       "calories": 11.0,
       "stroke": "DRILL",
       "avg_speed": 0.9129999876022339,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 27.378,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         },
@@ -345,7 +345,7 @@
           "index": 2,
           "stroke": "DRILL",
           "duration_s": 27.379,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -363,7 +363,7 @@
       "calories": 4.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -387,13 +387,13 @@
       "calories": 11.0,
       "stroke": "DRILL",
       "avg_speed": 1.0709999799728394,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 23.345,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         },
@@ -401,7 +401,7 @@
           "index": 2,
           "stroke": "DRILL",
           "duration_s": 23.346,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -419,7 +419,7 @@
       "calories": 4.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -443,13 +443,13 @@
       "calories": 16.0,
       "stroke": "DRILL",
       "avg_speed": 0.6790000200271606,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 36.809,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         },
@@ -457,7 +457,7 @@
           "index": 2,
           "stroke": "DRILL",
           "duration_s": 36.809,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -475,7 +475,7 @@
       "calories": 7.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -499,13 +499,13 @@
       "calories": 11.0,
       "stroke": "DRILL",
       "avg_speed": 1.0870000123977661,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 22.998,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         },
@@ -513,7 +513,7 @@
           "index": 2,
           "stroke": "DRILL",
           "duration_s": 22.998,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -531,7 +531,7 @@
       "calories": 6.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -555,13 +555,13 @@
       "calories": 17.0,
       "stroke": "DRILL",
       "avg_speed": 0.9710000157356263,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 25.749,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         },
@@ -569,7 +569,7 @@
           "index": 2,
           "stroke": "DRILL",
           "duration_s": 25.75,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -587,7 +587,7 @@
       "calories": 2.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -611,13 +611,13 @@
       "calories": 15.0,
       "stroke": "DRILL",
       "avg_speed": 0.7350000143051147,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 33.994,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         },
@@ -625,7 +625,7 @@
           "index": 2,
           "stroke": "DRILL",
           "duration_s": 33.995,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -643,7 +643,7 @@
       "calories": 6.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -667,13 +667,13 @@
       "calories": 12.0,
       "stroke": "DRILL",
       "avg_speed": 0.9480000138282776,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 26.371,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         },
@@ -681,7 +681,7 @@
           "index": 2,
           "stroke": "DRILL",
           "duration_s": 26.371,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -699,7 +699,7 @@
       "calories": 6.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -723,13 +723,13 @@
       "calories": 13.0,
       "stroke": "DRILL",
       "avg_speed": 0.8859999775886536,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 28.205,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         },
@@ -737,7 +737,7 @@
           "index": 2,
           "stroke": "DRILL",
           "duration_s": 28.206,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -755,7 +755,7 @@
       "calories": 6.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
@@ -779,13 +779,13 @@
       "calories": 29.0,
       "stroke": "DRILL",
       "avg_speed": 0.671999990940094,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,
           "stroke": "DRILL",
           "duration_s": 37.177,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         },
@@ -793,7 +793,7 @@
           "index": 2,
           "stroke": "DRILL",
           "duration_s": 37.177,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         },
@@ -801,7 +801,7 @@
           "index": 3,
           "stroke": "DRILL",
           "duration_s": 37.177,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         },
@@ -809,7 +809,7 @@
           "index": 4,
           "stroke": "DRILL",
           "duration_s": 37.177,
-          "strokes": null,
+          "strokes": 0,
           "swolf": null,
           "distance_m": 25.0
         }
@@ -827,7 +827,7 @@
       "calories": 10.0,
       "stroke": null,
       "avg_speed": 0.0,
-      "avg_swolf": null,
+      "avg_swolf": 0.0,
       "lengths": [
         {
           "index": 1,

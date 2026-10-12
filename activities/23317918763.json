@@ -1,0 +1,2415 @@
+{
+  "activity_id": 23317918763,
+  "laps": [
+    {
+      "index": 1,
+      "distance_m": 150.0,
+      "duration_s": 210.44,
+      "moving_duration_s": 210.44,
+      "avg_hr": 121.0,
+      "max_hr": 140.0,
+      "calories": 36.0,
+      "stroke": null,
+      "avg_speed": 0.7129999995231628,
+      "avg_swolf": 43.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 89.187,
+          "strokes": 19,
+          "swolf": 108.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": null,
+          "duration_s": 22.312,
+          "strokes": 7,
+          "swolf": 29.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 3,
+          "stroke": null,
+          "duration_s": 24.437,
+          "strokes": 6,
+          "swolf": 30.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 4,
+          "stroke": null,
+          "duration_s": 20.312,
+          "strokes": 6,
+          "swolf": 26.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 5,
+          "stroke": null,
+          "duration_s": 31.812,
+          "strokes": 7,
+          "swolf": 39.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 6,
+          "stroke": null,
+          "duration_s": 22.38,
+          "strokes": 5,
+          "swolf": 27.0,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false,
+      "turn_time_s": 0
+    },
+    {
+      "index": 2,
+      "distance_m": 0,
+      "duration_s": 20.097,
+      "moving_duration_s": 0.0,
+      "avg_hr": 131.0,
+      "max_hr": 140.0,
+      "calories": 4.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 20.097,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 3,
+      "distance_m": 0,
+      "duration_s": 10.029,
+      "moving_duration_s": 0.0,
+      "avg_hr": 124.0,
+      "max_hr": 125.0,
+      "calories": 2.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 10.029,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 4,
+      "distance_m": 300.0,
+      "duration_s": 298.649,
+      "moving_duration_s": 298.649,
+      "avg_hr": 137.0,
+      "max_hr": 156.0,
+      "calories": 83.0,
+      "stroke": null,
+      "avg_speed": 1.0049999952316284,
+      "avg_swolf": 32.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 31.0,
+          "strokes": 7,
+          "swolf": 38.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": null,
+          "duration_s": 26.25,
+          "strokes": 8,
+          "swolf": 34.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 3,
+          "stroke": null,
+          "duration_s": 24.062,
+          "strokes": 7,
+          "swolf": 31.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 4,
+          "stroke": null,
+          "duration_s": 26.187,
+          "strokes": 7,
+          "swolf": 33.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 5,
+          "stroke": null,
+          "duration_s": 23.812,
+          "strokes": 7,
+          "swolf": 31.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 6,
+          "stroke": null,
+          "duration_s": 23.937,
+          "strokes": 7,
+          "swolf": 31.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 7,
+          "stroke": null,
+          "duration_s": 24.187,
+          "strokes": 7,
+          "swolf": 31.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 8,
+          "stroke": null,
+          "duration_s": 22.562,
+          "strokes": 6,
+          "swolf": 29.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 9,
+          "stroke": null,
+          "duration_s": 24.062,
+          "strokes": 6,
+          "swolf": 30.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 10,
+          "stroke": null,
+          "duration_s": 24.562,
+          "strokes": 8,
+          "swolf": 33.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 11,
+          "stroke": null,
+          "duration_s": 22.125,
+          "strokes": 6,
+          "swolf": 28.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 12,
+          "stroke": null,
+          "duration_s": 25.903,
+          "strokes": 6,
+          "swolf": 32.0,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false,
+      "turn_time_s": 0
+    },
+    {
+      "index": 5,
+      "distance_m": 0,
+      "duration_s": 75.152,
+      "moving_duration_s": 0.0,
+      "avg_hr": 133.0,
+      "max_hr": 155.0,
+      "calories": 15.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 75.152,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 6,
+      "distance_m": 0,
+      "duration_s": 20.144,
+      "moving_duration_s": 0.0,
+      "avg_hr": 116.0,
+      "max_hr": 118.0,
+      "calories": 3.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 20.144,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 7,
+      "distance_m": 150.0,
+      "duration_s": 162.295,
+      "moving_duration_s": 162.295,
+      "avg_hr": 131.0,
+      "max_hr": 151.0,
+      "calories": 30.0,
+      "stroke": null,
+      "avg_speed": 0.9240000247955322,
+      "avg_swolf": 34.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 40.0,
+          "strokes": 7,
+          "swolf": 47.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": null,
+          "duration_s": 25.375,
+          "strokes": 7,
+          "swolf": 32.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 3,
+          "stroke": null,
+          "duration_s": 23.75,
+          "strokes": 6,
+          "swolf": 30.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 4,
+          "stroke": null,
+          "duration_s": 27.875,
+          "strokes": 8,
+          "swolf": 36.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 5,
+          "stroke": null,
+          "duration_s": 22.625,
+          "strokes": 6,
+          "swolf": 29.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 6,
+          "stroke": null,
+          "duration_s": 22.67,
+          "strokes": 6,
+          "swolf": 29.0,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false,
+      "turn_time_s": 0
+    },
+    {
+      "index": 8,
+      "distance_m": 0,
+      "duration_s": 60.114,
+      "moving_duration_s": 0.0,
+      "avg_hr": 134.0,
+      "max_hr": 151.0,
+      "calories": 12.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 60.114,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 9,
+      "distance_m": 0,
+      "duration_s": 20.098,
+      "moving_duration_s": 0.0,
+      "avg_hr": 123.0,
+      "max_hr": 127.0,
+      "calories": 3.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 20.098,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 10,
+      "distance_m": 75.0,
+      "duration_s": 89.589,
+      "moving_duration_s": 89.589,
+      "avg_hr": 137.0,
+      "max_hr": 148.0,
+      "calories": 18.0,
+      "stroke": null,
+      "avg_speed": 0.8370000123977661,
+      "avg_swolf": 38.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 37.562,
+          "strokes": 10,
+          "swolf": 48.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": null,
+          "duration_s": 28.375,
+          "strokes": 9,
+          "swolf": 37.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 3,
+          "stroke": null,
+          "duration_s": 23.652,
+          "strokes": 6,
+          "swolf": 30.0,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false,
+      "turn_time_s": 0
+    },
+    {
+      "index": 11,
+      "distance_m": 0,
+      "duration_s": 35.086,
+      "moving_duration_s": 0.0,
+      "avg_hr": 137.0,
+      "max_hr": 147.0,
+      "calories": 7.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 35.086,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 12,
+      "distance_m": 100.0,
+      "duration_s": 111.114,
+      "moving_duration_s": 111.114,
+      "avg_hr": 135.0,
+      "max_hr": 147.0,
+      "calories": 21.0,
+      "stroke": null,
+      "avg_speed": 0.8999999761581421,
+      "avg_swolf": 35.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 36.812,
+          "strokes": 6,
+          "swolf": 43.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": null,
+          "duration_s": 24.187,
+          "strokes": 8,
+          "swolf": 32.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 3,
+          "stroke": null,
+          "duration_s": 31.687,
+          "strokes": 9,
+          "swolf": 41.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 4,
+          "stroke": null,
+          "duration_s": 18.428,
+          "strokes": 4,
+          "swolf": 22.0,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false,
+      "turn_time_s": 0
+    },
+    {
+      "index": 13,
+      "distance_m": 0,
+      "duration_s": 35.152,
+      "moving_duration_s": 0.0,
+      "avg_hr": 135.0,
+      "max_hr": 145.0,
+      "calories": 7.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 35.152,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 14,
+      "distance_m": 0,
+      "duration_s": 20.094,
+      "moving_duration_s": 0.0,
+      "avg_hr": 127.0,
+      "max_hr": 128.0,
+      "calories": 3.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 20.094,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 15,
+      "distance_m": 25.0,
+      "duration_s": 35.34,
+      "moving_duration_s": 35.34,
+      "avg_hr": 130.0,
+      "max_hr": 133.0,
+      "calories": 6.0,
+      "stroke": null,
+      "avg_speed": 0.7070000171661376,
+      "avg_swolf": 43.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 35.34,
+          "strokes": 8,
+          "swolf": 43.0,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false,
+      "turn_time_s": 0
+    },
+    {
+      "index": 16,
+      "distance_m": 0,
+      "duration_s": 25.104,
+      "moving_duration_s": 0.0,
+      "avg_hr": 127.0,
+      "max_hr": 131.0,
+      "calories": 4.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 25.104,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 17,
+      "distance_m": 50.0,
+      "duration_s": 61.995,
+      "moving_duration_s": 61.995,
+      "avg_hr": 125.0,
+      "max_hr": 136.0,
+      "calories": 10.0,
+      "stroke": null,
+      "avg_speed": 0.8069999814033508,
+      "avg_swolf": 39.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 33.312,
+          "strokes": 9,
+          "swolf": 42.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": null,
+          "duration_s": 28.683,
+          "strokes": 7,
+          "swolf": 36.0,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false,
+      "turn_time_s": 0
+    },
+    {
+      "index": 18,
+      "distance_m": 0,
+      "duration_s": 25.101,
+      "moving_duration_s": 0.0,
+      "avg_hr": 129.0,
+      "max_hr": 136.0,
+      "calories": 4.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 25.101,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 19,
+      "distance_m": 75.0,
+      "duration_s": 120.929,
+      "moving_duration_s": 120.929,
+      "avg_hr": 130.0,
+      "max_hr": 144.0,
+      "calories": 21.0,
+      "stroke": null,
+      "avg_speed": 0.6200000047683716,
+      "avg_swolf": 50.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 34.937,
+          "strokes": 8,
+          "swolf": 43.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": null,
+          "duration_s": 39.312,
+          "strokes": 9,
+          "swolf": 48.0,
+          "distance_m": 25.0
+        },
+        {
+          "index": 3,
+          "stroke": null,
+          "duration_s": 46.68,
+          "strokes": 12,
+          "swolf": 59.0,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false,
+      "turn_time_s": 0
+    },
+    {
+      "index": 20,
+      "distance_m": 0,
+      "duration_s": 62.535,
+      "moving_duration_s": 0.0,
+      "avg_hr": 130.0,
+      "max_hr": 142.0,
+      "calories": 11.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 62.535,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 21,
+      "distance_m": 25.0,
+      "duration_s": 39.941,
+      "moving_duration_s": 39.941,
+      "avg_hr": 124.0,
+      "max_hr": 127.0,
+      "calories": 6.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.6259999871253966,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 39.941,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false,
+      "turn_time_s": 0
+    },
+    {
+      "index": 22,
+      "distance_m": 0,
+      "duration_s": 11.946,
+      "moving_duration_s": 0.0,
+      "avg_hr": 117.0,
+      "max_hr": 118.0,
+      "calories": 1.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 11.946,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 23,
+      "distance_m": 50.0,
+      "duration_s": 113.333,
+      "moving_duration_s": 113.333,
+      "avg_hr": 133.0,
+      "max_hr": 143.0,
+      "calories": 21.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.4410000145435333,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 56.666,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": "DRILL",
+          "duration_s": 56.667,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false,
+      "turn_time_s": 0
+    },
+    {
+      "index": 25,
+      "distance_m": 50.0,
+      "duration_s": 86.452,
+      "moving_duration_s": 86.452,
+      "avg_hr": 131.0,
+      "max_hr": 136.0,
+      "calories": 16.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.578000009059906,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 43.226,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": "DRILL",
+          "duration_s": 43.226,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false,
+      "turn_time_s": 9.3
+    },
+    {
+      "index": 26,
+      "distance_m": 0,
+      "duration_s": 87.183,
+      "moving_duration_s": 0.0,
+      "avg_hr": 132.0,
+      "max_hr": 144.0,
+      "calories": 14.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 87.183,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 27,
+      "distance_m": 100.0,
+      "duration_s": 146.657,
+      "moving_duration_s": 146.657,
+      "avg_hr": 133.0,
+      "max_hr": 154.0,
+      "calories": 25.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.6819999814033508,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 36.664,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": "DRILL",
+          "duration_s": 36.664,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 3,
+          "stroke": "DRILL",
+          "duration_s": 36.664,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 4,
+          "stroke": "DRILL",
+          "duration_s": 36.665,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false,
+      "turn_time_s": 0
+    },
+    {
+      "index": 28,
+      "distance_m": 0,
+      "duration_s": 72.833,
+      "moving_duration_s": 0.0,
+      "avg_hr": 139.0,
+      "max_hr": 148.0,
+      "calories": 14.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 72.833,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 30,
+      "distance_m": 50.0,
+      "duration_s": 1.047,
+      "moving_duration_s": 1.047,
+      "avg_hr": 144.0,
+      "max_hr": 145.0,
+      "calories": 1.0,
+      "stroke": "DRILL",
+      "avg_speed": 47.75500106811523,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 0.523,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false,
+      "turn_time_s": 0.7
+    },
+    {
+      "index": 31,
+      "distance_m": 0,
+      "duration_s": 42.874,
+      "moving_duration_s": 0.0,
+      "avg_hr": 135.0,
+      "max_hr": 143.0,
+      "calories": 7.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 0.524,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": null,
+          "duration_s": 42.874,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    },
+    {
+      "index": 32,
+      "distance_m": 150.0,
+      "duration_s": 177.503,
+      "moving_duration_s": 177.503,
+      "avg_hr": 145.0,
+      "max_hr": 165.0,
+      "calories": 36.0,
+      "stroke": "DRILL",
+      "avg_speed": 0.8450000286102295,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": "DRILL",
+          "duration_s": 29.583,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 2,
+          "stroke": "DRILL",
+          "duration_s": 29.583,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 3,
+          "stroke": "DRILL",
+          "duration_s": 29.583,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 4,
+          "stroke": "DRILL",
+          "duration_s": 29.583,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 5,
+          "stroke": "DRILL",
+          "duration_s": 29.583,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        },
+        {
+          "index": 6,
+          "stroke": "DRILL",
+          "duration_s": 29.588,
+          "strokes": 0,
+          "swolf": null,
+          "distance_m": 25.0
+        }
+      ],
+      "is_rest": false,
+      "turn_time_s": 0
+    },
+    {
+      "index": 33,
+      "distance_m": 0,
+      "duration_s": 391.727,
+      "moving_duration_s": 0.0,
+      "avg_hr": 126.0,
+      "max_hr": 164.0,
+      "calories": 49.0,
+      "stroke": null,
+      "avg_speed": 0.0,
+      "avg_swolf": 0.0,
+      "lengths": [
+        {
+          "index": 1,
+          "stroke": null,
+          "duration_s": 391.727,
+          "strokes": null,
+          "swolf": null,
+          "distance_m": null
+        }
+      ],
+      "is_rest": true,
+      "turn_time_s": 0
+    }
+  ],
+  "hr_series": [
+    {
+      "t": 0,
+      "hr": 84
+    },
+    {
+      "t": 8,
+      "hr": 93
+    },
+    {
+      "t": 16,
+      "hr": 90
+    },
+    {
+      "t": 24,
+      "hr": 106
+    },
+    {
+      "t": 32,
+      "hr": 109
+    },
+    {
+      "t": 40,
+      "hr": 109
+    },
+    {
+      "t": 48,
+      "hr": 116
+    },
+    {
+      "t": 56,
+      "hr": 116
+    },
+    {
+      "t": 64,
+      "hr": 117
+    },
+    {
+      "t": 72,
+      "hr": 118
+    },
+    {
+      "t": 80,
+      "hr": 122
+    },
+    {
+      "t": 88,
+      "hr": 124
+    },
+    {
+      "t": 96,
+      "hr": 126
+    },
+    {
+      "t": 104,
+      "hr": 129
+    },
+    {
+      "t": 112,
+      "hr": 128
+    },
+    {
+      "t": 120,
+      "hr": 131
+    },
+    {
+      "t": 128,
+      "hr": 134
+    },
+    {
+      "t": 136,
+      "hr": 134
+    },
+    {
+      "t": 144,
+      "hr": 133
+    },
+    {
+      "t": 152,
+      "hr": 137
+    },
+    {
+      "t": 160,
+      "hr": 134
+    },
+    {
+      "t": 168,
+      "hr": 133
+    },
+    {
+      "t": 176,
+      "hr": 135
+    },
+    {
+      "t": 184,
+      "hr": 134
+    },
+    {
+      "t": 192,
+      "hr": 134
+    },
+    {
+      "t": 200,
+      "hr": 138
+    },
+    {
+      "t": 208,
+      "hr": 136
+    },
+    {
+      "t": 216,
+      "hr": 129
+    },
+    {
+      "t": 224,
+      "hr": 125
+    },
+    {
+      "t": 232,
+      "hr": 125
+    },
+    {
+      "t": 253,
+      "hr": 115
+    },
+    {
+      "t": 261,
+      "hr": 113
+    },
+    {
+      "t": 269,
+      "hr": 118
+    },
+    {
+      "t": 277,
+      "hr": 120
+    },
+    {
+      "t": 285,
+      "hr": 117
+    },
+    {
+      "t": 293,
+      "hr": 122
+    },
+    {
+      "t": 301,
+      "hr": 126
+    },
+    {
+      "t": 309,
+      "hr": 125
+    },
+    {
+      "t": 317,
+      "hr": 126
+    },
+    {
+      "t": 325,
+      "hr": 130
+    },
+    {
+      "t": 333,
+      "hr": 131
+    },
+    {
+      "t": 341,
+      "hr": 129
+    },
+    {
+      "t": 349,
+      "hr": 134
+    },
+    {
+      "t": 357,
+      "hr": 135
+    },
+    {
+      "t": 365,
+      "hr": 133
+    },
+    {
+      "t": 373,
+      "hr": 139
+    },
+    {
+      "t": 381,
+      "hr": 138
+    },
+    {
+      "t": 389,
+      "hr": 138
+    },
+    {
+      "t": 397,
+      "hr": 141
+    },
+    {
+      "t": 405,
+      "hr": 137
+    },
+    {
+      "t": 413,
+      "hr": 136
+    },
+    {
+      "t": 421,
+      "hr": 145
+    },
+    {
+      "t": 429,
+      "hr": 145
+    },
+    {
+      "t": 437,
+      "hr": 138
+    },
+    {
+      "t": 445,
+      "hr": 145
+    },
+    {
+      "t": 453,
+      "hr": 141
+    },
+    {
+      "t": 461,
+      "hr": 140
+    },
+    {
+      "t": 469,
+      "hr": 147
+    },
+    {
+      "t": 477,
+      "hr": 145
+    },
+    {
+      "t": 485,
+      "hr": 145
+    },
+    {
+      "t": 493,
+      "hr": 150
+    },
+    {
+      "t": 501,
+      "hr": 149
+    },
+    {
+      "t": 509,
+      "hr": 149
+    },
+    {
+      "t": 517,
+      "hr": 153
+    },
+    {
+      "t": 525,
+      "hr": 149
+    },
+    {
+      "t": 533,
+      "hr": 149
+    },
+    {
+      "t": 541,
+      "hr": 156
+    },
+    {
+      "t": 549,
+      "hr": 154
+    },
+    {
+      "t": 557,
+      "hr": 146
+    },
+    {
+      "t": 565,
+      "hr": 141
+    },
+    {
+      "t": 573,
+      "hr": 136
+    },
+    {
+      "t": 581,
+      "hr": 134
+    },
+    {
+      "t": 589,
+      "hr": 129
+    },
+    {
+      "t": 597,
+      "hr": 127
+    },
+    {
+      "t": 605,
+      "hr": 124
+    },
+    {
+      "t": 613,
+      "hr": 122
+    },
+    {
+      "t": 621,
+      "hr": 119
+    },
+    {
+      "t": 629,
+      "hr": 118
+    },
+    {
+      "t": 637,
+      "hr": 115
+    },
+    {
+      "t": 645,
+      "hr": 114
+    },
+    {
+      "t": 653,
+      "hr": 119
+    },
+    {
+      "t": 661,
+      "hr": 119
+    },
+    {
+      "t": 669,
+      "hr": 121
+    },
+    {
+      "t": 677,
+      "hr": 125
+    },
+    {
+      "t": 685,
+      "hr": 123
+    },
+    {
+      "t": 693,
+      "hr": 122
+    },
+    {
+      "t": 701,
+      "hr": 125
+    },
+    {
+      "t": 709,
+      "hr": 127
+    },
+    {
+      "t": 717,
+      "hr": 130
+    },
+    {
+      "t": 725,
+      "hr": 131
+    },
+    {
+      "t": 733,
+      "hr": 136
+    },
+    {
+      "t": 741,
+      "hr": 136
+    },
+    {
+      "t": 749,
+      "hr": 139
+    },
+    {
+      "t": 757,
+      "hr": 141
+    },
+    {
+      "t": 765,
+      "hr": 138
+    },
+    {
+      "t": 773,
+      "hr": 139
+    },
+    {
+      "t": 781,
+      "hr": 142
+    },
+    {
+      "t": 789,
+      "hr": 142
+    },
+    {
+      "t": 797,
+      "hr": 144
+    },
+    {
+      "t": 805,
+      "hr": 151
+    },
+    {
+      "t": 813,
+      "hr": 144
+    },
+    {
+      "t": 821,
+      "hr": 138
+    },
+    {
+      "t": 829,
+      "hr": 135
+    },
+    {
+      "t": 837,
+      "hr": 130
+    },
+    {
+      "t": 845,
+      "hr": 128
+    },
+    {
+      "t": 853,
+      "hr": 125
+    },
+    {
+      "t": 861,
+      "hr": 126
+    },
+    {
+      "t": 869,
+      "hr": 125
+    },
+    {
+      "t": 877,
+      "hr": 120
+    },
+    {
+      "t": 885,
+      "hr": 127
+    },
+    {
+      "t": 893,
+      "hr": 130
+    },
+    {
+      "t": 901,
+      "hr": 129
+    },
+    {
+      "t": 909,
+      "hr": 131
+    },
+    {
+      "t": 917,
+      "hr": 138
+    },
+    {
+      "t": 925,
+      "hr": 141
+    },
+    {
+      "t": 933,
+      "hr": 136
+    },
+    {
+      "t": 941,
+      "hr": 137
+    },
+    {
+      "t": 949,
+      "hr": 142
+    },
+    {
+      "t": 957,
+      "hr": 141
+    },
+    {
+      "t": 965,
+      "hr": 142
+    },
+    {
+      "t": 973,
+      "hr": 148
+    },
+    {
+      "t": 981,
+      "hr": 145
+    },
+    {
+      "t": 989,
+      "hr": 138
+    },
+    {
+      "t": 997,
+      "hr": 132
+    },
+    {
+      "t": 1005,
+      "hr": 128
+    },
+    {
+      "t": 1013,
+      "hr": 121
+    },
+    {
+      "t": 1021,
+      "hr": 122
+    },
+    {
+      "t": 1029,
+      "hr": 120
+    },
+    {
+      "t": 1037,
+      "hr": 125
+    },
+    {
+      "t": 1045,
+      "hr": 130
+    },
+    {
+      "t": 1053,
+      "hr": 131
+    },
+    {
+      "t": 1061,
+      "hr": 133
+    },
+    {
+      "t": 1069,
+      "hr": 143
+    },
+    {
+      "t": 1077,
+      "hr": 143
+    },
+    {
+      "t": 1085,
+      "hr": 143
+    },
+    {
+      "t": 1093,
+      "hr": 145
+    },
+    {
+      "t": 1101,
+      "hr": 145
+    },
+    {
+      "t": 1109,
+      "hr": 144
+    },
+    {
+      "t": 1117,
+      "hr": 145
+    },
+    {
+      "t": 1125,
+      "hr": 143
+    },
+    {
+      "t": 1133,
+      "hr": 137
+    },
+    {
+      "t": 1141,
+      "hr": 133
+    },
+    {
+      "t": 1149,
+      "hr": 127
+    },
+    {
+      "t": 1157,
+      "hr": 128
+    },
+    {
+      "t": 1165,
+      "hr": 126
+    },
+    {
+      "t": 1173,
+      "hr": 128
+    },
+    {
+      "t": 1181,
+      "hr": 133
+    },
+    {
+      "t": 1189,
+      "hr": 129
+    },
+    {
+      "t": 1197,
+      "hr": 129
+    },
+    {
+      "t": 1205,
+      "hr": 132
+    },
+    {
+      "t": 1213,
+      "hr": 131
+    },
+    {
+      "t": 1221,
+      "hr": 129
+    },
+    {
+      "t": 1229,
+      "hr": 123
+    },
+    {
+      "t": 1237,
+      "hr": 122
+    },
+    {
+      "t": 1245,
+      "hr": 123
+    },
+    {
+      "t": 1253,
+      "hr": 118
+    },
+    {
+      "t": 1261,
+      "hr": 123
+    },
+    {
+      "t": 1269,
+      "hr": 125
+    },
+    {
+      "t": 1277,
+      "hr": 125
+    },
+    {
+      "t": 1285,
+      "hr": 129
+    },
+    {
+      "t": 1293,
+      "hr": 135
+    },
+    {
+      "t": 1301,
+      "hr": 136
+    },
+    {
+      "t": 1309,
+      "hr": 129
+    },
+    {
+      "t": 1317,
+      "hr": 126
+    },
+    {
+      "t": 1325,
+      "hr": 124
+    },
+    {
+      "t": 1333,
+      "hr": 116
+    },
+    {
+      "t": 1341,
+      "hr": 121
+    },
+    {
+      "t": 1349,
+      "hr": 121
+    },
+    {
+      "t": 1357,
+      "hr": 131
+    },
+    {
+      "t": 1365,
+      "hr": 130
+    },
+    {
+      "t": 1373,
+      "hr": 131
+    },
+    {
+      "t": 1381,
+      "hr": 135
+    },
+    {
+      "t": 1389,
+      "hr": 133
+    },
+    {
+      "t": 1397,
+      "hr": 131
+    },
+    {
+      "t": 1405,
+      "hr": 133
+    },
+    {
+      "t": 1413,
+      "hr": 132
+    },
+    {
+      "t": 1421,
+      "hr": 135
+    },
+    {
+      "t": 1429,
+      "hr": 137
+    },
+    {
+      "t": 1437,
+      "hr": 141
+    },
+    {
+      "t": 1445,
+      "hr": 142
+    },
+    {
+      "t": 1453,
+      "hr": 136
+    },
+    {
+      "t": 1461,
+      "hr": 132
+    },
+    {
+      "t": 1469,
+      "hr": 130
+    },
+    {
+      "t": 1477,
+      "hr": 125
+    },
+    {
+      "t": 1485,
+      "hr": 126
+    },
+    {
+      "t": 1493,
+      "hr": 127
+    },
+    {
+      "t": 1501,
+      "hr": 127
+    },
+    {
+      "t": 1509,
+      "hr": 126
+    },
+    {
+      "t": 1517,
+      "hr": 123
+    },
+    {
+      "t": 1525,
+      "hr": 126
+    },
+    {
+      "t": 1533,
+      "hr": 124
+    },
+    {
+      "t": 1541,
+      "hr": 123
+    },
+    {
+      "t": 1549,
+      "hr": 118
+    },
+    {
+      "t": 1557,
+      "hr": 117
+    },
+    {
+      "t": 1565,
+      "hr": 119
+    },
+    {
+      "t": 1573,
+      "hr": 121
+    },
+    {
+      "t": 1581,
+      "hr": 127
+    },
+    {
+      "t": 1589,
+      "hr": 127
+    },
+    {
+      "t": 1597,
+      "hr": 124
+    },
+    {
+      "t": 1605,
+      "hr": 131
+    },
+    {
+      "t": 1613,
+      "hr": 138
+    },
+    {
+      "t": 1621,
+      "hr": 134
+    },
+    {
+      "t": 1629,
+      "hr": 143
+    },
+    {
+      "t": 1637,
+      "hr": 143
+    },
+    {
+      "t": 1645,
+      "hr": 142
+    },
+    {
+      "t": 1653,
+      "hr": 139
+    },
+    {
+      "t": 1661,
+      "hr": 142
+    },
+    {
+      "t": 1669,
+      "hr": 142
+    },
+    {
+      "t": 1677,
+      "hr": 134
+    },
+    {
+      "t": 1685,
+      "hr": 134
+    },
+    {
+      "t": 1693,
+      "hr": 126
+    },
+    {
+      "t": 1701,
+      "hr": 126
+    },
+    {
+      "t": 1709,
+      "hr": 130
+    },
+    {
+      "t": 1717,
+      "hr": 131
+    },
+    {
+      "t": 1725,
+      "hr": 131
+    },
+    {
+      "t": 1733,
+      "hr": 130
+    },
+    {
+      "t": 1741,
+      "hr": 131
+    },
+    {
+      "t": 1749,
+      "hr": 133
+    },
+    {
+      "t": 1757,
+      "hr": 134
+    },
+    {
+      "t": 1765,
+      "hr": 135
+    },
+    {
+      "t": 1773,
+      "hr": 135
+    },
+    {
+      "t": 1781,
+      "hr": 130
+    },
+    {
+      "t": 1789,
+      "hr": 130
+    },
+    {
+      "t": 1797,
+      "hr": 142
+    },
+    {
+      "t": 1805,
+      "hr": 143
+    },
+    {
+      "t": 1813,
+      "hr": 141
+    },
+    {
+      "t": 1821,
+      "hr": 143
+    },
+    {
+      "t": 1829,
+      "hr": 141
+    },
+    {
+      "t": 1837,
+      "hr": 123
+    },
+    {
+      "t": 1845,
+      "hr": 117
+    },
+    {
+      "t": 1853,
+      "hr": 113
+    },
+    {
+      "t": 1861,
+      "hr": 114
+    },
+    {
+      "t": 1869,
+      "hr": 117
+    },
+    {
+      "t": 1877,
+      "hr": 122
+    },
+    {
+      "t": 1885,
+      "hr": 124
+    },
+    {
+      "t": 1893,
+      "hr": 124
+    },
+    {
+      "t": 1901,
+      "hr": 126
+    },
+    {
+      "t": 1909,
+      "hr": 126
+    },
+    {
+      "t": 1917,
+      "hr": 128
+    },
+    {
+      "t": 1925,
+      "hr": 134
+    },
+    {
+      "t": 1933,
+      "hr": 133
+    },
+    {
+      "t": 1941,
+      "hr": 138
+    },
+    {
+      "t": 1949,
+      "hr": 137
+    },
+    {
+      "t": 1957,
+      "hr": 136
+    },
+    {
+      "t": 1965,
+      "hr": 142
+    },
+    {
+      "t": 1973,
+      "hr": 145
+    },
+    {
+      "t": 1981,
+      "hr": 145
+    },
+    {
+      "t": 1989,
+      "hr": 152
+    },
+    {
+      "t": 1997,
+      "hr": 154
+    },
+    {
+      "t": 2005,
+      "hr": 148
+    },
+    {
+      "t": 2013,
+      "hr": 144
+    },
+    {
+      "t": 2021,
+      "hr": 140
+    },
+    {
+      "t": 2029,
+      "hr": 138
+    },
+    {
+      "t": 2037,
+      "hr": 139
+    },
+    {
+      "t": 2045,
+      "hr": 138
+    },
+    {
+      "t": 2053,
+      "hr": 136
+    },
+    {
+      "t": 2061,
+      "hr": 138
+    },
+    {
+      "t": 2069,
+      "hr": 141
+    },
+    {
+      "t": 2077,
+      "hr": 144
+    },
+    {
+      "t": 2085,
+      "hr": 141
+    },
+    {
+      "t": 2093,
+      "hr": 134
+    },
+    {
+      "t": 2101,
+      "hr": 133
+    },
+    {
+      "t": 2109,
+      "hr": 135
+    },
+    {
+      "t": 2117,
+      "hr": 132
+    },
+    {
+      "t": 2125,
+      "hr": 130
+    },
+    {
+      "t": 2133,
+      "hr": 131
+    },
+    {
+      "t": 2141,
+      "hr": 120
+    },
+    {
+      "t": 2149,
+      "hr": 127
+    },
+    {
+      "t": 2157,
+      "hr": 129
+    },
+    {
+      "t": 2165,
+      "hr": 130
+    },
+    {
+      "t": 2173,
+      "hr": 132
+    },
+    {
+      "t": 2181,
+      "hr": 137
+    },
+    {
+      "t": 2189,
+      "hr": 139
+    },
+    {
+      "t": 2197,
+      "hr": 143
+    },
+    {
+      "t": 2205,
+      "hr": 147
+    },
+    {
+      "t": 2213,
+      "hr": 148
+    },
+    {
+      "t": 2221,
+      "hr": 148
+    },
+    {
+      "t": 2229,
+      "hr": 150
+    },
+    {
+      "t": 2237,
+      "hr": 150
+    },
+    {
+      "t": 2245,
+      "hr": 152
+    },
+    {
+      "t": 2253,
+      "hr": 156
+    },
+    {
+      "t": 2261,
+      "hr": 158
+    },
+    {
+      "t": 2269,
+      "hr": 160
+    },
+    {
+      "t": 2277,
+      "hr": 162
+    },
+    {
+      "t": 2285,
+      "hr": 162
+    },
+    {
+      "t": 2293,
+      "hr": 164
+    },
+    {
+      "t": 2299,
+      "hr": 165
+    },
+    {
+      "t": 2307,
+      "hr": 160
+    },
+    {
+      "t": 2315,
+      "hr": 154
+    },
+    {
+      "t": 2323,
+      "hr": 147
+    },
+    {
+      "t": 2331,
+      "hr": 143
+    },
+    {
+      "t": 2339,
+      "hr": 139
+    },
+    {
+      "t": 2347,
+      "hr": 140
+    },
+    {
+      "t": 2355,
+      "hr": 143
+    },
+    {
+      "t": 2363,
+      "hr": 147
+    },
+    {
+      "t": 2371,
+      "hr": 148
+    },
+    {
+      "t": 2379,
+      "hr": 143
+    },
+    {
+      "t": 2387,
+      "hr": 142
+    },
+    {
+      "t": 2395,
+      "hr": 142
+    },
+    {
+      "t": 2403,
+      "hr": 140
+    },
+    {
+      "t": 2411,
+      "hr": 138
+    },
+    {
+      "t": 2419,
+      "hr": 135
+    },
+    {
+      "t": 2427,
+      "hr": 132
+    },
+    {
+      "t": 2435,
+      "hr": 129
+    },
+    {
+      "t": 2443,
+      "hr": 126
+    },
+    {
+      "t": 2451,
+      "hr": 128
+    },
+    {
+      "t": 2459,
+      "hr": 130
+    },
+    {
+      "t": 2467,
+      "hr": 122
+    },
+    {
+      "t": 2475,
+      "hr": 118
+    },
+    {
+      "t": 2483,
+      "hr": 116
+    },
+    {
+      "t": 2491,
+      "hr": 116
+    },
+    {
+      "t": 2499,
+      "hr": 114
+    },
+    {
+      "t": 2507,
+      "hr": 120
+    },
+    {
+      "t": 2515,
+      "hr": 118
+    },
+    {
+      "t": 2523,
+      "hr": 110
+    },
+    {
+      "t": 2531,
+      "hr": 113
+    },
+    {
+      "t": 2539,
+      "hr": 113
+    },
+    {
+      "t": 2547,
+      "hr": 111
+    },
+    {
+      "t": 2555,
+      "hr": 110
+    },
+    {
+      "t": 2563,
+      "hr": 104
+    },
+    {
+      "t": 2571,
+      "hr": 104
+    },
+    {
+      "t": 2579,
+      "hr": 105
+    },
+    {
+      "t": 2587,
+      "hr": 110
+    },
+    {
+      "t": 2595,
+      "hr": 110
+    },
+    {
+      "t": 2603,
+      "hr": 113
+    },
+    {
+      "t": 2611,
+      "hr": 114
+    },
+    {
+      "t": 2619,
+      "hr": 116
+    },
+    {
+      "t": 2627,
+      "hr": 119
+    },
+    {
+      "t": 2635,
+      "hr": 122
+    },
+    {
+      "t": 2643,
+      "hr": 122
+    },
+    {
+      "t": 2651,
+      "hr": 122
+    },
+    {
+      "t": 2659,
+      "hr": 124
+    },
+    {
+      "t": 2667,
+      "hr": 124
+    },
+    {
+      "t": 2675,
+      "hr": 130
+    },
+    {
+      "t": 2683,
+      "hr": 135
+    },
+    {
+      "t": 2690,
+      "hr": 133
+    }
+  ]
+}

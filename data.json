@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-11T19:15:47.113370Z",
+  "generated_at": "2026-10-12T16:41:31.412220Z",
   "plan_start": "2026-09-25",
-  "today": "2026-10-11",
+  "today": "2026-10-12",
   "stats": {
-    "sessions_done": 11,
-    "sessions_total": 18,
-    "total_distance_m": 58450.0,
-    "total_duration_s": 113164.46337890625
+    "sessions_done": 12,
+    "sessions_total": 24,
+    "total_distance_m": 60675.0,
+    "total_duration_s": 117606.67822265625
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -60,6 +60,30 @@
       "target_duration_s": 3900,
       "description": "จบ v5: 300 ม. ต่อเนื่องไม่ใช้ buoy เป้า max HR < 148 + buoy 2x400. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. นาฬิกาสั่น (HR 140) = หยุดที่ผนังทันที. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
     },
+    "D4.1": {
+      "name": "D4.1 • 2100m • Distance A",
+      "target_distance_m": 2100.0,
+      "target_duration_s": 3900,
+      "description": "Block 4: ดริล + 3x500 ไม่ใช้ buoy พักตาม HR + 4x100 ฟอร์ม. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. นาฬิกาสั่น (HR 140) = หยุดที่ผนังทันที. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+    },
+    "D4.2": {
+      "name": "D4.2 • 1800m • Distance B",
+      "target_distance_m": 1800.0,
+      "target_duration_s": 3600,
+      "description": "Block 4: ดริล + 2x600 ไม่ใช้ buoy พักตาม HR + 4x100 ฟอร์ม. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. นาฬิกาสั่น (HR 140) = หยุดที่ผนังทันที. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+    },
+    "D4.3": {
+      "name": "D4.3 • 1400m • Distance C",
+      "target_distance_m": 1400.0,
+      "target_duration_s": 3000,
+      "description": "Block 4: ดริล + 800 ต่อเนื่องไม่ใช้ buoy + 4x100 ฟอร์ม. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. นาฬิกาสั่น (HR 140) = หยุดที่ผนังทันที. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+    },
+    "TEST2": {
+      "name": "TEST2 • 1400m • 1000m Test",
+      "target_distance_m": 1400.0,
+      "target_duration_s": 3000,
+      "description": "จบ Block 4: 1,000 ม. ต่อเนื่องไม่ใช้ buoy เป้า max HR < 148 + 2x100 easy. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. นาฬิกาสั่น (HR 140) = หยุดที่ผนังทันที. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+    },
     "B.KICK": {
       "name": "B.KICK • 250m • Bonus Kickboard",
       "target_distance_m": 250.0,
@@ -83,6 +107,12 @@
       "target_distance_m": 350.0,
       "target_duration_s": 720,
       "description": "โบนัสหลัง main session: 300ม. ต่อเนื่อง pace สบาย ๆ ไม่หยุด + คูลดาวน์"
+    },
+    "B.PLUS": {
+      "name": "B.PLUS • 800m • Bonus After Test",
+      "target_distance_m": 800.0,
+      "target_duration_s": 1500,
+      "description": "ต่อหลังจบ TEST (ข้าม cooldown ของ TEST). ไหล่เจ็บ = หยุด. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. นาฬิกาสั่น (HR 140) = หยุดที่ผนังทันที. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
     }
   },
   "rotation": [
@@ -193,6 +223,42 @@
       "rotation_index": 18,
       "status": "done",
       "activity_id": 24674122086
+    },
+    {
+      "workout_key": "D4.1",
+      "rotation_index": 19,
+      "status": "done",
+      "activity_id": 24696634515
+    },
+    {
+      "workout_key": "D4.2",
+      "rotation_index": 20,
+      "status": "next",
+      "activity_id": null
+    },
+    {
+      "workout_key": "D4.1",
+      "rotation_index": 21,
+      "status": "upcoming",
+      "activity_id": null
+    },
+    {
+      "workout_key": "D4.2",
+      "rotation_index": 22,
+      "status": "upcoming",
+      "activity_id": null
+    },
+    {
+      "workout_key": "D4.3",
+      "rotation_index": 23,
+      "status": "upcoming",
+      "activity_id": null
+    },
+    {
+      "workout_key": "TEST2",
+      "rotation_index": 24,
+      "status": "upcoming",
+      "activity_id": null
     }
   ],
   "activities": [
@@ -930,6 +996,21 @@
       "pool_length": 25.0,
       "avg_swolf": 34.0,
       "lap_count": 47
+    },
+    {
+      "activity_id": 24696634515,
+      "name": "D4.1 • 2100m • Distance A",
+      "start_local": "2026-10-12 18:53:16",
+      "date": "2026-10-12",
+      "distance_m": 2225.0,
+      "duration_s": 4442.21484375,
+      "moving_duration_s": 2776.465087890625,
+      "avg_hr": 126.0,
+      "max_hr": 145.0,
+      "calories": 711.0,
+      "pool_length": 25.0,
+      "avg_swolf": 38.0,
+      "lap_count": 37
     }
   ]
 }
