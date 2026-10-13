@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-12T22:17:56.167748Z",
+  "generated_at": "2026-10-13T19:30:27.036567Z",
   "plan_start": "2026-09-25",
-  "today": "2026-10-12",
+  "today": "2026-10-13",
   "stats": {
-    "sessions_done": 12,
+    "sessions_done": 13,
     "sessions_total": 24,
-    "total_distance_m": 60675.0,
-    "total_duration_s": 117606.67822265625
+    "total_distance_m": 62900.0,
+    "total_duration_s": 120512.93115234375
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -233,13 +233,13 @@
     {
       "workout_key": "D4.2",
       "rotation_index": 20,
-      "status": "next",
-      "activity_id": null
+      "status": "done",
+      "activity_id": 24708887980
     },
     {
       "workout_key": "D4.1",
       "rotation_index": 21,
-      "status": "upcoming",
+      "status": "next",
       "activity_id": null
     },
     {
@@ -1011,6 +1011,21 @@
       "pool_length": 25.0,
       "avg_swolf": 38.0,
       "lap_count": 37
+    },
+    {
+      "activity_id": 24708887980,
+      "name": "D4.2 • 1800m • Distance B",
+      "start_local": "2026-10-13 19:28:48",
+      "date": "2026-10-13",
+      "distance_m": 2225.0,
+      "duration_s": 2906.2529296875,
+      "moving_duration_s": 2247.739990234375,
+      "avg_hr": 120.0,
+      "max_hr": 164.0,
+      "calories": 595.0,
+      "pool_length": 25.0,
+      "avg_swolf": 29.0,
+      "lap_count": 33
     }
   ]
 }
