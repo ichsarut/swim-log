@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-19T20:16:55.252431Z",
+  "generated_at": "2026-10-20T18:48:40.109501Z",
   "plan_start": "2026-09-25",
-  "today": "2026-10-19",
+  "today": "2026-10-20",
   "stats": {
     "sessions_done": 14,
     "sessions_total": 24,
-    "total_distance_m": 65425.0,
-    "total_duration_s": 123748.29907226562
+    "total_distance_m": 68575.0,
+    "total_duration_s": 127905.23022460938
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -1041,6 +1041,21 @@
       "pool_length": 25.0,
       "avg_swolf": 29.0,
       "lap_count": 34
+    },
+    {
+      "activity_id": 24790991089,
+      "name": "D4.1 • 2100m • Distance A",
+      "start_local": "2026-10-20 19:20:53",
+      "date": "2026-10-20",
+      "distance_m": 3150.0,
+      "duration_s": 4156.93115234375,
+      "moving_duration_s": 2909.56201171875,
+      "avg_hr": 123.0,
+      "max_hr": 144.0,
+      "calories": 689.0,
+      "pool_length": 25.0,
+      "avg_swolf": 28.0,
+      "lap_count": 45
     }
   ]
 }
