@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-20T18:48:40.109501Z",
+  "generated_at": "2026-10-21T19:01:11.678738Z",
   "plan_start": "2026-09-25",
-  "today": "2026-10-20",
+  "today": "2026-10-21",
   "stats": {
-    "sessions_done": 14,
+    "sessions_done": 15,
     "sessions_total": 24,
-    "total_distance_m": 68575.0,
-    "total_duration_s": 127905.23022460938
+    "total_distance_m": 71575.0,
+    "total_duration_s": 131871.90625
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -245,19 +245,19 @@
     {
       "workout_key": "D4.2",
       "rotation_index": 22,
-      "status": "next",
+      "status": "skipped",
       "activity_id": null
     },
     {
       "workout_key": "D4.3",
       "rotation_index": 23,
-      "status": "upcoming",
-      "activity_id": null
+      "status": "done",
+      "activity_id": 24803013108
     },
     {
       "workout_key": "TEST2",
       "rotation_index": 24,
-      "status": "upcoming",
+      "status": "next",
       "activity_id": null
     }
   ],
@@ -1056,6 +1056,21 @@
       "pool_length": 25.0,
       "avg_swolf": 28.0,
       "lap_count": 45
+    },
+    {
+      "activity_id": 24803013108,
+      "name": "D4.3 • 1400m • Distance C",
+      "start_local": "2026-10-21 19:36:07",
+      "date": "2026-10-21",
+      "distance_m": 3000.0,
+      "duration_s": 3966.676025390625,
+      "moving_duration_s": 2791.39208984375,
+      "avg_hr": 124.0,
+      "max_hr": 147.0,
+      "calories": 640.0,
+      "pool_length": 25.0,
+      "avg_swolf": 28.0,
+      "lap_count": 48
     }
   ]
 }
