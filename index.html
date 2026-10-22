@@ -161,6 +161,7 @@
   .pill.upcoming { border: 1px dashed var(--line); color: var(--muted) }
   .pill.skipped { background: rgba(148, 160, 187, 0.12); color: var(--muted) }
   .pill.skipped::before { content: '↷' }
+  .pill.retry { background: rgba(252, 211, 77, 0.15); color: var(--warn) }
   tr.row-skipped td:not(:last-child) { color: var(--muted) }
 
   .next-workout {
@@ -293,13 +294,25 @@
 <div class="grid-2">
   <div class="card">
     <h3>Distance per day</h3>
-    <p class="hint">วันที่ว่ายหลายครั้งจะซ้อนกันเป็นแท่งเดียว</p>
+    <p class="hint">ระยะตามนาฬิกา — เที่ยวยาวมักนับเกิน (ตัวเลขที่นับเองดูกราฟขวา) · วันที่ว่ายหลายครั้งซ้อนเป็นแท่งเดียว</p>
     <div class="chart-wrap"><canvas id="distChart" role="img" aria-label="กราฟระยะต่อวัน"></canvas></div>
   </div>
   <div class="card">
-    <h3>Pace per day</h3>
-    <p class="hint">นาที:วินาที ต่อ 100m · ยิ่งสูงยิ่งเร็ว</p>
-    <div class="chart-wrap"><canvas id="paceChart" role="img" aria-label="กราฟ pace ต่อวัน"></canvas></div>
+    <h3>ไกลสุดต่อเนื่อง</h3>
+    <p class="hint">ฟรีสไตล์ไม่ใช้ buoy ไม่หยุด · จาก journal (นับเอง) · เส้นประ = เป้า 1,000 m · จุดกลวง = วันที่ยังไม่ผ่านเกณฑ์</p>
+    <div class="chart-wrap"><canvas id="longChart" role="img" aria-label="กราฟระยะต่อเนื่องไกลสุด"></canvas></div>
+  </div>
+</div>
+<div class="grid-2 stack-gap">
+  <div class="card">
+    <h3>พักจน HR &lt; 120</h3>
+    <p class="hint">วินาทีเฉลี่ยต่อเที่ยว · ยิ่งต่ำยิ่งฟิต · เส้นประ = เป้า 60 วิ</p>
+    <div class="chart-wrap"><canvas id="restChart" role="img" aria-label="กราฟเวลาพักเฉลี่ย"></canvas></div>
+  </div>
+  <div class="card">
+    <h3>หายใจซ้าย · ตัวจม · ไหล่</h3>
+    <p class="hint">คะแนน 1–5 หลังว่าย (5 = ดีสุด)</p>
+    <div class="chart-wrap"><canvas id="ratingChart" role="img" aria-label="กราฟคะแนนหลังว่าย"></canvas></div>
   </div>
 </div>
 <div class="card stack-gap">
@@ -318,6 +331,8 @@
         <th scope="col">Workout</th>
         <th scope="col" class="num">ระยะ</th>
         <th scope="col" class="num">vs target</th>
+        <th scope="col" class="num">ไกลสุดต่อเนื่อง</th>
+        <th scope="col" class="center">เกณฑ์</th>
         <th scope="col" class="num">เวลา</th>
         <th scope="col" class="num">HR avg</th>
         <th scope="col" class="num">SWOLF</th>
@@ -549,7 +564,7 @@ function loadActivitiesTable(d) {
   tbody.replaceChildren();
   const acts = d.activities.slice().reverse();
   if (!acts.length) {
-    tbody.appendChild(el('tr', {}, el('td', { colspan: 7, class: 'empty', text: 'ยังไม่มี activity' })));
+    tbody.appendChild(el('tr', {}, el('td', { colspan: 9, class: 'empty', text: 'ยังไม่มี activity' })));
     return;
   }
   // Activities are matched to a workout template by their activity name.
@@ -588,6 +603,8 @@ function loadActivitiesTable(d) {
       })),
       el('td', { class: 'num', text: `${Math.round(a.distance_m).toLocaleString()} m` }),
       el('td', { class: 'num' }, vsCell),
+      el('td', { class: 'num', text: fmtLongest(a.journal) }),
+      el('td', { class: 'center' }, gateCell(a.journal)),
       el('td', { class: 'num', text: fmtClock(a.duration_s) }),
       el('td', { class: 'num', text: fmtNum(a.avg_hr) }),
       el('td', { class: 'num', text: fmtNum(a.avg_swolf) }),
@@ -599,6 +616,17 @@ function loadActivitiesTable(d) {
 
 const STATUS_LABELS = { done: 'เสร็จ', next: 'ครั้งต่อไป', upcoming: 'รอ', skipped: 'ข้าม' };
 
+// journal = ตัวเลขที่นับเอง/แก้แล้ว (swim-journal.md) — null ถ้าวันนั้นไม่มีบันทึก
+function fmtLongest(j) {
+  if (!j) return '—';
+  if (j.longest_m == null) return j.gate === false ? 'มีหยุด' : '—';
+  return `${j.longest_m.toLocaleString()} m${j.longest_buoy ? ' (buoy)' : ''}`;
+}
+function gateCell(j) {
+  if (!j || j.gate == null) return '—';
+  return el('span', { class: `pill ${j.gate ? 'done' : 'retry'}`, text: j.gate ? 'ผ่าน' : 'ยัง' });
+}
+
 function loadNextWorkout(d) {
   const next = (d.rotation || []).find(r => r.status === 'next');
   const card = document.getElementById('nextWorkout');
@@ -608,7 +636,9 @@ function loadNextWorkout(d) {
   document.getElementById('nextName').textContent = w.name;
   document.getElementById('nextMeta').textContent =
     `เป้าระยะ ${w.target_distance_m}m · ~${Math.round(w.target_duration_s / 60)} นาที · rotation ${next.rotation_index}/${d.rotation.length}`;
-  document.getElementById('nextDesc').textContent = w.description || '';
+  const retry = (next.attempts || []).length;
+  document.getElementById('nextDesc').textContent =
+    (retry ? `ว่ายซ้ำ — ครั้งก่อนยังไม่ผ่านเกณฑ์ (${retry} ครั้ง). ` : '') + (w.description || '');
 }
 
 function loadRotationTable(d) {
@@ -623,7 +653,8 @@ function loadRotationTable(d) {
       el('td', { text: w.name }),
       el('td', { class: 'center', text: `${w.target_distance_m}m` }),
       el('td', { class: 'center', text: `${Math.round(w.target_duration_s / 60)} นาที` }),
-      el('td', {}, el('span', { class: `pill ${s.status}`, text: STATUS_LABELS[s.status] || s.status })),
+      el('td', {}, el('span', { class: `pill ${s.status}`,
+        text: (STATUS_LABELS[s.status] || s.status) + ((s.attempts || []).length ? ` · ซ้ำ (ยังไม่ผ่าน ${s.attempts.length})` : '') })),
     ]));
   }
 }
@@ -775,51 +806,7 @@ function loadCharts(d) {
   document.getElementById('distChart').setAttribute('aria-label',
     'กราฟระยะต่อวัน · ' + describe(days, 'distance', v => `${v.toLocaleString()} m`));
 
-  // --- Pace: line, faster (lower s/100m) drawn higher ---
-  const paceBase = chartBase(days);
-  new Chart(document.getElementById('paceChart'), {
-    type: 'line',
-    data: {
-      labels,
-      datasets: [{
-        label: 'Pace',
-        data: days.map(x => x.pace),
-        borderColor: tok('--pace'),
-        backgroundColor: tok('--pace'),
-        pointRadius: 3,
-        pointHoverRadius: 5,
-        borderWidth: 2,
-        tension: 0.25,
-        spanGaps: true,
-      }],
-    },
-    options: {
-      ...paceBase,
-      plugins: {
-        ...paceBase.plugins,
-        tooltip: {
-          ...paceBase.plugins.tooltip,
-          callbacks: {
-            ...paceBase.plugins.tooltip.callbacks,
-            label: ctx => `${fmtPace(ctx.parsed.y)} /100m`,
-          },
-        },
-      },
-      scales: {
-        ...paceBase.scales,
-        y: {
-          ...paceBase.scales.y,
-          reverse: true,
-          grace: '5%',
-          ticks: { ...paceBase.scales.y.ticks, callback: v => fmtPace(v) },
-          title: { display: true, text: 'นาที /100m', color: tok('--muted') },
-        },
-      },
-    },
-    plugins: [marker],
-  });
-  document.getElementById('paceChart').setAttribute('aria-label',
-    'กราฟ pace ต่อวัน · ' + describe(days, 'pace', v => `${fmtPace(v)} ต่อ 100 เมตร`));
+  loadV5Charts(d);
 
   // --- HR: line over zone bands, zone labels in the right gutter ---
   const z = d.hr_zones || {};
@@ -891,6 +878,148 @@ function loadCharts(d) {
   });
   document.getElementById('hrChart').setAttribute('aria-label',
     'กราฟ HR เฉลี่ยต่อวัน · ' + describe(days, 'hr', v => `${v} bpm`));
+}
+
+// --- v5 charts: ตัวเลขจาก journal ต่อเซสชัน (แกน x = วันที่มีบันทึก) ---
+
+// เส้นประแนวนอนที่ค่าเป้า
+function targetLinePlugin(value, label) {
+  return {
+    id: 'target',
+    afterDatasetsDraw(chart) {
+      const { ctx, chartArea, scales: { y } } = chart;
+      const py = y.getPixelForValue(value);
+      if (py < chartArea.top || py > chartArea.bottom) return;
+      ctx.save();
+      ctx.strokeStyle = tok('--warn');
+      ctx.setLineDash([5, 4]);
+      ctx.beginPath();
+      ctx.moveTo(chartArea.left, py);
+      ctx.lineTo(chartArea.right, py);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = tok('--warn');
+      ctx.font = `11px ${tok('--font-body')}`;
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'bottom';
+      ctx.fillText(label, chartArea.right - 4, py - 3);
+      ctx.restore();
+    },
+  };
+}
+
+function loadV5Charts(d) {
+  const sessions = d.activities.filter(a => a.journal && inPlan(a, d));
+  const days = sessions.map(a => ({ date: a.date, a }));
+  const labels = sessions.map(a => fmtShort(a.date));
+  const key = a => (a.name || '').split(' ')[0];
+
+  // ไกลสุดต่อเนื่อง — ไม่ผ่านเกณฑ์ = จุดกลวง
+  const longBase = chartBase(days);
+  const longColor = tok('--series-1');
+  new Chart(document.getElementById('longChart'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        label: 'ไกลสุดต่อเนื่อง',
+        data: sessions.map(a => a.journal.free_longest_m),
+        borderColor: longColor,
+        backgroundColor: sessions.map(a => a.journal.gate === false ? tok('--bg') : longColor),
+        pointBorderColor: longColor,
+        pointRadius: 4,
+        pointHoverRadius: 6,
+        borderWidth: 2,
+        tension: 0.2,
+        spanGaps: true,
+      }],
+    },
+    options: {
+      ...longBase,
+      plugins: {
+        ...longBase.plugins,
+        tooltip: {
+          ...longBase.plugins.tooltip,
+          callbacks: {
+            ...longBase.plugins.tooltip.callbacks,
+            label: ctx => {
+              const a = sessions[ctx.dataIndex];
+              const gate = a.journal.gate == null ? '' : (a.journal.gate ? ' · ผ่าน' : ' · ยังไม่ผ่าน');
+              return `${key(a)}: ${ctx.parsed.y.toLocaleString()} m${gate}`;
+            },
+          },
+        },
+      },
+      scales: {
+        ...longBase.scales,
+        y: { ...longBase.scales.y, beginAtZero: true, suggestedMax: 1100,
+             title: { display: true, text: 'เมตร', color: tok('--muted') } },
+      },
+    },
+    plugins: [targetLinePlugin(1000, 'เป้า 1,000 m')],
+  });
+  const longVals = sessions.filter(a => a.journal.free_longest_m != null);
+  const best = longVals.reduce((m, a) => Math.max(m, a.journal.free_longest_m), 0);
+  document.getElementById('longChart').setAttribute('aria-label',
+    `กราฟระยะต่อเนื่องไกลสุด · ${longVals.length} เซสชัน · ดีสุด ${best.toLocaleString()} m · เป้า 1,000 m`);
+
+  // พักเฉลี่ยจน HR < 120
+  const restBase = chartBase(days);
+  new Chart(document.getElementById('restChart'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        label: 'พักเฉลี่ย',
+        data: sessions.map(a => a.journal.rest_s),
+        backgroundColor: sessions.map(a => a.journal.rest_s != null && a.journal.rest_s <= 60 ? tok('--good') : tok('--series-2')),
+        borderRadius: 4,
+      }],
+    },
+    options: {
+      ...restBase,
+      plugins: {
+        ...restBase.plugins,
+        tooltip: {
+          ...restBase.plugins.tooltip,
+          callbacks: { ...restBase.plugins.tooltip.callbacks,
+                       label: ctx => `${key(sessions[ctx.dataIndex])}: ${ctx.parsed.y} วิ` },
+        },
+      },
+      scales: {
+        ...restBase.scales,
+        y: { ...restBase.scales.y, beginAtZero: true, title: { display: true, text: 'วินาที', color: tok('--muted') } },
+      },
+    },
+    plugins: [targetLinePlugin(60, 'เป้า 60 วิ')],
+  });
+  document.getElementById('restChart').setAttribute('aria-label',
+    'กราฟเวลาพักเฉลี่ยจน HR ต่ำกว่า 120 · ' + describe(sessions.map(a => ({ date: a.date, v: a.journal.rest_s })), 'v', v => `${v} วิ`));
+
+  // คะแนนหลังว่าย
+  const rated = sessions.filter(a => a.journal.breath != null || a.journal.sink != null || a.journal.shoulder != null);
+  const rBase = chartBase(rated.map(a => ({ date: a.date })));
+  const line = (label, field, color) => ({
+    label, data: rated.map(a => a.journal[field]), borderColor: tok(color), backgroundColor: tok(color),
+    pointRadius: 3, pointHoverRadius: 5, borderWidth: 2, tension: 0.2, spanGaps: true,
+  });
+  new Chart(document.getElementById('ratingChart'), {
+    type: 'line',
+    data: {
+      labels: rated.map(a => fmtShort(a.date)),
+      datasets: [line('หายใจซ้าย', 'breath', '--series-1'), line('ตัวจม', 'sink', '--series-2'),
+                 line('ไหล่', 'shoulder', '--series-3')],
+    },
+    options: {
+      ...rBase,
+      plugins: { ...rBase.plugins, legend: { display: true, labels: { color: tok('--muted'), boxWidth: 12 } } },
+      scales: { ...rBase.scales, y: { ...rBase.scales.y, min: 1, max: 5, ticks: { ...rBase.scales.y.ticks, stepSize: 1 } } },
+    },
+  });
+  const last = rated[rated.length - 1];
+  document.getElementById('ratingChart').setAttribute('aria-label', last
+    ? `กราฟคะแนนหลังว่าย · ล่าสุด ${fmtDate(last.date)} หายใจซ้าย ${last.journal.breath ?? '—'} ตัวจม ${last.journal.sink ?? '—'} ไหล่ ${last.journal.shoulder ?? '—'}`
+    : 'กราฟคะแนนหลังว่าย · ไม่มีข้อมูล');
 }
 
 spawnBubbles();

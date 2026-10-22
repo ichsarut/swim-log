@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-21T19:01:11.678738Z",
+  "generated_at": "2026-10-22T05:54:08.338996Z",
   "plan_start": "2026-09-25",
-  "today": "2026-10-21",
+  "today": "2026-10-22",
   "stats": {
-    "sessions_done": 15,
-    "sessions_total": 24,
+    "sessions_done": 14,
+    "sessions_total": 36,
     "total_distance_m": 71575.0,
     "total_duration_s": 131871.90625
   },
@@ -84,6 +84,36 @@
       "target_duration_s": 3000,
       "description": "จบ Block 4: 1,000 ม. ต่อเนื่องไม่ใช้ buoy เป้า max HR < 148 + 2x100 easy. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
     },
+    "V5.1": {
+      "name": "V5.1 • 2200m • Volume Steady",
+      "target_distance_m": 2200.0,
+      "target_duration_s": 4200,
+      "description": "Block 5: ดริล + 2x800 ไม่ใช้ buoy พักตาม HR + 4x100 ฟอร์ม. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+    },
+    "V5.2": {
+      "name": "V5.2 • 1800m • Volume Form",
+      "target_distance_m": 1800.0,
+      "target_duration_s": 3600,
+      "description": "Block 5: ดริล + 1,000 ต่อเนื่องไม่ใช้ buoy + 6x100 ฟอร์ม. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+    },
+    "L5.1": {
+      "name": "L5.1 • 2400m • Long 2400",
+      "target_distance_m": 2400.0,
+      "target_duration_s": 4800,
+      "description": "Block 5 long swim: ดริล + 1,000 ต่อเนื่อง + buoy 2x400 + 4x100 ฟอร์ม. stroke เพิ่มครึ่งหลัง / ไหล่ล้า = ตัด buoy หรือ 100 ทิ้งได้. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+    },
+    "L5.2": {
+      "name": "L5.2 • 2700m • Long 2700",
+      "target_distance_m": 2700.0,
+      "target_duration_s": 5400,
+      "description": "Block 5 long swim: ดริล + 1,200 ต่อเนื่อง + buoy 2x500 + 3x100 ฟอร์ม. stroke เพิ่มครึ่งหลัง / ไหล่ล้า = ตัด buoy หรือ 100 ทิ้งได้. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+    },
+    "L5.3": {
+      "name": "L5.3 • 3000m • Long 3000",
+      "target_distance_m": 3000.0,
+      "target_duration_s": 6000,
+      "description": "Block 5 long swim: ดริล + 1,500 ต่อเนื่อง + buoy 2x500 + 3x100 ฟอร์ม. stroke เพิ่มครึ่งหลัง / ไหล่ล้า = ตัด buoy หรือ 100 ทิ้งได้. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+    },
     "B.KICK": {
       "name": "B.KICK • 250m • Bonus Kickboard",
       "target_distance_m": 250.0,
@@ -113,6 +143,12 @@
       "target_distance_m": 800.0,
       "target_duration_s": 1500,
       "description": "ต่อหลังจบ TEST (ข้าม cooldown ของ TEST). ไหล่เจ็บ = หยุด. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+    },
+    "B.ADD": {
+      "name": "B.ADD • 400m • Bonus Add-on",
+      "target_distance_m": 400.0,
+      "target_duration_s": 720,
+      "description": "ต่อหลังจบ D4.x ที่ผ่านเกณฑ์ (ข้าม cooldown ของ workout หลัก). ทำเมื่อไม่มี stroke drift + ไหล่ ≥ 4. ไม่ทำวันแรกหลังหยุด. ไหล่เจ็บ = หยุด"
     }
   },
   "rotation": [
@@ -120,145 +156,257 @@
       "workout_key": "F1.1",
       "rotation_index": 1,
       "status": "done",
-      "activity_id": 24501084934
+      "activity_id": 24501084934,
+      "attempts": []
     },
     {
       "workout_key": "F1.2",
       "rotation_index": 2,
       "status": "done",
-      "activity_id": 24505323379
+      "activity_id": 24505323379,
+      "attempts": []
     },
     {
       "workout_key": "F1.1",
       "rotation_index": 3,
       "status": "done",
-      "activity_id": 24517775173
+      "activity_id": 24517775173,
+      "attempts": []
     },
     {
       "workout_key": "F1.2",
       "rotation_index": 4,
       "status": "skipped",
-      "activity_id": null
+      "activity_id": null,
+      "attempts": []
     },
     {
       "workout_key": "F1.1",
       "rotation_index": 5,
       "status": "skipped",
-      "activity_id": null
+      "activity_id": null,
+      "attempts": []
     },
     {
       "workout_key": "F1.2",
       "rotation_index": 6,
       "status": "skipped",
-      "activity_id": null
+      "activity_id": null,
+      "attempts": []
     },
     {
       "workout_key": "E2.1",
       "rotation_index": 7,
       "status": "done",
-      "activity_id": 24529258267
+      "activity_id": 24529258267,
+      "attempts": []
     },
     {
       "workout_key": "E2.2",
       "rotation_index": 8,
       "status": "done",
-      "activity_id": 24554215159
+      "activity_id": 24554215159,
+      "attempts": []
     },
     {
       "workout_key": "E2.1",
       "rotation_index": 9,
       "status": "skipped",
-      "activity_id": null
+      "activity_id": null,
+      "attempts": []
     },
     {
       "workout_key": "E2.2",
       "rotation_index": 10,
       "status": "skipped",
-      "activity_id": null
+      "activity_id": null,
+      "attempts": []
     },
     {
       "workout_key": "E2.1",
       "rotation_index": 11,
       "status": "skipped",
-      "activity_id": null
+      "activity_id": null,
+      "attempts": []
     },
     {
       "workout_key": "E2.2",
       "rotation_index": 12,
       "status": "skipped",
-      "activity_id": null
+      "activity_id": null,
+      "attempts": []
     },
     {
       "workout_key": "X3.1",
       "rotation_index": 13,
       "status": "done",
-      "activity_id": 24590571426
+      "activity_id": 24590571426,
+      "attempts": []
     },
     {
       "workout_key": "X3.2",
       "rotation_index": 14,
       "status": "done",
-      "activity_id": 24603428129
+      "activity_id": 24603428129,
+      "attempts": []
     },
     {
       "workout_key": "X3.1",
       "rotation_index": 15,
       "status": "done",
-      "activity_id": 24614345525
+      "activity_id": 24614345525,
+      "attempts": []
     },
     {
       "workout_key": "X3.2",
       "rotation_index": 16,
       "status": "done",
-      "activity_id": 24652023537
+      "activity_id": 24652023537,
+      "attempts": []
     },
     {
       "workout_key": "X3.1",
       "rotation_index": 17,
       "status": "done",
-      "activity_id": 24663399405
+      "activity_id": 24663399405,
+      "attempts": []
     },
     {
       "workout_key": "TEST",
       "rotation_index": 18,
       "status": "done",
-      "activity_id": 24674122086
+      "activity_id": 24686358973,
+      "attempts": [
+        24674122086
+      ]
     },
     {
       "workout_key": "D4.1",
       "rotation_index": 19,
       "status": "done",
-      "activity_id": 24696634515
+      "activity_id": 24696634515,
+      "attempts": []
     },
     {
       "workout_key": "D4.2",
       "rotation_index": 20,
       "status": "done",
-      "activity_id": 24708887980
+      "activity_id": 24708887980,
+      "attempts": []
     },
     {
       "workout_key": "D4.1",
       "rotation_index": 21,
       "status": "done",
-      "activity_id": 24721019198
+      "activity_id": 24721019198,
+      "attempts": []
     },
     {
       "workout_key": "D4.2",
       "rotation_index": 22,
       "status": "skipped",
-      "activity_id": null
+      "activity_id": null,
+      "attempts": []
     },
     {
       "workout_key": "D4.3",
       "rotation_index": 23,
-      "status": "done",
-      "activity_id": 24803013108
+      "status": "next",
+      "activity_id": null,
+      "attempts": [
+        24803013108
+      ]
     },
     {
       "workout_key": "TEST2",
       "rotation_index": 24,
-      "status": "next",
-      "activity_id": null
+      "status": "upcoming",
+      "activity_id": null,
+      "attempts": []
+    },
+    {
+      "workout_key": "V5.1",
+      "rotation_index": 25,
+      "status": "upcoming",
+      "activity_id": null,
+      "attempts": []
+    },
+    {
+      "workout_key": "V5.2",
+      "rotation_index": 26,
+      "status": "upcoming",
+      "activity_id": null,
+      "attempts": []
+    },
+    {
+      "workout_key": "L5.1",
+      "rotation_index": 27,
+      "status": "upcoming",
+      "activity_id": null,
+      "attempts": []
+    },
+    {
+      "workout_key": "V5.1",
+      "rotation_index": 28,
+      "status": "upcoming",
+      "activity_id": null,
+      "attempts": []
+    },
+    {
+      "workout_key": "V5.2",
+      "rotation_index": 29,
+      "status": "upcoming",
+      "activity_id": null,
+      "attempts": []
+    },
+    {
+      "workout_key": "L5.2",
+      "rotation_index": 30,
+      "status": "upcoming",
+      "activity_id": null,
+      "attempts": []
+    },
+    {
+      "workout_key": "V5.1",
+      "rotation_index": 31,
+      "status": "upcoming",
+      "activity_id": null,
+      "attempts": []
+    },
+    {
+      "workout_key": "V5.2",
+      "rotation_index": 32,
+      "status": "upcoming",
+      "activity_id": null,
+      "attempts": []
+    },
+    {
+      "workout_key": "L5.3",
+      "rotation_index": 33,
+      "status": "upcoming",
+      "activity_id": null,
+      "attempts": []
+    },
+    {
+      "workout_key": "V5.1",
+      "rotation_index": 34,
+      "status": "upcoming",
+      "activity_id": null,
+      "attempts": []
+    },
+    {
+      "workout_key": "V5.2",
+      "rotation_index": 35,
+      "status": "upcoming",
+      "activity_id": null,
+      "attempts": []
+    },
+    {
+      "workout_key": "L5.3",
+      "rotation_index": 36,
+      "status": "upcoming",
+      "activity_id": null,
+      "attempts": []
     }
   ],
   "activities": [
@@ -275,7 +423,8 @@
       "calories": 637.0,
       "pool_length": 25.0,
       "avg_swolf": 31.0,
-      "lap_count": 60
+      "lap_count": 60,
+      "journal": null
     },
     {
       "activity_id": 22948180537,
@@ -290,7 +439,8 @@
       "calories": 288.0,
       "pool_length": 25.0,
       "avg_swolf": 0.0,
-      "lap_count": 47
+      "lap_count": 47,
+      "journal": null
     },
     {
       "activity_id": 22948181604,
@@ -305,7 +455,8 @@
       "calories": 303.0,
       "pool_length": 25.0,
       "avg_swolf": 0.0,
-      "lap_count": 47
+      "lap_count": 47,
+      "journal": null
     },
     {
       "activity_id": 22959672261,
@@ -320,7 +471,8 @@
       "calories": 533.0,
       "pool_length": 25.0,
       "avg_swolf": 51.0,
-      "lap_count": 38
+      "lap_count": 38,
+      "journal": null
     },
     {
       "activity_id": 22959977026,
@@ -335,7 +487,8 @@
       "calories": 365.0,
       "pool_length": 25.0,
       "avg_swolf": 46.0,
-      "lap_count": 29
+      "lap_count": 29,
+      "journal": null
     },
     {
       "activity_id": 22983648853,
@@ -350,7 +503,8 @@
       "calories": 780.0,
       "pool_length": 25.0,
       "avg_swolf": 36.0,
-      "lap_count": 49
+      "lap_count": 49,
+      "journal": null
     },
     {
       "activity_id": 22983987736,
@@ -365,7 +519,8 @@
       "calories": 245.0,
       "pool_length": 25.0,
       "avg_swolf": 0.0,
-      "lap_count": 19
+      "lap_count": 19,
+      "journal": null
     },
     {
       "activity_id": 23044145787,
@@ -380,7 +535,8 @@
       "calories": 792.0,
       "pool_length": 25.0,
       "avg_swolf": 50.0,
-      "lap_count": 55
+      "lap_count": 55,
+      "journal": null
     },
     {
       "activity_id": 23128765119,
@@ -395,7 +551,8 @@
       "calories": 735.0,
       "pool_length": 25.0,
       "avg_swolf": 52.0,
-      "lap_count": 52
+      "lap_count": 52,
+      "journal": null
     },
     {
       "activity_id": 23257457466,
@@ -410,7 +567,8 @@
       "calories": 744.0,
       "pool_length": 25.0,
       "avg_swolf": 42.0,
-      "lap_count": 48
+      "lap_count": 48,
+      "journal": null
     },
     {
       "activity_id": 23269825870,
@@ -425,7 +583,8 @@
       "calories": 619.0,
       "pool_length": 25.0,
       "avg_swolf": 42.0,
-      "lap_count": 43
+      "lap_count": 43,
+      "journal": null
     },
     {
       "activity_id": 23282831936,
@@ -440,7 +599,8 @@
       "calories": 684.0,
       "pool_length": 25.0,
       "avg_swolf": 45.0,
-      "lap_count": 56
+      "lap_count": 56,
+      "journal": null
     },
     {
       "activity_id": 23295114841,
@@ -455,7 +615,8 @@
       "calories": 466.0,
       "pool_length": 25.0,
       "avg_swolf": 37.0,
-      "lap_count": 44
+      "lap_count": 44,
+      "journal": null
     },
     {
       "activity_id": 23317918763,
@@ -470,7 +631,8 @@
       "calories": 491.0,
       "pool_length": 25.0,
       "avg_swolf": 37.0,
-      "lap_count": 33
+      "lap_count": 33,
+      "journal": null
     },
     {
       "activity_id": 23339770232,
@@ -485,7 +647,8 @@
       "calories": 616.0,
       "pool_length": 25.0,
       "avg_swolf": 43.0,
-      "lap_count": 57
+      "lap_count": 57,
+      "journal": null
     },
     {
       "activity_id": 23364316103,
@@ -500,7 +663,8 @@
       "calories": 339.0,
       "pool_length": 25.0,
       "avg_swolf": 44.0,
-      "lap_count": 25
+      "lap_count": 25,
+      "journal": null
     },
     {
       "activity_id": 23364316768,
@@ -515,7 +679,8 @@
       "calories": 95.0,
       "pool_length": 25.0,
       "avg_swolf": 45.0,
-      "lap_count": 11
+      "lap_count": 11,
+      "journal": null
     },
     {
       "activity_id": 23364317497,
@@ -530,7 +695,8 @@
       "calories": 97.0,
       "pool_length": 25.0,
       "avg_swolf": 30.0,
-      "lap_count": 6
+      "lap_count": 6,
+      "journal": null
     },
     {
       "activity_id": 23595310099,
@@ -545,7 +711,8 @@
       "calories": 447.0,
       "pool_length": 25.0,
       "avg_swolf": 38.0,
-      "lap_count": 55
+      "lap_count": 55,
+      "journal": null
     },
     {
       "activity_id": 23595310790,
@@ -560,7 +727,8 @@
       "calories": 95.0,
       "pool_length": 25.0,
       "avg_swolf": 42.0,
-      "lap_count": 14
+      "lap_count": 14,
+      "journal": null
     },
     {
       "activity_id": 23595311412,
@@ -575,7 +743,8 @@
       "calories": 87.0,
       "pool_length": 25.0,
       "avg_swolf": 54.0,
-      "lap_count": 11
+      "lap_count": 11,
+      "journal": null
     },
     {
       "activity_id": 23606378354,
@@ -590,7 +759,8 @@
       "calories": 133.0,
       "pool_length": 25.0,
       "avg_swolf": 28.0,
-      "lap_count": 13
+      "lap_count": 13,
+      "journal": null
     },
     {
       "activity_id": 23606837479,
@@ -605,7 +775,8 @@
       "calories": 455.0,
       "pool_length": 25.0,
       "avg_swolf": 38.0,
-      "lap_count": 47
+      "lap_count": 47,
+      "journal": null
     },
     {
       "activity_id": 23652472932,
@@ -620,7 +791,8 @@
       "calories": 599.0,
       "pool_length": 25.0,
       "avg_swolf": 38.0,
-      "lap_count": 31
+      "lap_count": 31,
+      "journal": null
     },
     {
       "activity_id": 23654366166,
@@ -635,7 +807,8 @@
       "calories": 532.0,
       "pool_length": 25.0,
       "avg_swolf": 36.0,
-      "lap_count": 37
+      "lap_count": 37,
+      "journal": null
     },
     {
       "activity_id": 23715828477,
@@ -650,7 +823,8 @@
       "calories": 526.0,
       "pool_length": 25.0,
       "avg_swolf": 38.0,
-      "lap_count": 57
+      "lap_count": 57,
+      "journal": null
     },
     {
       "activity_id": 23715829377,
@@ -665,7 +839,8 @@
       "calories": 554.0,
       "pool_length": 25.0,
       "avg_swolf": 36.0,
-      "lap_count": 42
+      "lap_count": 42,
+      "journal": null
     },
     {
       "activity_id": 23835591029,
@@ -680,7 +855,8 @@
       "calories": 588.0,
       "pool_length": 25.0,
       "avg_swolf": 39.0,
-      "lap_count": 47
+      "lap_count": 47,
+      "journal": null
     },
     {
       "activity_id": 23835591890,
@@ -695,7 +871,8 @@
       "calories": 535.0,
       "pool_length": 25.0,
       "avg_swolf": 33.0,
-      "lap_count": 18
+      "lap_count": 18,
+      "journal": null
     },
     {
       "activity_id": 23835592560,
@@ -710,7 +887,8 @@
       "calories": 158.0,
       "pool_length": 25.0,
       "avg_swolf": 40.0,
-      "lap_count": 4
+      "lap_count": 4,
+      "journal": null
     },
     {
       "activity_id": 23835593368,
@@ -725,7 +903,8 @@
       "calories": 254.0,
       "pool_length": 25.0,
       "avg_swolf": 37.0,
-      "lap_count": 9
+      "lap_count": 9,
+      "journal": null
     },
     {
       "activity_id": 24501084934,
@@ -740,7 +919,8 @@
       "calories": 490.0,
       "pool_length": 25.0,
       "avg_swolf": 39.0,
-      "lap_count": 47
+      "lap_count": 47,
+      "journal": null
     },
     {
       "activity_id": 24501085464,
@@ -755,7 +935,8 @@
       "calories": 68.0,
       "pool_length": 25.0,
       "avg_swolf": null,
-      "lap_count": 8
+      "lap_count": 8,
+      "journal": null
     },
     {
       "activity_id": 24501086129,
@@ -770,7 +951,8 @@
       "calories": 125.0,
       "pool_length": 25.0,
       "avg_swolf": 36.0,
-      "lap_count": 17
+      "lap_count": 17,
+      "journal": null
     },
     {
       "activity_id": 24505323379,
@@ -785,7 +967,8 @@
       "calories": 748.0,
       "pool_length": 25.0,
       "avg_swolf": 33.0,
-      "lap_count": 53
+      "lap_count": 53,
+      "journal": null
     },
     {
       "activity_id": 24505324251,
@@ -800,7 +983,8 @@
       "calories": 95.0,
       "pool_length": 25.0,
       "avg_swolf": 34.0,
-      "lap_count": 13
+      "lap_count": 13,
+      "journal": null
     },
     {
       "activity_id": 24517775173,
@@ -815,7 +999,19 @@
       "calories": 344.0,
       "pool_length": 25.0,
       "avg_swolf": 35.0,
-      "lap_count": 56
+      "lap_count": 56,
+      "journal": {
+        "longest_m": 200,
+        "longest_buoy": false,
+        "free_longest_m": 200,
+        "rest_s": 22,
+        "z4_ok": 11,
+        "z4_n": 11,
+        "gate": true,
+        "breath": null,
+        "sink": null,
+        "shoulder": null
+      }
     },
     {
       "activity_id": 24517776008,
@@ -830,7 +1026,8 @@
       "calories": 77.0,
       "pool_length": 25.0,
       "avg_swolf": 43.0,
-      "lap_count": 15
+      "lap_count": 15,
+      "journal": null
     },
     {
       "activity_id": 24517776916,
@@ -845,7 +1042,8 @@
       "calories": 94.0,
       "pool_length": 25.0,
       "avg_swolf": 28.0,
-      "lap_count": 5
+      "lap_count": 5,
+      "journal": null
     },
     {
       "activity_id": 24517777878,
@@ -860,7 +1058,8 @@
       "calories": 79.0,
       "pool_length": 25.0,
       "avg_swolf": 32.0,
-      "lap_count": 12
+      "lap_count": 12,
+      "journal": null
     },
     {
       "activity_id": 24529258267,
@@ -875,7 +1074,19 @@
       "calories": 616.0,
       "pool_length": 25.0,
       "avg_swolf": 32.0,
-      "lap_count": 58
+      "lap_count": 58,
+      "journal": {
+        "longest_m": 275,
+        "longest_buoy": true,
+        "free_longest_m": null,
+        "rest_s": 47,
+        "z4_ok": 12,
+        "z4_n": 12,
+        "gate": true,
+        "breath": null,
+        "sink": null,
+        "shoulder": null
+      }
     },
     {
       "activity_id": 24554215159,
@@ -890,7 +1101,19 @@
       "calories": 726.0,
       "pool_length": 25.0,
       "avg_swolf": 34.0,
-      "lap_count": 69
+      "lap_count": 69,
+      "journal": {
+        "longest_m": 375,
+        "longest_buoy": false,
+        "free_longest_m": 375,
+        "rest_s": 38,
+        "z4_ok": 12,
+        "z4_n": 12,
+        "gate": true,
+        "breath": null,
+        "sink": null,
+        "shoulder": null
+      }
     },
     {
       "activity_id": 24590571426,
@@ -905,7 +1128,19 @@
       "calories": 818.0,
       "pool_length": 25.0,
       "avg_swolf": 33.0,
-      "lap_count": 33
+      "lap_count": 33,
+      "journal": {
+        "longest_m": 250,
+        "longest_buoy": false,
+        "free_longest_m": 150,
+        "rest_s": 79,
+        "z4_ok": 6,
+        "z4_n": 6,
+        "gate": null,
+        "breath": null,
+        "sink": null,
+        "shoulder": null
+      }
     },
     {
       "activity_id": 24603428129,
@@ -920,7 +1155,19 @@
       "calories": 596.0,
       "pool_length": 25.0,
       "avg_swolf": 37.0,
-      "lap_count": 36
+      "lap_count": 36,
+      "journal": {
+        "longest_m": 300,
+        "longest_buoy": false,
+        "free_longest_m": 125,
+        "rest_s": 122,
+        "z4_ok": 6,
+        "z4_n": 6,
+        "gate": null,
+        "breath": null,
+        "sink": null,
+        "shoulder": null
+      }
     },
     {
       "activity_id": 24614345525,
@@ -935,7 +1182,19 @@
       "calories": 756.0,
       "pool_length": 25.0,
       "avg_swolf": 33.0,
-      "lap_count": 44
+      "lap_count": 44,
+      "journal": {
+        "longest_m": 400,
+        "longest_buoy": true,
+        "free_longest_m": 225,
+        "rest_s": 69,
+        "z4_ok": 2,
+        "z4_n": 6,
+        "gate": null,
+        "breath": 3,
+        "sink": 3,
+        "shoulder": 5
+      }
     },
     {
       "activity_id": 24652023537,
@@ -950,7 +1209,19 @@
       "calories": 968.0,
       "pool_length": 25.0,
       "avg_swolf": 37.0,
-      "lap_count": 44
+      "lap_count": 44,
+      "journal": {
+        "longest_m": 650,
+        "longest_buoy": true,
+        "free_longest_m": 200,
+        "rest_s": 66,
+        "z4_ok": 6,
+        "z4_n": 6,
+        "gate": null,
+        "breath": 2,
+        "sink": 2,
+        "shoulder": 5
+      }
     },
     {
       "activity_id": 24663399405,
@@ -965,7 +1236,19 @@
       "calories": 760.0,
       "pool_length": 25.0,
       "avg_swolf": 38.0,
-      "lap_count": 39
+      "lap_count": 39,
+      "journal": {
+        "longest_m": 300,
+        "longest_buoy": true,
+        "free_longest_m": 100,
+        "rest_s": 76,
+        "z4_ok": 6,
+        "z4_n": 6,
+        "gate": null,
+        "breath": 3,
+        "sink": 3,
+        "shoulder": 5
+      }
     },
     {
       "activity_id": 24674122086,
@@ -980,7 +1263,19 @@
       "calories": 382.0,
       "pool_length": 25.0,
       "avg_swolf": 34.0,
-      "lap_count": 23
+      "lap_count": 23,
+      "journal": {
+        "longest_m": 450,
+        "longest_buoy": true,
+        "free_longest_m": 275,
+        "rest_s": 60,
+        "z4_ok": 1,
+        "z4_n": 1,
+        "gate": false,
+        "breath": 3,
+        "sink": 3,
+        "shoulder": 5
+      }
     },
     {
       "activity_id": 24686358973,
@@ -995,7 +1290,19 @@
       "calories": 585.0,
       "pool_length": 25.0,
       "avg_swolf": 34.0,
-      "lap_count": 47
+      "lap_count": 47,
+      "journal": {
+        "longest_m": 400,
+        "longest_buoy": false,
+        "free_longest_m": 400,
+        "rest_s": 67,
+        "z4_ok": 3,
+        "z4_n": 3,
+        "gate": true,
+        "breath": 4,
+        "sink": 4,
+        "shoulder": 5
+      }
     },
     {
       "activity_id": 24696634515,
@@ -1010,7 +1317,19 @@
       "calories": 711.0,
       "pool_length": 25.0,
       "avg_swolf": 38.0,
-      "lap_count": 37
+      "lap_count": 37,
+      "journal": {
+        "longest_m": 450,
+        "longest_buoy": false,
+        "free_longest_m": 450,
+        "rest_s": 123,
+        "z4_ok": 9,
+        "z4_n": 9,
+        "gate": false,
+        "breath": null,
+        "sink": null,
+        "shoulder": null
+      }
     },
     {
       "activity_id": 24708887980,
@@ -1025,7 +1344,19 @@
       "calories": 595.0,
       "pool_length": 25.0,
       "avg_swolf": 29.0,
-      "lap_count": 33
+      "lap_count": 33,
+      "journal": {
+        "longest_m": 675,
+        "longest_buoy": false,
+        "free_longest_m": 675,
+        "rest_s": 46,
+        "z4_ok": 6,
+        "z4_n": 6,
+        "gate": true,
+        "breath": 4,
+        "sink": 4,
+        "shoulder": 5
+      }
     },
     {
       "activity_id": 24721019198,
@@ -1040,7 +1371,8 @@
       "calories": 616.0,
       "pool_length": 25.0,
       "avg_swolf": 29.0,
-      "lap_count": 34
+      "lap_count": 34,
+      "journal": null
     },
     {
       "activity_id": 24790991089,
@@ -1055,7 +1387,19 @@
       "calories": 689.0,
       "pool_length": 25.0,
       "avg_swolf": 28.0,
-      "lap_count": 45
+      "lap_count": 45,
+      "journal": {
+        "longest_m": 500,
+        "longest_buoy": false,
+        "free_longest_m": 500,
+        "rest_s": 72,
+        "z4_ok": 7,
+        "z4_n": 7,
+        "gate": true,
+        "breath": 3,
+        "sink": 4,
+        "shoulder": 5
+      }
     },
     {
       "activity_id": 24803013108,
@@ -1070,7 +1414,19 @@
       "calories": 640.0,
       "pool_length": 25.0,
       "avg_swolf": 28.0,
-      "lap_count": 48
+      "lap_count": 48,
+      "journal": {
+        "longest_m": null,
+        "longest_buoy": false,
+        "free_longest_m": null,
+        "rest_s": 59,
+        "z4_ok": 5,
+        "z4_n": 5,
+        "gate": false,
+        "breath": 4,
+        "sink": 4,
+        "shoulder": 5
+      }
     }
   ]
 }
