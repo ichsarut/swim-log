@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-22T18:56:28.739766Z",
+  "generated_at": "2026-10-23T12:15:03.928026Z",
   "plan_start": "2026-09-25",
-  "today": "2026-10-22",
+  "today": "2026-10-23",
   "stats": {
     "sessions_done": 15,
     "sessions_total": 36,
@@ -1372,7 +1372,18 @@
       "pool_length": 25.0,
       "avg_swolf": 29.0,
       "lap_count": 34,
-      "journal": null
+      "journal": {
+        "longest_m": 500,
+        "longest_buoy": false,
+        "free_longest_m": 500,
+        "rest_s": 49,
+        "z4_ok": 7,
+        "z4_n": 7,
+        "gate": true,
+        "breath": null,
+        "sink": null,
+        "shoulder": null
+      }
     },
     {
       "activity_id": 24790991089,
