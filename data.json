@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-24T17:42:40.219773Z",
+  "generated_at": "2026-10-25T17:57:25.791971Z",
   "plan_start": "2026-09-25",
-  "today": "2026-10-24",
+  "today": "2026-10-25",
   "stats": {
-    "sessions_done": 15,
+    "sessions_done": 16,
     "sessions_total": 36,
-    "total_distance_m": 76025.0,
-    "total_duration_s": 137509.67041015625
+    "total_distance_m": 77825.0,
+    "total_duration_s": 141554.0594177246
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -320,14 +320,14 @@
     {
       "workout_key": "TEST2",
       "rotation_index": 24,
-      "status": "next",
-      "activity_id": null,
+      "status": "done",
+      "activity_id": 24846911445,
       "attempts": []
     },
     {
       "workout_key": "V5.1",
       "rotation_index": 25,
-      "status": "upcoming",
+      "status": "next",
       "activity_id": null,
       "attempts": []
     },
@@ -1469,6 +1469,54 @@
       "pool_length": 25.0,
       "avg_swolf": 25.0,
       "lap_count": 21,
+      "journal": null
+    },
+    {
+      "activity_id": 24846835916,
+      "name": "TEST • 2000m • Z2 Endurance",
+      "start_local": "2026-10-25 19:45:13",
+      "date": "2026-10-25",
+      "distance_m": 225.0,
+      "duration_s": 1147.43603515625,
+      "moving_duration_s": 285.6000061035156,
+      "avg_hr": 111.0,
+      "max_hr": 136.0,
+      "calories": 99.0,
+      "pool_length": 25.0,
+      "avg_swolf": 37.0,
+      "lap_count": 2,
+      "journal": null
+    },
+    {
+      "activity_id": 24846911445,
+      "name": "TEST2 • 1400m • 1000m Test",
+      "start_local": "2026-10-25 20:06:13",
+      "date": "2026-10-25",
+      "distance_m": 100.0,
+      "duration_s": 365.6910095214844,
+      "moving_duration_s": 143.33700561523438,
+      "avg_hr": 109.0,
+      "max_hr": 126.0,
+      "calories": 48.0,
+      "pool_length": 25.0,
+      "avg_swolf": 0.0,
+      "lap_count": 5,
+      "journal": null
+    },
+    {
+      "activity_id": 24847414831,
+      "name": "TEST2 • 1400m • 1000m Test",
+      "start_local": "2026-10-25 20:13:19",
+      "date": "2026-10-25",
+      "distance_m": 1475.0,
+      "duration_s": 2531.261962890625,
+      "moving_duration_s": 1942.3380126953125,
+      "avg_hr": 124.0,
+      "max_hr": 145.0,
+      "calories": 397.0,
+      "pool_length": 25.0,
+      "avg_swolf": 43.0,
+      "lap_count": 18,
       "journal": null
     }
   ]
