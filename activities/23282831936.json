@@ -1,5 +1,6 @@
 {
   "activity_id": 23282831936,
+  "skipped_m": 250.0,
   "laps": [
     {
       "index": 2,
@@ -1170,94 +1171,6 @@
       "turn_time_s": 0
     },
     {
-      "index": 44,
-      "distance_m": 250.0,
-      "duration_s": 2.828,
-      "moving_duration_s": 2.828,
-      "avg_hr": 157.0,
-      "max_hr": 162.0,
-      "calories": 3.0,
-      "stroke": "DRILL",
-      "avg_speed": 88.40200042724608,
-      "avg_swolf": 0.0,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": "DRILL",
-          "duration_s": 0.282,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        },
-        {
-          "index": 2,
-          "stroke": "DRILL",
-          "duration_s": 0.282,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        },
-        {
-          "index": 3,
-          "stroke": "DRILL",
-          "duration_s": 0.282,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        },
-        {
-          "index": 4,
-          "stroke": "DRILL",
-          "duration_s": 0.282,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        },
-        {
-          "index": 5,
-          "stroke": "DRILL",
-          "duration_s": 0.282,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        },
-        {
-          "index": 6,
-          "stroke": "DRILL",
-          "duration_s": 0.282,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        },
-        {
-          "index": 7,
-          "stroke": "DRILL",
-          "duration_s": 0.282,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        },
-        {
-          "index": 8,
-          "stroke": "DRILL",
-          "duration_s": 0.282,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        },
-        {
-          "index": 9,
-          "stroke": "DRILL",
-          "duration_s": 0.282,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        }
-      ],
-      "is_rest": false,
-      "turn_time_s": 7.6
-    },
-    {
       "index": 45,
       "distance_m": 0,
       "duration_s": 13.085,
@@ -1287,7 +1200,7 @@
         }
       ],
       "is_rest": true,
-      "turn_time_s": 0
+      "turn_time_s": 10.4
     },
     {
       "index": 47,

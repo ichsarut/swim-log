@@ -1,5 +1,6 @@
 {
   "activity_id": 23317918763,
+  "skipped_m": 50.0,
   "laps": [
     {
       "index": 1,
@@ -922,30 +923,6 @@
       "turn_time_s": 0
     },
     {
-      "index": 30,
-      "distance_m": 50.0,
-      "duration_s": 1.047,
-      "moving_duration_s": 1.047,
-      "avg_hr": 144.0,
-      "max_hr": 145.0,
-      "calories": 1.0,
-      "stroke": "DRILL",
-      "avg_speed": 47.75500106811523,
-      "avg_swolf": 0.0,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": "DRILL",
-          "duration_s": 0.523,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        }
-      ],
-      "is_rest": false,
-      "turn_time_s": 0.7
-    },
-    {
       "index": 31,
       "distance_m": 0,
       "duration_s": 42.874,
@@ -975,7 +952,7 @@
         }
       ],
       "is_rest": true,
-      "turn_time_s": 0
+      "turn_time_s": 1.8
     },
     {
       "index": 32,

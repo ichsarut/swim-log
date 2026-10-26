@@ -1,102 +1,7 @@
 {
   "activity_id": 24803013108,
+  "skipped_m": 200.0,
   "laps": [
-    {
-      "index": 2,
-      "distance_m": 100.0,
-      "duration_s": 1.595,
-      "moving_duration_s": 1.595,
-      "avg_hr": 88.0,
-      "max_hr": 88.0,
-      "calories": 1.0,
-      "stroke": "DRILL",
-      "avg_speed": 62.69599914550781,
-      "avg_swolf": 0.0,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": "DRILL",
-          "duration_s": 0.398,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        },
-        {
-          "index": 2,
-          "stroke": "DRILL",
-          "duration_s": 0.398,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        },
-        {
-          "index": 3,
-          "stroke": "DRILL",
-          "duration_s": 0.398,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        },
-        {
-          "index": 4,
-          "stroke": "DRILL",
-          "duration_s": 0.401,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        }
-      ],
-      "is_rest": false,
-      "turn_time_s": 4.2
-    },
-    {
-      "index": 5,
-      "distance_m": 100.0,
-      "duration_s": 1.277,
-      "moving_duration_s": 1.277,
-      "avg_hr": 88.0,
-      "max_hr": 88.0,
-      "calories": 1.0,
-      "stroke": "DRILL",
-      "avg_speed": 78.30899810791016,
-      "avg_swolf": 0.0,
-      "lengths": [
-        {
-          "index": 1,
-          "stroke": "DRILL",
-          "duration_s": 0.319,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        },
-        {
-          "index": 2,
-          "stroke": "DRILL",
-          "duration_s": 0.319,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        },
-        {
-          "index": 3,
-          "stroke": "DRILL",
-          "duration_s": 0.319,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        },
-        {
-          "index": 4,
-          "stroke": "DRILL",
-          "duration_s": 0.32,
-          "strokes": 0,
-          "swolf": null,
-          "distance_m": 25.0
-        }
-      ],
-      "is_rest": false,
-      "turn_time_s": 6.6
-    },
     {
       "index": 7,
       "distance_m": 0,
@@ -119,7 +24,7 @@
         }
       ],
       "is_rest": true,
-      "turn_time_s": 4.2
+      "turn_time_s": 18.0
     },
     {
       "index": 8,

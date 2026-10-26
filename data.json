@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-25T17:57:25.791971Z",
+  "generated_at": "2026-10-26T11:34:15.944389Z",
   "plan_start": "2026-09-25",
-  "today": "2026-10-25",
+  "today": "2026-10-26",
   "stats": {
     "sessions_done": 16,
     "sessions_total": 36,
-    "total_distance_m": 77825.0,
+    "total_distance_m": 76925.0,
     "total_duration_s": 141554.0594177246
   },
   "hr_zones": {
@@ -312,9 +312,10 @@
       "workout_key": "D4.3",
       "rotation_index": 23,
       "status": "done",
-      "activity_id": 24814413354,
+      "activity_id": 24825461122,
       "attempts": [
-        24803013108
+        24803013108,
+        24814413354
       ]
     },
     {
@@ -424,7 +425,9 @@
       "pool_length": 25.0,
       "avg_swolf": 31.0,
       "lap_count": 60,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1575.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 22948180537,
@@ -440,7 +443,9 @@
       "pool_length": 25.0,
       "avg_swolf": 0.0,
       "lap_count": 47,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 700.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 22948181604,
@@ -456,7 +461,9 @@
       "pool_length": 25.0,
       "avg_swolf": 0.0,
       "lap_count": 47,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 650.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 22959672261,
@@ -472,7 +479,9 @@
       "pool_length": 25.0,
       "avg_swolf": 51.0,
       "lap_count": 38,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 675.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 22959977026,
@@ -488,7 +497,9 @@
       "pool_length": 25.0,
       "avg_swolf": 46.0,
       "lap_count": 29,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 550.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 22983648853,
@@ -504,7 +515,9 @@
       "pool_length": 25.0,
       "avg_swolf": 36.0,
       "lap_count": 49,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1575.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 22983987736,
@@ -520,7 +533,9 @@
       "pool_length": 25.0,
       "avg_swolf": 0.0,
       "lap_count": 19,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 400.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23044145787,
@@ -536,7 +551,9 @@
       "pool_length": 25.0,
       "avg_swolf": 50.0,
       "lap_count": 55,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1175.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23128765119,
@@ -552,7 +569,9 @@
       "pool_length": 25.0,
       "avg_swolf": 52.0,
       "lap_count": 52,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1250.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23257457466,
@@ -568,14 +587,16 @@
       "pool_length": 25.0,
       "avg_swolf": 42.0,
       "lap_count": 48,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1450.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23269825870,
       "name": "OW W3.2 4x200",
       "start_local": "2026-06-16 19:48:20",
       "date": "2026-06-16",
-      "distance_m": 1600.0,
+      "distance_m": 1500.0,
       "duration_s": 3054.39208984375,
       "moving_duration_s": 2152.9189453125,
       "avg_hr": 136.0,
@@ -584,14 +605,16 @@
       "pool_length": 25.0,
       "avg_swolf": 42.0,
       "lap_count": 43,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1600.0,
+      "skipped_m": 100.0
     },
     {
       "activity_id": 23282831936,
       "name": "W1.2 • 1500m • Side Kick Foc",
       "start_local": "2026-06-17 20:02:05",
       "date": "2026-06-17",
-      "distance_m": 1725.0,
+      "distance_m": 1475.0,
       "duration_s": 3330.419921875,
       "moving_duration_s": 1963.4000244140625,
       "avg_hr": 145.0,
@@ -600,7 +623,9 @@
       "pool_length": 25.0,
       "avg_swolf": 45.0,
       "lap_count": 56,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1725.0,
+      "skipped_m": 250.0
     },
     {
       "activity_id": 23295114841,
@@ -616,14 +641,16 @@
       "pool_length": 25.0,
       "avg_swolf": 37.0,
       "lap_count": 44,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1200.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23317918763,
       "name": "W4.1 • 1100m • Pyramid",
       "start_local": "2026-06-20 20:20:51",
       "date": "2026-06-20",
-      "distance_m": 1350.0,
+      "distance_m": 1300.0,
       "duration_s": 2681.422119140625,
       "moving_duration_s": 1656.1280517578125,
       "avg_hr": 132.0,
@@ -632,7 +659,9 @@
       "pool_length": 25.0,
       "avg_swolf": 37.0,
       "lap_count": 33,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1350.0,
+      "skipped_m": 50.0
     },
     {
       "activity_id": 23339770232,
@@ -648,7 +677,9 @@
       "pool_length": 25.0,
       "avg_swolf": 43.0,
       "lap_count": 57,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1600.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23364316103,
@@ -664,7 +695,9 @@
       "pool_length": 25.0,
       "avg_swolf": 44.0,
       "lap_count": 25,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1050.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23364316768,
@@ -680,7 +713,9 @@
       "pool_length": 25.0,
       "avg_swolf": 45.0,
       "lap_count": 11,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 50.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23364317497,
@@ -696,7 +731,9 @@
       "pool_length": 25.0,
       "avg_swolf": 30.0,
       "lap_count": 6,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 400.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23595310099,
@@ -712,7 +749,9 @@
       "pool_length": 25.0,
       "avg_swolf": 38.0,
       "lap_count": 55,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1200.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23595310790,
@@ -728,7 +767,9 @@
       "pool_length": 25.0,
       "avg_swolf": 42.0,
       "lap_count": 14,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 50.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23595311412,
@@ -744,7 +785,9 @@
       "pool_length": 25.0,
       "avg_swolf": 54.0,
       "lap_count": 11,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 200.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23606378354,
@@ -760,7 +803,9 @@
       "pool_length": 25.0,
       "avg_swolf": 28.0,
       "lap_count": 13,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 400.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23606837479,
@@ -776,7 +821,9 @@
       "pool_length": 25.0,
       "avg_swolf": 38.0,
       "lap_count": 47,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1025.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23652472932,
@@ -792,7 +839,9 @@
       "pool_length": 25.0,
       "avg_swolf": 38.0,
       "lap_count": 31,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1575.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23654366166,
@@ -808,7 +857,9 @@
       "pool_length": 25.0,
       "avg_swolf": 36.0,
       "lap_count": 37,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1525.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23715828477,
@@ -824,7 +875,9 @@
       "pool_length": 25.0,
       "avg_swolf": 38.0,
       "lap_count": 57,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1450.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23715829377,
@@ -840,7 +893,9 @@
       "pool_length": 25.0,
       "avg_swolf": 36.0,
       "lap_count": 42,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1700.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23835591029,
@@ -856,7 +911,9 @@
       "pool_length": 25.0,
       "avg_swolf": 39.0,
       "lap_count": 47,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1750.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23835591890,
@@ -872,7 +929,9 @@
       "pool_length": 25.0,
       "avg_swolf": 33.0,
       "lap_count": 18,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1875.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23835592560,
@@ -888,7 +947,9 @@
       "pool_length": 25.0,
       "avg_swolf": 40.0,
       "lap_count": 4,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 500.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 23835593368,
@@ -904,7 +965,9 @@
       "pool_length": 25.0,
       "avg_swolf": 37.0,
       "lap_count": 9,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 675.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24501084934,
@@ -920,7 +983,9 @@
       "pool_length": 25.0,
       "avg_swolf": 39.0,
       "lap_count": 47,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1275.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24501085464,
@@ -936,7 +1001,9 @@
       "pool_length": 25.0,
       "avg_swolf": null,
       "lap_count": 8,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 0.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24501086129,
@@ -952,7 +1019,9 @@
       "pool_length": 25.0,
       "avg_swolf": 36.0,
       "lap_count": 17,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 375.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24505323379,
@@ -968,7 +1037,9 @@
       "pool_length": 25.0,
       "avg_swolf": 33.0,
       "lap_count": 53,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 1950.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24505324251,
@@ -984,7 +1055,9 @@
       "pool_length": 25.0,
       "avg_swolf": 34.0,
       "lap_count": 13,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 50.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24517775173,
@@ -1011,7 +1084,9 @@
         "breath": null,
         "sink": null,
         "shoulder": null
-      }
+      },
+      "watch_distance_m": 1125.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24517776008,
@@ -1027,7 +1102,9 @@
       "pool_length": 25.0,
       "avg_swolf": 43.0,
       "lap_count": 15,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 325.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24517776916,
@@ -1043,7 +1120,9 @@
       "pool_length": 25.0,
       "avg_swolf": 28.0,
       "lap_count": 5,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 350.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24517777878,
@@ -1059,7 +1138,9 @@
       "pool_length": 25.0,
       "avg_swolf": 32.0,
       "lap_count": 12,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 125.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24529258267,
@@ -1086,7 +1167,9 @@
         "breath": null,
         "sink": null,
         "shoulder": null
-      }
+      },
+      "watch_distance_m": 2025.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24554215159,
@@ -1113,7 +1196,9 @@
         "breath": null,
         "sink": null,
         "shoulder": null
-      }
+      },
+      "watch_distance_m": 2750.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24590571426,
@@ -1140,7 +1225,9 @@
         "breath": null,
         "sink": null,
         "shoulder": null
-      }
+      },
+      "watch_distance_m": 2500.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24603428129,
@@ -1167,7 +1254,9 @@
         "breath": null,
         "sink": null,
         "shoulder": null
-      }
+      },
+      "watch_distance_m": 1550.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24614345525,
@@ -1194,7 +1283,9 @@
         "breath": 3,
         "sink": 3,
         "shoulder": 5
-      }
+      },
+      "watch_distance_m": 2400.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24652023537,
@@ -1221,7 +1312,9 @@
         "breath": 2,
         "sink": 2,
         "shoulder": 5
-      }
+      },
+      "watch_distance_m": 2950.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24663399405,
@@ -1248,7 +1341,9 @@
         "breath": 3,
         "sink": 3,
         "shoulder": 5
-      }
+      },
+      "watch_distance_m": 2125.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24674122086,
@@ -1275,7 +1370,9 @@
         "breath": 3,
         "sink": 3,
         "shoulder": 5
-      }
+      },
+      "watch_distance_m": 1525.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24686358973,
@@ -1302,7 +1399,9 @@
         "breath": 4,
         "sink": 4,
         "shoulder": 5
-      }
+      },
+      "watch_distance_m": 2150.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24696634515,
@@ -1329,7 +1428,9 @@
         "breath": null,
         "sink": null,
         "shoulder": null
-      }
+      },
+      "watch_distance_m": 2225.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24708887980,
@@ -1356,7 +1457,9 @@
         "breath": 4,
         "sink": 4,
         "shoulder": 5
-      }
+      },
+      "watch_distance_m": 2225.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24721019198,
@@ -1383,7 +1486,9 @@
         "breath": null,
         "sink": null,
         "shoulder": null
-      }
+      },
+      "watch_distance_m": 2525.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24790991089,
@@ -1410,14 +1515,16 @@
         "breath": 3,
         "sink": 4,
         "shoulder": 5
-      }
+      },
+      "watch_distance_m": 3150.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24803013108,
       "name": "D4.3 • 1400m • Distance C",
       "start_local": "2026-10-21 19:36:07",
       "date": "2026-10-21",
-      "distance_m": 3000.0,
+      "distance_m": 2800.0,
       "duration_s": 3966.676025390625,
       "moving_duration_s": 2791.39208984375,
       "avg_hr": 124.0,
@@ -1437,14 +1544,16 @@
         "breath": 4,
         "sink": 4,
         "shoulder": 5
-      }
+      },
+      "watch_distance_m": 3000.0,
+      "skipped_m": 200.0
     },
     {
       "activity_id": 24814413354,
       "name": "D4.3 • 1400m • Distance C",
       "start_local": "2026-10-22 19:49:26",
       "date": "2026-10-22",
-      "distance_m": 2350.0,
+      "distance_m": 2150.0,
       "duration_s": 3038.37109375,
       "moving_duration_s": 1909.1109619140625,
       "avg_hr": 125.0,
@@ -1453,7 +1562,20 @@
       "pool_length": 25.0,
       "avg_swolf": 27.0,
       "lap_count": 31,
-      "journal": null
+      "journal": {
+        "longest_m": null,
+        "longest_buoy": false,
+        "free_longest_m": null,
+        "rest_s": 82,
+        "z4_ok": 4,
+        "z4_n": 5,
+        "gate": false,
+        "breath": 4,
+        "sink": 4,
+        "shoulder": 5
+      },
+      "watch_distance_m": 2350.0,
+      "skipped_m": 200.0
     },
     {
       "activity_id": 24825461122,
@@ -1469,7 +1591,20 @@
       "pool_length": 25.0,
       "avg_swolf": 25.0,
       "lap_count": 21,
-      "journal": null
+      "journal": {
+        "longest_m": 800,
+        "longest_buoy": false,
+        "free_longest_m": 800,
+        "rest_s": 96,
+        "z4_ok": 3,
+        "z4_n": 3,
+        "gate": true,
+        "breath": 4,
+        "sink": 4,
+        "shoulder": 5
+      },
+      "watch_distance_m": 2100.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24846835916,
@@ -1485,7 +1620,9 @@
       "pool_length": 25.0,
       "avg_swolf": 37.0,
       "lap_count": 2,
-      "journal": null
+      "journal": null,
+      "watch_distance_m": 225.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24846911445,
@@ -1501,14 +1638,27 @@
       "pool_length": 25.0,
       "avg_swolf": 0.0,
       "lap_count": 5,
-      "journal": null
+      "journal": {
+        "longest_m": 1000,
+        "longest_buoy": false,
+        "free_longest_m": 1000,
+        "rest_s": 106,
+        "z4_ok": 2,
+        "z4_n": 2,
+        "gate": true,
+        "breath": 4,
+        "sink": 4,
+        "shoulder": 5
+      },
+      "watch_distance_m": 100.0,
+      "skipped_m": 0.0
     },
     {
       "activity_id": 24847414831,
       "name": "TEST2 • 1400m • 1000m Test",
       "start_local": "2026-10-25 20:13:19",
       "date": "2026-10-25",
-      "distance_m": 1475.0,
+      "distance_m": 1375.0,
       "duration_s": 2531.261962890625,
       "moving_duration_s": 1942.3380126953125,
       "avg_hr": 124.0,
@@ -1517,7 +1667,20 @@
       "pool_length": 25.0,
       "avg_swolf": 43.0,
       "lap_count": 18,
-      "journal": null
+      "journal": {
+        "longest_m": 1000,
+        "longest_buoy": false,
+        "free_longest_m": 1000,
+        "rest_s": 106,
+        "z4_ok": 2,
+        "z4_n": 2,
+        "gate": true,
+        "breath": 4,
+        "sink": 4,
+        "shoulder": 5
+      },
+      "watch_distance_m": 1475.0,
+      "skipped_m": 100.0
     }
   ]
 }
