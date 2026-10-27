@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T19:34:16.028763Z",
+  "generated_at": "2026-10-27T19:44:29.856615Z",
   "plan_start": "2026-09-25",
   "today": "2026-10-27",
   "stats": {
@@ -1726,9 +1726,9 @@
       "avg_swolf": 36.0,
       "lap_count": 31,
       "journal": {
-        "longest_m": 925,
+        "longest_m": 1000,
         "longest_buoy": false,
-        "free_longest_m": 925,
+        "free_longest_m": 1000,
         "rest_s": 81,
         "z4_ok": 5,
         "z4_n": 6,
