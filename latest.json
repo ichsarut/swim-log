@@ -1,13 +1,13 @@
 {
-  "requested_epoch": 1793102514,
+  "requested_epoch": 1793124222,
   "status": "ok",
-  "date": "2026-10-26",
-  "workout": "V5.1",
+  "date": "2026-10-27",
+  "workout": "V5.2",
   "gate_pass": false,
   "lines": [
-    "Long 625m",
-    "Z4-free 5/5",
-    "Rest 76s"
+    "Long 925m",
+    "Z4-free 5/6",
+    "Rest 81s"
   ],
-  "next": "V5.2"
+  "next": "L5.1"
 }

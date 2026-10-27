@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-27T12:02:26.983892Z",
+  "generated_at": "2026-10-27T18:24:08.938267Z",
   "plan_start": "2026-09-25",
   "today": "2026-10-27",
   "stats": {
-    "sessions_done": 17,
+    "sessions_done": 18,
     "sessions_total": 36,
-    "total_distance_m": 79050.0,
-    "total_duration_s": 145310.75936889648
+    "total_distance_m": 81175.0,
+    "total_duration_s": 149416.27157592773
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -335,14 +335,14 @@
     {
       "workout_key": "V5.2",
       "rotation_index": 26,
-      "status": "next",
-      "activity_id": null,
+      "status": "done",
+      "activity_id": 24869287648,
       "attempts": []
     },
     {
       "workout_key": "L5.1",
       "rotation_index": 27,
-      "status": "upcoming",
+      "status": "next",
       "activity_id": null,
       "attempts": []
     },
@@ -1701,6 +1701,35 @@
         "longest_buoy": false,
         "free_longest_m": 800,
         "rest_s": 76,
+        "z4_ok": 5,
+        "z4_n": 6,
+        "gate": false,
+        "breath": 5,
+        "sink": 4,
+        "shoulder": 5
+      },
+      "watch_distance_m": 2125.0,
+      "skipped_m": 0.0
+    },
+    {
+      "activity_id": 24869287648,
+      "name": "V5.2 • 1800m • Volume Form",
+      "start_local": "2026-10-27 19:32:30",
+      "date": "2026-10-27",
+      "distance_m": 2125.0,
+      "duration_s": 4105.51220703125,
+      "moving_duration_s": 2615.7880859375,
+      "avg_hr": 127.0,
+      "max_hr": 152.0,
+      "calories": 591.0,
+      "pool_length": 25.0,
+      "avg_swolf": 36.0,
+      "lap_count": 31,
+      "journal": {
+        "longest_m": 925,
+        "longest_buoy": false,
+        "free_longest_m": 925,
+        "rest_s": 81,
         "z4_ok": 5,
         "z4_n": 6,
         "gate": false,
