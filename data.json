@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-28T19:58:18.280510Z",
+  "generated_at": "2026-10-29T19:56:11.373094Z",
   "plan_start": "2026-09-25",
-  "today": "2026-10-28",
+  "today": "2026-10-29",
   "stats": {
     "sessions_done": 18,
     "sessions_total": 36,
-    "total_distance_m": 81175.0,
-    "total_duration_s": 149416.27157592773
+    "total_distance_m": 83100.0,
+    "total_duration_s": 153591.19149780273
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -344,7 +344,9 @@
       "rotation_index": 27,
       "status": "next",
       "activity_id": null,
-      "attempts": []
+      "attempts": [
+        24893671411
+      ]
     },
     {
       "workout_key": "V5.1",
@@ -1738,6 +1740,35 @@
         "shoulder": 5
       },
       "watch_distance_m": 2125.0,
+      "skipped_m": 0.0
+    },
+    {
+      "activity_id": 24893671411,
+      "name": "L5.1 • 2400m • Long 2400",
+      "start_local": "2026-10-29 20:05:36",
+      "date": "2026-10-29",
+      "distance_m": 1925.0,
+      "duration_s": 4174.919921875,
+      "moving_duration_s": 3507.839111328125,
+      "avg_hr": 125.0,
+      "max_hr": 142.0,
+      "calories": 607.0,
+      "pool_length": 25.0,
+      "avg_swolf": 53.0,
+      "lap_count": 13,
+      "journal": {
+        "longest_m": 500,
+        "longest_buoy": false,
+        "free_longest_m": 500,
+        "rest_s": 139,
+        "z4_ok": 4,
+        "z4_n": 4,
+        "gate": false,
+        "breath": 5,
+        "sink": 5,
+        "shoulder": 5
+      },
+      "watch_distance_m": 1925.0,
       "skipped_m": 0.0
     }
   ]
