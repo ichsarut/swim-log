@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-07T19:10:04.269243Z",
+  "generated_at": "2026-11-08T06:59:59.016129Z",
   "plan_start": "2026-09-25",
-  "today": "2026-11-07",
+  "today": "2026-11-08",
   "stats": {
     "sessions_done": 19,
     "sessions_total": 36,
@@ -88,31 +88,31 @@
       "name": "V5.1 • 2200m • Volume Steady",
       "target_distance_m": 2200.0,
       "target_duration_s": 4200,
-      "description": "Block 5: ดริล + 2x800 ไม่ใช้ buoy พักตาม HR + 4x100 ฟอร์ม. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+      "description": "Block 5: ดริล + 2-beat + 2x800 ไม่ใช้ buoy พักตาม HR + 3x100 2-beat. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
     },
     "V5.2": {
       "name": "V5.2 • 1800m • Volume Form",
       "target_distance_m": 1800.0,
       "target_duration_s": 3600,
-      "description": "Block 5: ดริล + 1,000 ต่อเนื่องไม่ใช้ buoy + 6x100 ฟอร์ม. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+      "description": "Block 5: ดริล + 2-beat + 1,000 ต่อเนื่องไม่ใช้ buoy + 5x100 2-beat. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
     },
     "L5.1": {
       "name": "L5.1 • 2400m • Long 2400",
       "target_distance_m": 2400.0,
       "target_duration_s": 4800,
-      "description": "Block 5 long swim: ดริล + 1,000 ต่อเนื่อง + buoy 2x400 + 4x100 ฟอร์ม. stroke เพิ่มครึ่งหลัง / ไหล่ล้า = ตัด buoy หรือ 100 ทิ้งได้. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+      "description": "Block 5 long swim: ดริล + 2-beat + 1,000 ต่อเนื่อง + buoy 2x400 + 3x100 2-beat. stroke เพิ่มครึ่งหลัง / ไหล่ล้า = ตัด buoy หรือ 100 ทิ้งได้. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
     },
     "L5.2": {
       "name": "L5.2 • 2700m • Long 2700",
       "target_distance_m": 2700.0,
       "target_duration_s": 5400,
-      "description": "Block 5 long swim: ดริล + 1,200 ต่อเนื่อง + buoy 2x500 + 3x100 ฟอร์ม. stroke เพิ่มครึ่งหลัง / ไหล่ล้า = ตัด buoy หรือ 100 ทิ้งได้. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+      "description": "Block 5 long swim: ดริล + 2-beat + 1,200 ต่อเนื่อง + buoy 2x500 + 2x100 2-beat. stroke เพิ่มครึ่งหลัง / ไหล่ล้า = ตัด buoy หรือ 100 ทิ้งได้. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
     },
     "L5.3": {
       "name": "L5.3 • 3000m • Long 3000",
       "target_distance_m": 3000.0,
       "target_duration_s": 6000,
-      "description": "Block 5 long swim: ดริล + 1,500 ต่อเนื่อง + buoy 2x500 + 3x100 ฟอร์ม. stroke เพิ่มครึ่งหลัง / ไหล่ล้า = ตัด buoy หรือ 100 ทิ้งได้. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
+      "description": "Block 5 long swim: ดริล + 2-beat + 1,500 ต่อเนื่อง + buoy 2x500 + 2x100 2-beat. stroke เพิ่มครึ่งหลัง / ไหล่ล้า = ตัด buoy หรือ 100 ทิ้งได้. เที่ยวหลัก: ว่ายจบแล้วพักจน HR < 120 ค่อยกด lap ออกเที่ยวใหม่. Swim HR สั่น: 1 ครั้ง = HR 130 · 2 ครั้ง = 140 ว่ายช้าลง · สั่นยาวซ้ำ = 148 หยุดที่ผนัง. เวลาเป็นตัวตัดสิน — พักนานจนเวลาไม่พอ ตัดเที่ยวทิ้งได้. หายใจกลิ้งลำตัว ไม่ยกหัว"
     },
     "B.KICK": {
       "name": "B.KICK • 250m • Bonus Kickboard",
@@ -343,9 +343,13 @@
       "workout_key": "L5.1",
       "rotation_index": 27,
       "status": "done",
-      "activity_id": 24904801216,
+      "activity_id": 24997955686,
       "attempts": [
-        24893671411
+        24893671411,
+        24904801216,
+        24951338007,
+        24975506552,
+        24986497592
       ]
     },
     {
@@ -1785,7 +1789,18 @@
       "pool_length": 25.0,
       "avg_swolf": 47.0,
       "lap_count": 15,
-      "journal": null,
+      "journal": {
+        "longest_m": null,
+        "longest_buoy": false,
+        "free_longest_m": null,
+        "rest_s": 54,
+        "z4_ok": 4,
+        "z4_n": 4,
+        "gate": false,
+        "breath": 5,
+        "sink": 5,
+        "shoulder": 5
+      },
       "watch_distance_m": 2100.0,
       "skipped_m": 0.0
     },
@@ -1803,7 +1818,18 @@
       "pool_length": 25.0,
       "avg_swolf": 65.0,
       "lap_count": 8,
-      "journal": null,
+      "journal": {
+        "longest_m": null,
+        "longest_buoy": false,
+        "free_longest_m": null,
+        "rest_s": 24,
+        "z4_ok": 0,
+        "z4_n": 1,
+        "gate": false,
+        "breath": null,
+        "sink": null,
+        "shoulder": null
+      },
       "watch_distance_m": 1425.0,
       "skipped_m": 0.0
     },
@@ -1821,7 +1847,18 @@
       "pool_length": 25.0,
       "avg_swolf": 34.0,
       "lap_count": 18,
-      "journal": null,
+      "journal": {
+        "longest_m": null,
+        "longest_buoy": false,
+        "free_longest_m": null,
+        "rest_s": 136,
+        "z4_ok": 2,
+        "z4_n": 4,
+        "gate": false,
+        "breath": null,
+        "sink": null,
+        "shoulder": null
+      },
       "watch_distance_m": 2450.0,
       "skipped_m": 0.0
     },
@@ -1839,7 +1876,18 @@
       "pool_length": 25.0,
       "avg_swolf": 50.0,
       "lap_count": 8,
-      "journal": null,
+      "journal": {
+        "longest_m": null,
+        "longest_buoy": false,
+        "free_longest_m": null,
+        "rest_s": 100,
+        "z4_ok": 0,
+        "z4_n": 1,
+        "gate": false,
+        "breath": null,
+        "sink": null,
+        "shoulder": null
+      },
       "watch_distance_m": 1450.0,
       "skipped_m": 0.0
     },
@@ -1857,7 +1905,18 @@
       "pool_length": 25.0,
       "avg_swolf": 36.0,
       "lap_count": 24,
-      "journal": null,
+      "journal": {
+        "longest_m": 1000,
+        "longest_buoy": false,
+        "free_longest_m": 1000,
+        "rest_s": 118,
+        "z4_ok": 5,
+        "z4_n": 5,
+        "gate": true,
+        "breath": 5,
+        "sink": 5,
+        "shoulder": 5
+      },
       "watch_distance_m": 2600.0,
       "skipped_m": 0.0
     }
