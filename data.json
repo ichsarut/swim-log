@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-15T20:01:19.259158Z",
+  "generated_at": "2026-11-16T23:34:51.038822Z",
   "plan_start": "2026-09-25",
-  "today": "2026-11-15",
+  "today": "2026-11-16",
   "stats": {
-    "sessions_done": 22,
+    "sessions_done": 23,
     "sessions_total": 36,
-    "total_distance_m": 103750.0,
-    "total_duration_s": 189121.27255249023
+    "total_distance_m": 106500.0,
+    "total_duration_s": 194584.70077514648
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -378,14 +378,14 @@
     {
       "workout_key": "V5.1",
       "rotation_index": 31,
-      "status": "next",
-      "activity_id": null,
+      "status": "done",
+      "activity_id": 25097455922,
       "attempts": []
     },
     {
       "workout_key": "V5.2",
       "rotation_index": 32,
-      "status": "upcoming",
+      "status": "next",
       "activity_id": null,
       "attempts": []
     },
@@ -2026,6 +2026,24 @@
       "journal": null,
       "watch_distance_m": 2975.0,
       "skipped_m": 100.0
+    },
+    {
+      "activity_id": 25097455922,
+      "name": "V5.1 • 2200m • Volume Steady",
+      "start_local": "2026-11-16 19:35:05",
+      "date": "2026-11-16",
+      "distance_m": 2750.0,
+      "duration_s": 5463.42822265625,
+      "moving_duration_s": 3352.383056640625,
+      "avg_hr": 122.0,
+      "max_hr": 146.0,
+      "calories": 733.0,
+      "pool_length": 25.0,
+      "avg_swolf": 36.0,
+      "lap_count": 27,
+      "journal": null,
+      "watch_distance_m": 2750.0,
+      "skipped_m": 0.0
     }
   ]
 }
