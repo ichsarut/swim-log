@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-16T23:34:51.038822Z",
+  "generated_at": "2026-11-17T22:43:35.052196Z",
   "plan_start": "2026-09-25",
-  "today": "2026-11-16",
+  "today": "2026-11-17",
   "stats": {
-    "sessions_done": 23,
+    "sessions_done": 24,
     "sessions_total": 36,
-    "total_distance_m": 106500.0,
-    "total_duration_s": 194584.70077514648
+    "total_distance_m": 108575.0,
+    "total_duration_s": 198203.7078552246
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -385,14 +385,14 @@
     {
       "workout_key": "V5.2",
       "rotation_index": 32,
-      "status": "next",
-      "activity_id": null,
+      "status": "done",
+      "activity_id": 25108363635,
       "attempts": []
     },
     {
       "workout_key": "L5.3",
       "rotation_index": 33,
-      "status": "upcoming",
+      "status": "next",
       "activity_id": null,
       "attempts": []
     },
@@ -2023,7 +2023,18 @@
       "pool_length": 25.0,
       "avg_swolf": 36.0,
       "lap_count": 20,
-      "journal": null,
+      "journal": {
+        "longest_m": 1200,
+        "longest_buoy": false,
+        "free_longest_m": 1200,
+        "rest_s": 69,
+        "z4_ok": 4,
+        "z4_n": 4,
+        "gate": true,
+        "breath": 4,
+        "sink": 4,
+        "shoulder": 4
+      },
       "watch_distance_m": 2975.0,
       "skipped_m": 100.0
     },
@@ -2041,8 +2052,48 @@
       "pool_length": 25.0,
       "avg_swolf": 36.0,
       "lap_count": 27,
-      "journal": null,
+      "journal": {
+        "longest_m": 800,
+        "longest_buoy": false,
+        "free_longest_m": 800,
+        "rest_s": 237,
+        "z4_ok": 5,
+        "z4_n": 5,
+        "gate": true,
+        "breath": 4,
+        "sink": 4,
+        "shoulder": 4
+      },
       "watch_distance_m": 2750.0,
+      "skipped_m": 0.0
+    },
+    {
+      "activity_id": 25108363635,
+      "name": "V5.2 • 1800m • Volume Form",
+      "start_local": "2026-11-17 19:32:51",
+      "date": "2026-11-17",
+      "distance_m": 2075.0,
+      "duration_s": 3619.007080078125,
+      "moving_duration_s": 2407.115966796875,
+      "avg_hr": 126.0,
+      "max_hr": 149.0,
+      "calories": 587.0,
+      "pool_length": 25.0,
+      "avg_swolf": 34.0,
+      "lap_count": 25,
+      "journal": {
+        "longest_m": 1000,
+        "longest_buoy": false,
+        "free_longest_m": 1000,
+        "rest_s": 72,
+        "z4_ok": 6,
+        "z4_n": 6,
+        "gate": true,
+        "breath": 4,
+        "sink": 4,
+        "shoulder": 4
+      },
+      "watch_distance_m": 2075.0,
       "skipped_m": 0.0
     }
   ]
