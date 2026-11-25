@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-24T23:41:17.781267Z",
+  "generated_at": "2026-11-25T23:24:56.443579Z",
   "plan_start": "2026-09-25",
-  "today": "2026-11-24",
+  "today": "2026-11-25",
   "stats": {
     "sessions_done": 26,
     "sessions_total": 36,
-    "total_distance_m": 113925.0,
-    "total_duration_s": 205795.47885131836
+    "total_distance_m": 115750.0,
+    "total_duration_s": 208695.98178100586
   },
   "hr_zones": {
     "z1_floor": 93,
@@ -392,9 +392,11 @@
     {
       "workout_key": "L5.3",
       "rotation_index": 33,
-      "status": "done",
-      "activity_id": 25120120531,
-      "attempts": []
+      "status": "skipped",
+      "activity_id": null,
+      "attempts": [
+        25120120531
+      ]
     },
     {
       "workout_key": "V5.1",
@@ -406,14 +408,14 @@
     {
       "workout_key": "V5.2",
       "rotation_index": 35,
-      "status": "next",
-      "activity_id": null,
+      "status": "done",
+      "activity_id": 25194916119,
       "attempts": []
     },
     {
       "workout_key": "L5.3",
       "rotation_index": 36,
-      "status": "upcoming",
+      "status": "next",
       "activity_id": null,
       "attempts": []
     }
@@ -2110,7 +2112,18 @@
       "pool_length": 25.0,
       "avg_swolf": 35.0,
       "lap_count": 16,
-      "journal": null,
+      "journal": {
+        "longest_m": 1550,
+        "longest_buoy": false,
+        "free_longest_m": 1550,
+        "rest_s": 102,
+        "z4_ok": 2,
+        "z4_n": 3,
+        "gate": false,
+        "breath": 4,
+        "sink": 4,
+        "shoulder": 5
+      },
       "watch_distance_m": 3075.0,
       "skipped_m": 0.0
     },
@@ -2128,8 +2141,48 @@
       "pool_length": 25.0,
       "avg_swolf": 36.0,
       "lap_count": 16,
-      "journal": null,
+      "journal": {
+        "longest_m": 875,
+        "longest_buoy": false,
+        "free_longest_m": 875,
+        "rest_s": 104,
+        "z4_ok": 4,
+        "z4_n": 5,
+        "gate": false,
+        "breath": 4,
+        "sink": 4,
+        "shoulder": 5
+      },
       "watch_distance_m": 2275.0,
+      "skipped_m": 0.0
+    },
+    {
+      "activity_id": 25194916119,
+      "name": "V5.2 • 1800m • Volume Form",
+      "start_local": "2026-11-25 19:33:45",
+      "date": "2026-11-25",
+      "distance_m": 1825.0,
+      "duration_s": 2900.5029296875,
+      "moving_duration_s": 2301.323974609375,
+      "avg_hr": 121.0,
+      "max_hr": 141.0,
+      "calories": 423.0,
+      "pool_length": 25.0,
+      "avg_swolf": 37.0,
+      "lap_count": 18,
+      "journal": {
+        "longest_m": 1050,
+        "longest_buoy": false,
+        "free_longest_m": 1050,
+        "rest_s": 78,
+        "z4_ok": 6,
+        "z4_n": 6,
+        "gate": true,
+        "breath": 4,
+        "sink": 4,
+        "shoulder": 5
+      },
+      "watch_distance_m": 1825.0,
       "skipped_m": 0.0
     }
   ]
